@@ -153,12 +153,12 @@ h1 a.navbar-brand {
     margin: 0;
     text-decoration: none;
     padding: 0;
-    font-weight: 300;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 .top-nav ul li a:hover, .top-nav ul li a.active{
-    color: #00e6e6 !important;
+    color: #C44F00 !important;
 }
 div#bs-example-navbar-collapse-1 {
     float: right;
@@ -205,6 +205,8 @@ a.w3-join {
     font-size: 0.9em;
     font-weight: 400;
     border: 1px solid #b5b2b2;
+	background: rgba(0,0,0,0.50);
+	border-radius: 4px;
 }
 a.w3-join:hover {
 	color:#FCB941;
@@ -237,7 +239,7 @@ a.w3-join:hover {
     color: #d435ca;
 }
 .agile_text h5 {
-    font-size: 1.5em;
+    font-size: 16px;
     color: #000;
     line-height: 1.8;
     letter-spacing: 1px;
@@ -1671,7 +1673,7 @@ section.stats p.text-center {
 	.agile_text {
 		padding: 3em 2em;
 	}
-	.agile_team_grid.agile_team_gridf:nth-child(2), .agile_team_grid.agile_team_gridf:nth-child(3) {
+	.agile_team_grid.agile_team_gridf:nth-child(2), .agile_team_grid.agile_team_gridf:nth-child(3), .agile_team_grid.agile_team_gridf:nth-child(4) {
 		margin-top: 2em;
 	}
 	.agileinfo_banner_bottom_left h3 {

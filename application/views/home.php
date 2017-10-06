@@ -38,7 +38,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</button>
 						</div>
 						<h1>
-                        <a class="navbar-brand" href="index.html">CLASS LEARNING ONLINE
+                        <a class="navbar-brand" href="<?=base_url(); ?>">CLASS LEARNING ONLINE
                        <center>  <h2>your sent future </h2></center>
                        </a>
                        </h1>
@@ -49,7 +49,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         
 							<li>
                             
-                            <a class="active" href="index.html">
+                            <a class="active" href="<?=base_url(); ?>">
                             HOME</a></li>
 							<li><a href="#about" class="scroll">ABOUT</a></li>
 							<li><a href="#services" class="scroll">SERVICER</a></li>
@@ -101,21 +101,27 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="grid-w3">
 		<div class="container">
 			<div class="agile_team_grids">
-				<div class="col-md-4 col-sm-4 col-xs-4 agile_team_grid  agile_team_gridf">
+				<div class="col-md-3 col-sm-3 col-xs-3 agile_team_grid  agile_team_gridf">
 					<div class="agile_text text1-agile">
 						<h3>01</h3>
 						<h5>NEW CLASSROOM TECHNOLOGY</h5>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-4 col-xs-4 agile_team_grid  agile_team_gridf">
+				<div class="col-md-3 col-sm-3 col-xs-3 agile_team_grid  agile_team_gridf">
 					<div class="agile_text text2-agile">
 						<h3>02</h3>
 						<h5>PRIOR LEARNING ASSESSMENT</h5>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-4 col-xs-4 agile_team_grid  agile_team_gridf">
+				<div class="col-md-3 col-sm-3 col-xs-3 agile_team_grid  agile_team_gridf">
 					<div class="agile_text text3-agile">
 						<h3>03</h3>
+						<h5>CAREER OPPORTUNITIES </h5>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-3 agile_team_grid  agile_team_gridf">
+					<div class="agile_text text1-agile">
+						<h3>04</h3>
 						<h5>CAREER OPPORTUNITIES</h5>
 					</div>
 				</div>
@@ -569,7 +575,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	</div>
 </div>
 <div class="map">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50996.31320435244!2d-122.06676498187694!3d36.97949802442312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e441b7c36d549%3A0x52ca104b2ad7f985!2sSanta+Cruz%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1469096018666" style="border:0"></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4798403196487!2d106.769823514257!3d10.85106166078012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175270ad28d48ab%3A0xa6c02de0a7c40d6c!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTxrAgcGjhuqFtIEvhu7kgdGh14bqtdCBUcC4gSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1507309819363" style="border:0"></iframe>
 </div>
 <!-- //mail -->
 <!-- footer -->
@@ -590,7 +596,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-4 col-xs-4 w3ls_footer_grid_right">
-				<h2><a href="index.html">Literature</a></h2>
+				<h2><a href="<?=base_url(); ?>">Literature</a></h2>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
