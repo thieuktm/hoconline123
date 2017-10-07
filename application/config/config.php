@@ -23,6 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+//khi up lên host thì đổi địa chỉ lại.
 $config['base_url'] = '';
 
 /*
