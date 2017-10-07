@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //khi up lên host thì đổi địa chỉ lại.
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/hoconline/';
 
 /*
 |--------------------------------------------------------------------------

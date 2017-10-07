@@ -45,11 +45,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
-                        
-                        
-							<li>
-                            
-                            <a class="active" href="<?=base_url(); ?>">
+                         <li>
+                  
+                           <a class="active" href="<?=base_url(); ?>">
                             HOME</a></li>
 							<li><a href="#about" class="scroll">ABOUT</a></li>
 							<li><a href="#services" class="scroll">SERVICER</a></li>
@@ -122,7 +120,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<div class="col-md-3 col-sm-3 col-xs-3 agile_team_grid  agile_team_gridf">
 					<div class="agile_text text1-agile">
 						<h3>04</h3>
-						<h5>CAREER OPPORTUNITIES</h5>
+						<h5>Connect with business to create jobs</h5>
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -152,15 +150,18 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 		</div>
 		<div class="col-md-6 agileinfo_banner_bottom_left">
-			<h3>eum iure reprehenderit qui in ea velit esse quam nihil</h3>
-			<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur 
-				ridiculus mus. Curabitur pellentesque augue sit amet enim hendrerit, a 
-				facilisis nibh porttitor. Aliquam purus velit, congue id consectetur non, 
-				interdum vel metus. Sed vulputate diam nisl.</p>
+			<h3>You can choose the program that matches your level</h3>
+			<em>Online learning has the following benefits</em>
+            <br>1. Reduce the cost of study</br>
+            <a1>2. Self-regulation: As an online learner. You can adjust the speed of course </a1>
+            <br>3.Synchronization: The curriculum and materials of online courses are highly
+            <a2>4. Interaction and Collaboration: Online learning you can interact with and interct with multiple people at the same time </a2>
+            <br>5. Efficiency: Online learning helps individual and corporate learners not only save money but also meet their needs. </br>
+            <a3>6. Easy to access and convenient: Online technology-based learning is the Internet, so access is easy. You can reach and learn anywhere</a3>
 			<ul>
-				<li><i class="fa fa-leanpub" aria-hidden="true"></i>Sed vulputate diam nisl, neque.</li>
-				<li><i class="fa fa-graduation-cap" aria-hidden="true"></i>Aliquam erat volutpat.</li>
-				<li><i class="fa fa-book" aria-hidden="true"></i>Duis porttitor magna leoat.</li>
+				<li><i class="fa fa-leanpub" aria-hidden="true"></i>The level of students</li>
+				<li><i class="fa fa-graduation-cap" aria-hidden="true"></i>The level Master's degree.</li>
+				<li><i class="fa fa-book" aria-hidden="true"></i>Research papers.</li>
 			</ul>
 		</div>
 		<div class="clearfix"> </div>
@@ -178,7 +179,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 				<div class="agileits-services-info">
 					<h4>Qualified Teachers</h4>
-					<p>Donec non nibh in dui sagittis finibus. Duis suscipit, arcu vel rhoncus molestie, ipsum velit mattis nibh, id congue lacus lorem a elit. </p>
+					<p>You can choose the conformity teacher for you </p>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-4 w3l-services-grid">
@@ -187,7 +188,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 				<div class="agileits-services-info">
 					<h4>Online Courses</h4>
-					<p>Donec non nibh in dui sagittis finibus. Duis suscipit, arcu vel rhoncus molestie, ipsum velit mattis nibh, id congue lacus lorem a elit. </p>
+					<p>Choose the right online course for you to study </p>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-4 w3l-services-grid">
@@ -196,7 +197,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 				<div class="agileits-services-info">
 					<h4>Best Education</h4>
-					<p>Donec non nibh in dui sagittis finibus. Duis suscipit, arcu vel rhoncus molestie, ipsum velit mattis nibh, id congue lacus lorem a elit. </p>
+					<p>Online education reduces learning costs and can be trained remotely. Educational development in the direction of digital technology </p>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
@@ -209,11 +210,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="container">
 		<h3 class="tittle-w3l">Our Faculties</h3>
 		<div class="agile_banner_bottom_grids">
-			<div class="col-md-3 col-sm-3 col-xs-3 agile_banner_bottom_grid">
+	    	<div class="col-md-3 col-sm-3 col-xs-3 agile_banner_bottom_grid">
 				<div class="w3layouts_banner_bottom_grid">
-					<img src="images/t1.jpg" alt=" " class="img-responsive" />
+					<img src="images/t2.jpg" alt=" " class="img-responsive" />
 					<div class="w3layouts_banner_bottom_grid_pos">
-						<p>Mary Doe</p>
+						<p>Victoria</p>
 						<div class="social-bnr-agileits">
 							<ul>
 								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -223,12 +224,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-3 col-sm-3 col-xs-3 agile_banner_bottom_grid">
+			  </div>
+            <div class="col-md-3 col-sm-3 col-xs-3 agile_banner_bottom_grid">
 				<div class="w3layouts_banner_bottom_grid">
-					<img src="images/t2.jpg" alt=" " class="img-responsive" />
+					<img src="images/t5.png" alt=" " class="img-responsive" />
 					<div class="w3layouts_banner_bottom_grid_pos">
-						<p>Victoria</p>
+						<p>Ngô Bảo Châu</p>
 						<div class="social-bnr-agileits">
 							<ul>
 								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -287,8 +288,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 				</div>
 				<div class="col-md-6 home-agile-text">
-				   <h4>Literature</h4>
-				   <p>Duis aute irure dolor reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem Duis aute irure dolor reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				   <h4> Enrollment and Study time</h4>
+				   <p>Schedule online classes and meet with teachers. Or you can watch videos when not online. Teachers communicate with you through offline sessions</p>
 				    <div class="date">
 						<h3>Opening Hours</h3>
 					   <h5><i class="fa fa-calendar" aria-hidden="true"></i>Monday - Saturday</h5>
@@ -298,21 +299,21 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<div class="clearfix"></div>	
 				 
 				<div class="col-md-6 home-agile-text w3-tex-2">
-					<p>Duis aute irure dolor reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem Duis aute irure dolor reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<p>Statistics on the number of students studying online, the number of classes currently open</p>
 				   <!-- Counter -->
 					<section class="stats">
 						<div class="row-w3">
 							<div class="col-md-6 col-sm-6 col-xs-6 stats-grid stats-grid-1 gridw3">
 								<i class="fa fa-users" aria-hidden="true"></i>
 								<div class="w3-count-agile">
-									<div class="numscroller" data-slno='1' data-min='0' data-max='875' data-delay='3' data-increment="1">875</div>
+									<div class="numscroller" data-slno='1' data-min='0' data-max='910' data-delay='3' data-increment="1">910</div>
 									<h4>Students</h4>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 col-xs-6 stats-grid stats-grid-1 gridw3">
 								<i class="fa fa-building-o" aria-hidden="true"></i>
 								<div class="w3-count-agile">
-									<div class="numscroller" data-slno='1' data-min='0' data-max='67' data-delay='3' data-increment="1">67</div>
+									<div class="numscroller" data-slno='1' data-min='0' data-max='89' data-delay='3' data-increment="1">89</div>
 									<h4>Classrooms</h4>
 								</div>
 							</div>
@@ -322,14 +323,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-6 col-sm-6 col-xs-6 stats-grid stats-grid-1 gridw3">
 								<i class="fa fa-book" aria-hidden="true"></i>
 								<div class="w3-count-agile">
-									<div class="numscroller" data-slno='1' data-min='0' data-max='77' data-delay='3' data-increment="1">77</div>
+									<div class="numscroller" data-slno='1' data-min='0' data-max='110' data-delay='3' data-increment="1">110</div>
 									<h4>Class Types</h4>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 col-xs-6 stats-grid stats-grid-1 gridw3">
 								<i class="fa fa-graduation-cap" aria-hidden="true"></i>
 								<div class="w3-count-agile">
-									<div class="numscroller" data-slno='1' data-min='0' data-max='95' data-delay='3' data-increment="1">95%</div>
+									<div class="numscroller" data-slno='1' data-min='0' data-max='97' data-delay='3' data-increment="1">97%</div>
 									<h4>Graduation</h4>
 								</div>
 							</div>
@@ -362,8 +363,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g1.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g1.jpg" alt="" />
 							<div>
-								<h5>Literature</h5>
-								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
+								<h5>Choose course</h5>
+								<span>Group learning outside</span>
 							</div>
 						</a>
 					</li>
@@ -371,8 +372,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g3.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g3.jpg" alt="" />
 							<div>
-								<h5>Literature</h5>
-								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
+								<h5>Choose course</h5>
+								<span>Scientific research</span>
 							</div>
 						</a>
 					</li>
@@ -380,8 +381,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g4.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g4.jpg" alt="" />
 							<div>
-								<h5>Literature</h5>
-								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
+								<h5>Choose course</h5>
+								<span>Outdoor game</span>
 							</div>
 						</a>
 					</li>
@@ -389,7 +390,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g5.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g5.jpg" alt="" />
 							<div>
-								<h5>Literature</h5>
+								<h5>Choose course</h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
@@ -398,7 +399,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g9.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g9.jpg" alt="" />
 							<div>
-								<h5>Literature</h5>
+								<h5>Choose course</h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
@@ -407,7 +408,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g8.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g8.jpg" alt="" />
 							<div>
-								<h5>Literature</h5>
+								<h5>Choose course</h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
@@ -416,7 +417,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g6.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g6.jpg" alt="" />
 							<div>
-								<h5>Literature</h5>
+								<h5>Choose course</h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
@@ -425,7 +426,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g7.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g7.jpg" alt="" />
 							<div>
-								<h5>Literature</h5>
+								<h5>Choose course</h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
@@ -434,7 +435,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g2.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g2.jpg" alt="" />
 							<div>
-								<h5>Literature</h5>
+								<h5>Choose course</h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
@@ -476,6 +477,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<figcaption>Carl Lii<span>Sed maximus eros quis leo congue ipsum sagittis.</span></figcaption>
 					</figure>
 					</a> </li>
+                    	<li class="mis-slide"> 
+				<!-- A slide element - the class is optional --> 
+					<a href="#" class="mis-container"> 
+					<!-- A slide container - this element is optional, if absent the plugin adds it automatically -->
+					<figure> 
+					<!-- Slide content - whatever you want --> 
+					<img src="images/9.png" alt=" " class="img-responsive" />
+					<figcaption>Ngô Bảo Châu<span>Sed maximus eros quis leo congue ipsum sagittis.</span></figcaption>
+					</figure>
+					</a> </li>
 				<li class="mis-slide"> <a href="#" class="mis-container">
 					<figure> <img src="images/6.jpg" alt=" " class="img-responsive" />
 					<figcaption>Michael Paul<span>Sed maximus eros quis leo congue ipsum sagittis.</span></figcaption>
@@ -496,11 +507,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<figcaption>Thomas Carl<span>Sed maximus eros quis leo congue ipsum sagittis.</span></figcaption>
 					</figure>
 					</a> </li>
-				<li class="mis-slide"> <a href="#" class="mis-container">
-					<figure> <img src="images/7.jpg" alt=" " class="img-responsive" />
-					<figcaption>Rosy Crisp<span>Sed maximus eros quis leo congue ipsum sagittis.</span></figcaption>
-					</figure>
-					</a> </li>
+				
 			</ol>
 		</div>
 	</div>
@@ -535,7 +542,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 				<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
 					<h4>Visit us</h4>
-					<h5>Parma Via Modena,BO, Italy</h5>
+					<h5>Võ Văn Ngân, Thủ Đức, tp.HCM</h5>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -545,7 +552,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 				<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
 					<h4>Mail us</h4>
-					<h5><a href="mailto:info@example.com">info@example.com</a></h5>
+					<h5>@student.hcmute.edu.vn</h5>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -555,7 +562,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 				<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
 					<h4>Call us</h4>
-					<h5>+18044261149</h5>
+					<h5>+8419008191</h5>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -565,7 +572,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 				<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
 					<h4>Work hours</h4>
-					<h5>Mon-Sat 09:00 AM - 05:00PM</h5>
+					<h5>Mon-Sat 08:00 AM - 05:00PM</h5>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -601,7 +608,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="clearfix"> </div>
 		</div>
 		<div class="col-md-6 w3ls_footer_grid1_left">
-			<p>&copy; 2017 Literature. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+			<p>&copy; 2017 doantotnghiep- hoconline- spkt  </p>
 		</div>
 		<div class="col-md-6 w3ls_footer_grid1_right">
 			<ul>
