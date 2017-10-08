@@ -47,11 +47,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<ul class="nav navbar-nav">
                          <li>
                   
-                           <a class="active" href="<?=base_url(); ?>">
-                            HOME</a></li>
-							<li><a href="#about" class="scroll">ABOUT</a></li>
-							<li><a href="#services" class="scroll">SERVICER</a></li>
-							<li><a href="#faculties" class="scroll">FACULTIES</a></li>
+                           <a class="active" href="<?=base_url(); ?>"><?=$this->lang->line('home'); ?></a></li>
+							<li><a href="#about" class="scroll"><?=$this->lang->line('about'); ?></a></li>
+							<li><a href="#services" class="scroll"><?=$this->lang->line('services'); ?></a></li>
+							<li><a href="#faculties" class="scroll"><?=$this->lang->line('teacher'); ?></a></li>
 							<li><a href="#gallery" class="scroll">GALLERY</a></li>	
 							<li><a href="#mail" class="scroll">MAIL US</a>
                           </li>
@@ -67,25 +66,25 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<li>
 								<div class="wthree_banner_info_grid">
 									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-									<h3>CLASS ONLINE</h3>
+									<h3><?=$this->lang->line('class_online'); ?></h3>
 									<p> always companion </p>
-									<a href="#about" class="w3-join scroll">Join Now</a>
+									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
 								</div>
 							</li>
 							<li>
 								<div class="wthree_banner_info_grid">
 									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-									<h3>CLASS OFFONLINE</h3>
+									<h3><?=$this->lang->line('class_online'); ?></h3>
 									<p>self-practicing science</p>
-									<a href="#about" class="w3-join scroll">Join Now</a>
+									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
 								</div>
 							</li>
 							<li>
 								<div class="wthree_banner_info_grid">
 									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-									<h3>CLASSES PRACTICE </h3>
+									<h3><?=$this->lang->line('class_online'); ?></h3>
 									<p>guide you to understand</p>
-									<a href="#about" class="w3-join scroll">Join Now</a>
+									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
 								</div>
 							</li>
 						</ul>
@@ -133,18 +132,17 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <div class="about" id="about">
 	<div class="container">
 		<h3 class="tittle-w3l"> 
-        About Us</h3>
+        <?=$this->lang->line('about'); ?></h3>
 		<div class="col-md-6 agileinfo_banner_bottom_right">
 			<div class="agileinfo_banner_bottom_right1">	
-				<h3>Join Now!</h3>
+				<h3><?=$this->lang->line('join_now'); ?></h3>
 				<div class="agileinfo_banner_bottom_right1_grid">
 					<form action="#" method="post">		
-						<input type="text" name="name" placeholder="Name" required>
+						<input type="text" name="name" placeholder="<?=$this->lang->line('name'); ?>" required>
 						<input type="email" name="email" placeholder="Email" required>
-						<input type="text" name="location" placeholder="Location" required>
-						<input type="text" name="city" placeholder="City" required>
-						<input type="text" name="phone" placeholder="Phone Number" required>
-						<input type="submit" value="Submit">
+						<input type="text" name="location" placeholder="<?=$this->lang->line('location'); ?>" required>
+						<input type="text" name="phone" placeholder="<?=$this->lang->line('phone_number'); ?>" required>
+						<input type="submit" value="<?=$this->lang->line('sigin'); ?>">
 					</form>
 				</div>
 			</div>
@@ -171,7 +169,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- services -->
 <div class="services" id="services">
 	<div class="container">
-		<h3 class="tittle-w3l">Our Services</h3>
+		<h3 class="tittle-w3l"><?=$this->lang->line('services'); ?></h3>
 		<div class="w3-services-grids">
 			<div class="col-md-4 col-sm-4 col-xs-4 w3l-services-grid">
 				<div class="w3ls-services-img">
@@ -208,7 +206,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Team -->
 <div class="team" id="faculties">
 	<div class="container">
-		<h3 class="tittle-w3l">Our Faculties</h3>
+		<h3 class="tittle-w3l"><?=$this->lang->line('teacher'); ?></h3>
 		<div class="agile_banner_bottom_grids">
 	    	<div class="col-md-3 col-sm-3 col-xs-3 agile_banner_bottom_grid">
 				<div class="w3layouts_banner_bottom_grid">
