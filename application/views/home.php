@@ -38,8 +38,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</button>
 						</div>
 						<h1>
-                        <a class="navbar-brand" href="<?=base_url(); ?>">CLASS LEARNING ONLINE
-                       <center>  <h2>your sent future </h2></center>
+                        <a class="navbar-brand" href="<?=base_url(); ?>"><?=$this->lang->line('class_online'); ?>
+                       <center>  <h2> <?=$this->lang->line('your sent future'); ?> </h2> </center>
                        </a>
                        </h1>
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -148,9 +148,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 		</div>
 		<div class="col-md-6 agileinfo_banner_bottom_left">
-			<h3>You can choose the program that matches your level</h3>
-			<em>Online learning has the following benefits</em>
-            <br>1. Reduce the cost of study</br>
+			<h3> <?=$this ->lang->line('You can choose the program that matches your level');?></h3>
+			<strong> Online learning has the following benefits </strong>
+            <br>1. Reduce the cost of study </br>
             <a1>2. Self-regulation: As an online learner. You can adjust the speed of course </a1>
             <br>3.Synchronization: The curriculum and materials of online courses are highly
             <a2>4. Interaction and Collaboration: Online learning you can interact with and interct with multiple people at the same time </a2>
@@ -176,7 +176,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<i class="fa fa-users" aria-hidden="true"></i>
 				</div>
 				<div class="agileits-services-info">
-					<h4>Qualified Teachers</h4>
+					<h4><?=$this ->lang->line('LIST_TEACHERS'); ?></h4>
 					<p>You can choose the conformity teacher for you </p>
 				</div>
 			</div>
@@ -286,10 +286,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 				</div>
 				<div class="col-md-6 home-agile-text">
-				   <h4> Enrollment and Study time</h4>
-				   <p>Schedule online classes and meet with teachers. Or you can watch videos when not online. Teachers communicate with you through offline sessions</p>
+				   <h4><?=$this->lang->line('Online study time');?></h4>
+				   <p><?=$this->lang->line('Schedule online classes and meet with teachers. Or you can watch videos when not online. Teachers communicate with you through offline sessions');?></p>
 				    <div class="date">
-						<h3>Opening Hours</h3>
+						<h3><?=$this->lang->line('Opening Hours');?></h3>
 					   <h5><i class="fa fa-calendar" aria-hidden="true"></i>Monday - Saturday</h5>
 					   <h5><i class="fa fa-clock-o" aria-hidden="true"></i> 10.00am - 07.00pm</h5>
 				   </div>
@@ -305,14 +305,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<i class="fa fa-users" aria-hidden="true"></i>
 								<div class="w3-count-agile">
 									<div class="numscroller" data-slno='1' data-min='0' data-max='910' data-delay='3' data-increment="1">910</div>
-									<h4>Students</h4>
+									<h4><?=$this->lang->line('student'); ?></h4>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 col-xs-6 stats-grid stats-grid-1 gridw3">
 								<i class="fa fa-building-o" aria-hidden="true"></i>
 								<div class="w3-count-agile">
 									<div class="numscroller" data-slno='1' data-min='0' data-max='89' data-delay='3' data-increment="1">89</div>
-									<h4>Classrooms</h4>
+									<h4><?=$this->lang->line('Classrooms'); ?></h4>
 								</div>
 							</div>
 							<div class="clearfix"></div>
