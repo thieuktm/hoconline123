@@ -148,18 +148,18 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 		</div>
 		<div class="col-md-6 agileinfo_banner_bottom_left">
-			<h3> <?=$this ->lang->line('You can choose the program that matches your level');?></h3>
-			<strong> Online learning has the following benefits </strong>
-            <br>1. Reduce the cost of study </br>
-            <a1>2. Self-regulation: As an online learner. You can adjust the speed of course </a1>
-            <br>3.Synchronization: The curriculum and materials of online courses are highly
-            <a2>4. Interaction and Collaboration: Online learning you can interact with and interct with multiple people at the same time </a2>
-            <br>5. Efficiency: Online learning helps individual and corporate learners not only save money but also meet their needs. </br>
-            <a3>6. Easy to access and convenient: Online technology-based learning is the Internet, so access is easy. You can reach and learn anywhere</a3>
+			<h3> <?=$this ->lang->line('You_can_choose_the_program_that_matches_your_level'); ?></h3>
+			<strong><?=$this->lang->line('Online_learning_has_the_following_benefits '); ?> </strong>
+            <br><?=$this->lang->line('1.Reduce_the_cost_of_study'); ?> </br>
+            <a1><?=$this ->lang->line('2.Self-regulation'); ?></a1>
+            <br><?=$this->lang->line('3.Synchronization'); ?> </br>
+            <a2><?=$this->lang->line('4.Interaction_and_Collaboration'); ?> </a2>
+            <br><?=$this->lang->line('5. Efficiency'); ?></br>
+            <a3><?=$this->lang->line('6.Easy-to-access-and-convenient'); ?></a3>
 			<ul>
-				<li><i class="fa fa-leanpub" aria-hidden="true"></i>The level of students</li>
-				<li><i class="fa fa-graduation-cap" aria-hidden="true"></i>The level Master's degree.</li>
-				<li><i class="fa fa-book" aria-hidden="true"></i>Research papers.</li>
+				<li><i class="fa fa-leanpub" aria-hidden="true"></i><?=$this->lang->line('The_level_of_students'); ?></li>
+				<li><i class="fa fa-graduation-cap" aria-hidden="true"></i><?=$this->lang->line('The-level-Master-degree'); ?></li>
+				<li><i class="fa fa-book" aria-hidden="true"></i><?=$this->lang->line('Research_papers.'); ?></li>
 			</ul>
 		</div>
 		<div class="clearfix"> </div>
@@ -177,7 +177,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 				<div class="agileits-services-info">
 					<h4><?=$this ->lang->line('LIST_TEACHERS'); ?></h4>
-					<p>You can choose the conformity teacher for you </p>
+					<p><?=$this ->lang->line('You _an_choose_the_conformity_teacher_for_you'); ?> </p>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-4 w3l-services-grid">
@@ -185,8 +185,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 				</div>
 				<div class="agileits-services-info">
-					<h4>Online Courses</h4>
-					<p>Choose the right online course for you to study </p>
+					<h4><?=$this->lang->line('Online_Courses'); ?> </h4>
+					<p><?=$this->lang->line('Choose_the_right_online_course_for_you_to_study');?> </p>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-4 w3l-services-grid">
@@ -194,8 +194,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<i class="fa fa-leanpub" aria-hidden="true"></i>
 				</div>
 				<div class="agileits-services-info">
-					<h4>Best Education</h4>
-					<p>Online education reduces learning costs and can be trained remotely. Educational development in the direction of digital technology </p>
+					<h4> <?=$this ->lang->line('Education_is_the_best'); ?> </h4>
+					<p><?=$this ->lang->line('Online_education_reduces_learning_costs_and_can_be_trained_remotely_Educational_development_in_the_direction_of_digital_technology'); ?> </p>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
@@ -279,17 +279,17 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				   <figure class="effect-moses">
 						<img src="images/2.jpg" alt="" />
 						<figcaption>
-							<h4>Best Education</h4>
-							<p>Best For Your Education</p>
+							<h4><?=$this->lang ->line('Best_Education'); ?></h4>
+							<p><?=$this->lang ->line('Best_For_Your_Education'); ?></p>
 						</figcaption>			
 				</figure>
 
 				</div>
 				<div class="col-md-6 home-agile-text">
 				   <h4><?=$this->lang->line('Online study time');?></h4>
-				   <p><?=$this->lang->line('Schedule online classes and meet with teachers. Or you can watch videos when not online. Teachers communicate with you through offline sessions');?></p>
+				   <p><?=$this->lang->line('Schedule_online_and_meet_teachers_Or_you_can_watch_the_video_when_not_online_Teachers_communicate_with_you_through_offline_sessions');?></p>
 				    <div class="date">
-						<h3><?=$this->lang->line('Opening Hours');?></h3>
+						<h3><?=$this->lang->line('opening_hours');?></h3>
 					   <h5><i class="fa fa-calendar" aria-hidden="true"></i>Monday - Saturday</h5>
 					   <h5><i class="fa fa-clock-o" aria-hidden="true"></i> 10.00am - 07.00pm</h5>
 				   </div>
@@ -297,7 +297,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<div class="clearfix"></div>	
 				 
 				<div class="col-md-6 home-agile-text w3-tex-2">
-					<p>Statistics on the number of students studying online, the number of classes currently open</p>
+					<p><?=$this ->lang->line('Statistics_on_the_number_of_students_studying_online_the_number_of_classes_currently_open'); ?></p>
 				   <!-- Counter -->
 					<section class="stats">
 						<div class="row-w3">
@@ -341,8 +341,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					 <figure class="effect-moses">
 						<img src="images/3.jpg" alt="" />
 						<figcaption>
-							<h4>Best Education</h4>
-							<p>Best For Your Education</p>
+							<h4><?=$this->lang ->line('Best_Education'); ?></h4>
+							<p><?=$this->lang ->line('Best_For_Your_Education'); ?></p>
 						</figcaption>			
 					</figure>
 				</div>
@@ -361,17 +361,17 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g1.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g1.jpg" alt="" />
 							<div>
-								<h5>Choose course</h5>
-								<span>Group learning outside</span>
+								<h5><?=$this->lang->line('Choose_course'); ?></h5>
+								<span><?=$this->lang->line('Group_learning_outside'); ?></span>
 							</div>
 						</a>
 					</li>
 					<li>
-						<a href="images/g3.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
-							<img src="images/g3.jpg" alt="" />
+						<a href="images/g12.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
+							<img src="images/g12.jpg" alt="" />
 							<div>
-								<h5>Choose course</h5>
-								<span>Scientific research</span>
+								<h5><?=$this->lang->line('Choose_course'); ?></h5>
+								<span><?=$this->lang->line('Scientific_research'); ?></span>
 							</div>
 						</a>
 					</li>
@@ -379,8 +379,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g4.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g4.jpg" alt="" />
 							<div>
-								<h5>Choose course</h5>
-								<span>Outdoor game</span>
+								<h5><?=$this->lang->line('Choose_course'); ?></h5>
+								<span><?=$this->lang->line('Outdoor_game'); ?></span>
 							</div>
 						</a>
 					</li>
@@ -388,52 +388,52 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="images/g5.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
 							<img src="images/g5.jpg" alt="" />
 							<div>
-								<h5>Choose course</h5>
+								<h5><?=$this->lang->line('Choose_course'); ?></h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
 					</li>
 					<li>	
-						<a href="images/g9.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
-							<img src="images/g9.jpg" alt="" />
+						<a href="images/g7.png" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
+							<img src="images/g7.png" alt="" />
 							<div>
-								<h5>Choose course</h5>
+								<h5><?=$this->lang->line('Choose_course'); ?></h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
 					</li>
 					<li>
-						<a href="images/g8.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
-							<img src="images/g8.jpg" alt="" />
+						<a href="images/g10.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
+							<img src="images/g10.jpg" alt="" />
 							<div>
-								<h5>Choose course</h5>
+								<h5><?=$this->lang->line('Choose_course'); ?></h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
 					</li>
 					<li>
-						<a href="images/g6.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
-							<img src="images/g6.jpg" alt="" />
+						<a href="images/g9.png" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
+							<img src="images/g9.png" alt="" />
 							<div>
-								<h5>Choose course</h5>
+								<h5><?=$this->lang->line('Choose_course'); ?></h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
 					</li>
 					<li>
-						<a href="images/g7.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
-							<img src="images/g7.jpg" alt="" />
+						<a href="images/g15.png" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
+							<img src="images/g15.png" alt="" />
 							<div>
-								<h5>Choose course</h5>
+								<h5><?=$this->lang->line('Choose_course'); ?></h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
 					</li>
 					<li>
-						<a href="images/g2.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
-							<img src="images/g2.jpg" alt="" />
+						<a href="images/g14.png" class=" mask b-link-stripe b-animate-go   swipebox"  title="">
+							<img src="images/g14.png" alt="" />
 							<div>
-								<h5>Choose course</h5>
+								<h5><?=$this->lang->line('Choose_course'); ?></h5>
 								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
 							</div>
 						</a>
@@ -460,7 +460,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- testimonials -->
 <div class="testimonials">
 	<div class="container">
-	<h3 class="tittle-w3l">Our People says</h3>
+	<h3 class="tittle-w3l"><?=$this->lang->line('People_success'); ?></h3>
 		<div class="mis-stage"> 
 			<!-- The element to select and apply miSlider to - the class is optional -->
 			<ol class="mis-slider">
@@ -472,7 +472,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<figure> 
 					<!-- Slide content - whatever you want --> 
 					<img src="images/5.jpg" alt=" " class="img-responsive" />
-					<figcaption>Carl Lii<span>Sed maximus eros quis leo congue ipsum sagittis.</span></figcaption>
+					<figcaption>Carl Lii<span>Send mail</span></figcaption>
 					</figure>
 					</a> </li>
                     	<li class="mis-slide"> 
@@ -482,27 +482,27 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<figure> 
 					<!-- Slide content - whatever you want --> 
 					<img src="images/9.png" alt=" " class="img-responsive" />
-					<figcaption>Ngô Bảo Châu<span>Sed maximus eros quis leo congue ipsum sagittis.</span></figcaption>
+					<figcaption>Ngô Bảo Châu<span>Send mail</span></figcaption>
 					</figure>
 					</a> </li>
 				<li class="mis-slide"> <a href="#" class="mis-container">
 					<figure> <img src="images/6.jpg" alt=" " class="img-responsive" />
-					<figcaption>Michael Paul<span>Sed maximus eros quis leo congue ipsum sagittis.</span></figcaption>
+					<figcaption>Michael Paul<span>Send mail</span></figcaption>
 					</figure>
 					</a> </li>
 				<li class="mis-slide"> <a href="link" class="mis-container">
 					<figure> <img src="images/7.jpg" alt=" " class="img-responsive" />
-					<figcaption>Henry Doe<span>Sed maximus eros quis leo congue ipsum sagittis.</span></figcaption>
+					<figcaption>Henry Doe<span>Send mail</span></figcaption>
 					</figure>
 					</a> </li>
 				<li class="mis-slide"> <a href="#" class="mis-container">
 					<figure> <img src="images/8.jpg" alt=" " class="img-responsive" />
-					<figcaption>Laura James<span>Sed maximus eros quis leo congue ipsum sagittis.</span></figcaption>
+					<figcaption>Laura James<span>Send mail</span></figcaption>
 					</figure>
 					</a> </li>
 				<li class="mis-slide"> <a href="#" class="mis-container">
 					<figure> <img src="images/6.jpg" alt=" " class="img-responsive" />
-					<figcaption>Thomas Carl<span>Sed maximus eros quis leo congue ipsum sagittis.</span></figcaption>
+					<figcaption>Thomas Carl<span>Send mail</span></figcaption>
 					</figure>
 					</a> </li>
 				
@@ -519,27 +519,27 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="col-md-7 agileinfo_mail_grid_right">
 				<form action="#" method="post">
 					<div class="col-md-6 col-sm-6 wthree_contact_left_grid">
-						<input type="text" name="Name" placeholder="Name" required>
+						<input type="text" name="Name" placeholder="Họ Và Tên" required>
 						<input type="email" name="Email" placeholder="Email" required>
 					</div>
 					<div class="col-md-6 col-sm-6 wthree_contact_left_grid">
-						<input type="text" name="Telephone" placeholder="Telephone" required>
-						<input type="text" name="Subject" placeholder="Subject" required>
+						<input type="text" name="Telephone" placeholder="Số Điện Thoại" required>
+						<input type="text" name="Subject" placeholder="Môn Học" required>
 					</div>
 					<div class="clearfix"> </div>
 					<textarea name="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>Message...</textarea>
-					<input type="submit" value="Submit">
+					<input type="submit" value="Send">
 					<input type="reset" value="Clear">
 				</form>
 			</div>
 			<div class="col-md-5 contact-left-w3ls">
-			<h3>Contact Info</h3>
+			<h3><?=$this->lang->line('Contact_Info'); ?></h3>
 			<div class="visit">
 				<div class="col-md-2 col-sm-2 col-xs-2 contact-icon-wthree">
 					<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
 				</div>
 				<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
-					<h4>Visit us</h4>
+					<h4><?=$this->lang->line('address'); ?></h4>
 					<h5>Võ Văn Ngân, Thủ Đức, tp.HCM</h5>
 				</div>
 				<div class="clearfix"></div>
@@ -549,8 +549,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 				</div>
 				<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
-					<h4>Mail us</h4>
-					<h5>@student.hcmute.edu.vn</h5>
+					<h4><?=$this->lang->line('Mail_us'); ?></h4>
+					<h5>spkt@student.hcmute.edu.vn</h5>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -559,7 +559,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
 				</div>
 				<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
-					<h4>Call us</h4>
+					<h4><?=$this->lang->line('Call_us'); ?></h4>
 					<h5>+8419008191</h5>
 				</div>
 				<div class="clearfix"></div>
@@ -569,8 +569,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
 				</div>
 				<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
-					<h4>Work hours</h4>
-					<h5>Mon-Sat 08:00 AM - 05:00PM</h5>
+					<h4><?=$this->lang->line('Work_hours'); ?></h4>
+					<h5><?=$this->lang->line('Mon-Sat'); ?> </h5>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -601,20 +601,20 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-4 col-xs-4 w3ls_footer_grid_right">
-				<h2><a href="<?=base_url(); ?>">Literature</a></h2>
+				<h2><a href="<?=base_url(); ?>">Đồ Án Tốt Nghiệp</a></h2>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 		<div class="col-md-6 w3ls_footer_grid1_left">
-			<p>&copy; 2017 doantotnghiep- hoconline- spkt  </p>
+			<p>&copy; 2017 doantotnghiep-NguyenVanThieu-10119052</p>
 		</div>
 		<div class="col-md-6 w3ls_footer_grid1_right">
 			<ul>
 				<li>
-					<a href="#about" class="scroll">About</a>
+					<a href="#about" class="scroll"><?=$this->lang->line('about'); ?></a>
 				</li>
 				<li>
-					<a href="#services" class="scroll">Services</a>
+					<a href="#services" class="scroll"><?=$this->lang->line('services'); ?></a>
 				</li>
 				<li>
 					<a href="#faculties" class="scroll">Faculties</a>
