@@ -18,14 +18,14 @@
 		</div>
 		 <div class="header-top-right">
 			<div class="signin">
-				<a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Sign Up</a>
+				<a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Đăn ký</a>
 				<!-- pop-up-box -->
 								<script type="text/javascript" src="<?=base_url(); ?>js/modernizr.custom.min.js"></script>    
 								<link href="<?=base_url(); ?>css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 								<script src="<?=base_url(); ?>js/jquery.magnific-popup.js" type="text/javascript"></script>
 								<!--//pop-up-box -->
 								<div id="small-dialog2" class="mfp-hide">
-									<h3>Create Account</h3> 
+									<h3>Tạo tài khoản</h3> 
 									<div class="social-sits">
 										<div class="facebook-button">
 											<a href="#">Connect with Facebook</a>
@@ -160,7 +160,7 @@
 								</script>	
 			</div>
 			<div class="signin">
-				<a href="#small-dialog" class="play-icon popup-with-zoom-anim">Sign In</a>
+				<a href="#small-dialog" class="play-icon popup-with-zoom-anim">Đăng nhập</a>
 				<div id="small-dialog" class="mfp-hide">
 					<h3>Login</h3>
 					<div class="social-sits">

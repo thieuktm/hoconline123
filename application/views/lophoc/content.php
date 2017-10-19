@@ -1,7 +1,7 @@
 <div class="main-grids">
 	<div class="top-grids">
 		<div class="recommended-info">
-			<h3>Recent Videos</h3>
+			<h3>Khóa học mới</h3>
 		</div>
 		<div class="col-md-4 resent-grid recommended-grid slider-top-grids">
 			<div class="resent-grid-img recommended-grid-img">
@@ -14,10 +14,10 @@
 				</div>
 			</div>
 			<div class="resent-grid-info recommended-grid-info">
-				<h3><a href="single.html" class="title title-info">Pellentesque vitae pulvinar tortor nullam interdum metus a imperdiet</a></h3>
+				<h3><a href="single.html" class="title title-info">Đào tạo lập trình viên viên quốc tế</a></h3>
 				<ul>
 					<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-					<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
+					<li class="right-list"><p class="views views-info">200 học viên</p></li>
 				</ul>
 			</div>
 		</div>
@@ -32,10 +32,10 @@
 				</div>
 			</div>
 			<div class="resent-grid-info recommended-grid-info">
-				<h3><a href="single.html" class="title title-info">Interdum pellentesque vitae pulvinar tortor nullam metus a imperdiet</a></h3>
+				<h3><a href="single.html" class="title title-info">Lập trình viên viết web</a></h3>
 				<ul>
 					<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-					<li class="right-list"><p class="views views-info">4,200 views</p></li>
+					<li class="right-list"><p class="views views-info">200 học viên</p></li>
 				</ul>
 			</div>
 		</div>
@@ -50,10 +50,10 @@
 				</div>
 			</div>
 			<div class="resent-grid-info recommended-grid-info">
-				<h3><a href="single.html" class="title title-info">Nullam interdum metus a imperdiet pellentesque vitae pulvinar tortor</a></h3>
+				<h3><a href="single.html" class="title title-info">Lớp tiếng Nhật N3</a></h3>
 				<ul>
 					<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-					<li class="right-list"><p class="views views-info">71,174 views</p></li>
+					<li class="right-list"><p class="views views-info">174 học viên</p></li>
 				</ul>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 	<div class="recommended">
 		<div class="recommended-grids">
 			<div class="recommended-info">
-				<h3>Animated Cartoon</h3>
+				<h3>Lớp học hot</h3>
 			</div>
 			<script src="<?=base_url(); ?>js/responsiveslides.min.js"></script>
 			 <script>
@@ -100,13 +100,13 @@
 									</div>
 								</div>
 								<div class="resent-grid-info recommended-grid-info">
-									<h5><a href="single.html" class="title">Varius sit sed viverra nullam viverra nullam interdum metus</a></h5>
+									<h5><a href="single.html" class="title">Tiếng Anh dành cho người đi làm</a></h5>
 									<div class="slid-bottom-grids">
 										<div class="slid-bottom-grid">
 											<p class="author author-info"><a href="#" class="author">John Maniya</a></p>
 										</div>
 										<div class="slid-bottom-grid slid-bottom-right">
-											<p class="views views-info">2,114,200 views</p>
+											<p class="views views-info">114,200 học viên</p>
 										</div>
 										<div class="clearfix"> </div>
 									</div>
@@ -123,13 +123,13 @@
 									</div>
 								</div>
 								<div class="resent-grid-info recommended-grid-info">
-									<h5><a href="single.html" class="title">Nullam interdum metus varius viverra nullam sit amet viverra</a></h5>
+									<h5><a href="single.html" class="title">Luyện thi đại học môn Toán</a></h5>
 									<div class="slid-bottom-grids">
 										<div class="slid-bottom-grid">
 											<p class="author author-info"><a href="#" class="author">John Maniya</a></p>
 										</div>
 										<div class="slid-bottom-grid slid-bottom-right">
-											<p class="views views-info">14,200 views</p>
+											<p class="views views-info">14,200 học viên</p>
 										</div>
 										<div class="clearfix"> </div>
 									</div>
@@ -146,7 +146,7 @@
 									</div>
 								</div>
 								<div class="resent-grid-info recommended-grid-info">
-									<h5><a href="single.html" class="title">Varius sit sed viverra nullam viverra nullam interdum metus</a></h5>
+									<h5><a href="single.html" class="title">Luyện thi đại học môn Hóa học</a></h5>
 									<div class="slid-bottom-grids">
 										<div class="slid-bottom-grid">
 											<p class="author author-info"><a href="#" class="author">John Maniya</a></p>
@@ -482,7 +482,7 @@
 	<div class="recommended">
 		<div class="recommended-grids">
 			<div class="recommended-info">
-				<h3>Recommended</h3>
+				<h3>Cấp 1</h3>
 			</div>
 			<div class="col-md-3 resent-grid recommended-grid">
 				<div class="resent-grid-img recommended-grid-img">
@@ -495,7 +495,7 @@
 					</div>
 				</div>
 				<div class="resent-grid-info recommended-grid-info video-info-grid">
-					<h5><a href="single.html" class="title">Varius sit sed viverra viverra nullam nullam interdum metus</a></h5>
+					<h5><a href="single.html" class="title">Lớp 1</a></h5>
 					<ul>
 						<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
 						<li class="right-list"><p class="views views-info">2,114,200 views</p></li>
