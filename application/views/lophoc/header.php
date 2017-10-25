@@ -18,7 +18,7 @@
 		</div>
 		 <div class="header-top-right">
 			<div class="signin">
-				<a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Đăn ký</a>
+				<a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Đăng ký</a>
 				<!-- pop-up-box -->
 								<script type="text/javascript" src="<?=base_url(); ?>js/modernizr.custom.min.js"></script>    
 								<link href="<?=base_url(); ?>css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
@@ -176,7 +176,7 @@
 					</div>
 					<div class="signup">
 						<form>
-							<input type="text" class="email" placeholder="Enter email / mobile" required pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?"/>
+							<input type="text" class="email" placeholder="Enter email / mobile" required pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" title="Bạn chưa nhập Email"/>
 							<input type="password" placeholder="Password" required pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
 							<input type="submit"  value="LOGIN"/>
 						</form>

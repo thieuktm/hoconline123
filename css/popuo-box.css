@@ -770,7 +770,7 @@ button::-moz-focus-inner {
 .facebook-button a{
     background: url(../images/fb1.png) no-repeat 14px 15px #3b5998;
     color: #fff;
-    padding: 1em 1em 1em 3em;
+    padding: 1em 1em 1em 1em;
     text-decoration: none;
     font-size: 14px;
 }
@@ -778,7 +778,7 @@ button::-moz-focus-inner {
     background: url(../images/ch1.png) no-repeat 14px 15px #dd4b39;
     color: #FFF;
     font-size: 14px;
-    padding: 1em 1em 1em 3em;
+    padding: 1em 2em 1em 1em;
     text-decoration: none;
 }
 .social-sits p{
