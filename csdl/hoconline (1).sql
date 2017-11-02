@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 31, 2017 lúc 03:09 PM
+-- Thời gian đã tạo: Th10 02, 2017 lúc 12:59 PM
 -- Phiên bản máy phục vụ: 5.7.19
 -- Phiên bản PHP: 5.6.31
 
@@ -63,6 +63,17 @@ CREATE TABLE IF NOT EXISTS `dang_ky` (
   KEY `MaMH` (`MaMH`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `dang_ky`
+--
+
+INSERT INTO `dang_ky` (`MaHV`, `MaMH`, `Diem`) VALUES
+(1010, 10, 7),
+(1011, 10, 7),
+(1012, 11, 7),
+(1013, 10, 6),
+(1014, 12, 7);
+
 -- --------------------------------------------------------
 
 --
@@ -80,6 +91,15 @@ CREATE TABLE IF NOT EXISTS `giao_trinh` (
   `gioithieu` text COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`MaMH`,`Ma_Giaotrinh`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `giao_trinh`
+--
+
+INSERT INTO `giao_trinh` (`MaMH`, `Ma_Giaotrinh`, `TenGiaotrinh`, `video`, `noidungchinh`, `noidungfull`, `gioithieu`) VALUES
+('10', 'Anh_van', 'tiếng anh', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn'),
+('14', 'ngu_van', 'ngữ Văn', '', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ'),
+('12', 'toan_lop1', 'toán', '', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư');
 
 -- --------------------------------------------------------
 
