@@ -1,18 +1,19 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Lophoc extends CI_Controller {
+class Lop extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
 		$this->lang->load('home','vietnamese'); 
 		$this->load->model('Mlophoc');
 	}
-	public function index()
+	public function index($id)
 	{
+		$id = $this->uri->segment('3');
 		$data['title'] = 'CLASS ONLINE | Home';
 		$data['active'] = 1;
-		$data['content'] = 'lophoc/content';
+		$data['content'] = 'lophoc/hienthi';
 		$data['lophoc_moi'] = $this->Mlophoc->lophoc(3);
 		$data['lophoc_hot'] = $this->Mlophoc->lophoc(12);
 		$data['cap1'] = $this->Mlophoc->cap1();
