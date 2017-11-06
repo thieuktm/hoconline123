@@ -2,10 +2,10 @@
 	<div class="recommended">
 		<div class="recommended-grids">
 			<div class="recommended-info">
-				<h3>Cấp 1</h3>
+				<h3>Cấp 2</h3>
 			</div>
 			<?php
-			foreach($cap1 as $tam)
+			foreach($cap2 as $tam)
 			{
 			?>
 			<div class="col-md-3 resent-grid recommended-grid">
@@ -21,7 +21,7 @@
 				<div class="resent-grid-info recommended-grid-info video-info-grid">
 					<h5><a href="<?=base_url('lop/'.$tam['MaLH']); ?>" class="title"><?=$tam['TenLH']; ?></a></h5>
 					<ul>
-						<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
+						<li><p class="author author-info"><a href="#" class="author">John </a></p></li>
 						<li class="right-list"><p class="views views-info"><?=$tam['Soluong_HV']; ?> học viên</p></li>
 					</ul>
 				</div>

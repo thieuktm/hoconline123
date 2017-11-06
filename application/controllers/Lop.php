@@ -15,8 +15,9 @@ class Lop extends CI_Controller {
 		$data['active'] = 1;
 		$data['content'] = 'lophoc/hienthi';
 		$data['lophoc_moi'] = $this->Mlophoc->lophoc(3);
-		$data['lophoc_hot'] = $this->Mlophoc->lophoc(12);
+		$data['lophoc_hot'] = $this->Mlophoc->lophoc(16);
 		$data['cap1'] = $this->Mlophoc->cap1();
+		$data['cap2'] = $this->Mlophoc->cap2();
 		
 		$this->load->view('lophoc',$data);
 	}
@@ -26,6 +27,14 @@ class Lop extends CI_Controller {
 		$data['active'] = 2;
 		$data['content'] = 'lophoc/cap1';
 		$data['cap1'] = $this->Mlophoc->cap1();
+		$this->load->view('lophoc', $data);
+	}
+	public function cap2()
+	{
+		$data['title'] = 'CLASS ONLINE | Cấp 2';
+		$data['active'] = 3;
+		$data['content'] = 'lophoc/cap2';
+		$data['cap2'] = $this->Mlophoc->cap2();
 		$this->load->view('lophoc', $data);
 	}
 	public function baihoc()

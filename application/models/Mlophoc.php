@@ -22,7 +22,30 @@ class Mlophoc extends CI_Model{
 		//$this->db->limit();
 		return $this->db->get()->result_array();
 	}
-
+	public function cap2()
+	{
+		$this->db->from('lop_hoc');
+		$this->db->where('cap = 2');
+		//$this->db->order_by('MaLH', 'desc');
+		//$this->db->limit();
+		return $this->db->get()->result_array();
+	}
+	public function cap3()
+	{
+		$this->db->from('lop_hoc');
+		$this->db->where('cap = 3');
+		//$this->db->order_by('MaLH', 'desc');
+		//$this->db->limit();
+		return $this->db->get()->result_array();
+	}
+	public function cap4()
+	{
+		$this->db->from('lop_hoc');
+		$this->db->where('cap = 4');
+		//$this->db->order_by('MaLH', 'desc');
+		//$this->db->limit();
+		return $this->db->get()->result_array();
+	}
 	public function countAll(){
 		return $this->db->count_all($this->_table); 
 	}
