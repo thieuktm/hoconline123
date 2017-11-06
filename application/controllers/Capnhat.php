@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Capnhat extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
@@ -12,7 +12,8 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('home');
+		echo $_SESSION['login'];
+		//$this->load->view('home');
 	}
 	public function dangky()
 	{
@@ -37,30 +38,5 @@ class Home extends CI_Controller {
 		}
 		//$this->load->view('home');
 	}
-	public function dangnhap()
-	{
-		if(isset($_POST['dangnhap']))
-		{
-			$email = $this->input->post('email');
-			$pass = md5($this->input->post('pass'));
-			if($this->mhocvien->check_mail_pass($email,$pass) == TRUE)
-			{
-				$this->session->set_userdata("login", $email);
-				redirect(base_url('lophoc'));
-			}
-			else
-				echo '<script>alert("Tài khoản hoặc mật khẩu không đúng.");</script>';
-		}
-		//$this->load->view('home');
-	}
-	public function dangxuat()
-	{
-		//đăng xuất
-		$this->session->unset_userdata("login");
-		redirect(base_url());
-		//view
-		
-	}
-	
 }
 ?>

@@ -11,14 +11,41 @@
 	</div>
 	<div id="navbar" class="navbar-collapse collapse">
 		<div class="top-search">
-			<form class="navbar-form navbar-right">
-				<input type="text" class="form-control" placeholder="Search...">
+			<form class="navbar-form navbar-right" action="#" method="get">
+				<input type="text" name="tukhoa" class="form-control" placeholder="Search...">
 				<input type="submit" value=" ">
 			</form>
 		</div>
 		 <div class="header-top-right">
+			 <?php 
+			 if(isset($_SESSION['login']))
+			 {
+			?> 
+			<div class="dropdown">
+				<button class="btn dropdown-toggle btn btn-info" type="button" id="dropdownMenu1" data-toggle="dropdown">
+			<?=$_SESSION['login']; ?>
+			<span class="caret"></span>
+			</button>
+
+				<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a>
+					</li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
+					</li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="<?=base_url('home/dangxuat'); ?>">Đăng xuất</a>
+					</li>
+				</ul>
+			</div>
+			<?php	 
+			 }
+			 else
+			 {
+			 ?>
 			<div class="signin">
-				<a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Đăng ký</a>
+				<a href="#small-dialog3" class="play-icon popup-with-zoom-anim">Đăng ký</a>
 				<!-- pop-up-box -->
 								<script type="text/javascript" src="<?=base_url(); ?>js/modernizr.custom.min.js"></script>    
 								<link href="<?=base_url(); ?>css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
@@ -48,7 +75,7 @@
 									<div class="clearfix"> </div>
 								</div>	
 								<div id="small-dialog3" class="mfp-hide">
-									<h3>Create Account</h3> 
+									<h3>Đăng ký tài khoản</h3> 
 									<div class="social-sits">
 										<div class="facebook-button">
 											<a href="#">Connect with Facebook</a>
@@ -61,11 +88,12 @@
 										</div>
 									</div>
 									<div class="signup">
-										<form>
-											<input type="text" class="email" placeholder="Email" required pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" title="Enter a valid email"/>
-											<input type="password" placeholder="Password" required pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
-											<input type="text" class="email" placeholder="Mobile Number" maxlength="10" pattern="[1-9]{1}\d{9}" title="Enter a valid mobile number" />
-											<input type="submit"  value="Sign Up"/>
+										<form action="<?=base_url('home/dangky'); ?>" enctype="multipart/form-data" method="post">
+											<input type="text" name="email" class="email" placeholder="Nhập email" required pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" title="Enter a valid email"/>
+											<input type="password" name="pass" placeholder="Mật khẩu" required pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
+											<input type="password" name="repass" placeholder="Nhập lại mật khẩu" required pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
+											<!--<input type="text" class="email" placeholder="Mobile Number" maxlength="10" pattern="[1-9]{1}\d{9}" title="Enter a valid mobile number" />-->
+											<input type="submit" name="dangky"  value="Đăng ký"/>
 										</form>
 									</div>
 									<div class="clearfix"> </div>
@@ -175,10 +203,10 @@
 						</div>
 					</div>
 					<div class="signup">
-						<form>
-							<input type="text" class="email" placeholder="Enter email / mobile" required pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" title="Bạn chưa nhập Email"/>
-							<input type="password" placeholder="Password" required pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
-							<input type="submit"  value="LOGIN"/>
+						<form action="<?=base_url('home/dangnhap'); ?>" enctype="multipart/form-data" method="post">
+							<input type="text" name="email" class="email" placeholder="Enter email / mobile" required pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" title="Bạn chưa nhập Email"/>
+							<input type="password" name="pass" placeholder="Password" required pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
+							<input type="submit" name="dangnhap"  value="LOGIN"/>
 						</form>
 						<div class="forgot">
 							<a href="#">Forgot password ?</a>
@@ -188,6 +216,9 @@
 				</div>
 			</div>
 			<div class="clearfix"> </div>
+			 <?php
+			 }
+			 ?>
 		</div>
 	</div>
 	<div class="clearfix"> </div>

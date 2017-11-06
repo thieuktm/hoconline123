@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
-<html>
-<head>
+<html><head>
 <title><?=$title; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -14,6 +13,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Custom Theme files -->
 <link href="<?=base_url(); ?>css/style1.css" rel='stylesheet' type='text/css' media="all" />
 <script src="<?=base_url(); ?>js/jquery-1.11.1.min.js"></script>
+	<!--<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.min.js"></script>-->
+	<!--<script type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>-->
+	<!--<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-migrate-3.0.0.js"></script>-->
 <!--start-smoth-scrolling-->
 <!-- fonts -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
