@@ -51,8 +51,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<li><a href="#about" class="scroll"><?=$this->lang->line('about'); ?></a></li>
 							<li><a href="#services" class="scroll"><?=$this->lang->line('services'); ?></a></li>
 							<li><a href="#faculties" class="scroll"><?=$this->lang->line('teacher'); ?></a></li>
-							<li><a href="#gallery" class="scroll">GALLERY</a></li>	
-							<li><a href="#mail" class="scroll">MAIL US</a>
+							<li><a href="#gallery" class="scroll"><?=$this->lang->line('GALLERY'); ?></a></li>	
+							<li><a href="#mail" class="scroll"><?=$this->lang->line('MAIL_US'); ?></a>
                           </li>
 						</ul>
 						<div class="clearfix"> </div>							
@@ -133,20 +133,60 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="container">
 		<h3 class="tittle-w3l"> 
         <?=$this->lang->line('about'); ?></h3>
+        <!--<form class="form-horizontal" role="form" >-->
 		<div class="col-md-6 agileinfo_banner_bottom_right">
 			<div class="agileinfo_banner_bottom_right1">	
 				<h3><?=$this->lang->line('join_now'); ?></h3>
+				
 				<div class="agileinfo_banner_bottom_right1_grid">
-					<form action="#" method="post">		
-						<input type="text" name="name" placeholder="<?=$this->lang->line('name'); ?>" required>
-						<input type="email" name="email" placeholder="Email" required>
-						<input type="text" name="location" placeholder="<?=$this->lang->line('location'); ?>" required>
-						<input type="text" name="phone" placeholder="<?=$this->lang->line('phone_number'); ?>" required>
-						<input type="submit" value="<?=$this->lang->line('sigin'); ?>">
-					</form>
+													
+						<input type="text" name="ten" id="ten" placeholder="<?=$this->lang->line('name'); ?>" required>
+						<input type="date" name="ngsinh" id="ngsinh" placeholder="<?=$this->lang->line('date_of_birth'); ?>" required>
+						<select name="gioi_tinh" id="gioi_tinh">
+							<option value="1">Nam</option>
+							<option value="2">Nữ</option>
+							<option value="3">Khác</option>
+						</select>
+						<input type="email" name="email" id="email" placeholder="Email" required>
+						<input type="password" name="pass" id="pass" placeholder="Mật khẩu" required>
+						<input type="password" name="repass" id="repass" placeholder="Nhập lại mật khẩu" required>
+						
+						
+						<button class="dangky" type="button" name="dangky" onClick="return dangky_home()"><?=$this->lang->line('sigin'); ?></button>
+					<!--</form>-->
 				</div>
 			</div>
 		</div>
+		<script>
+			function dangky_home(){
+				var ten = $('#ten').val();
+				var ngsinh = $('#ngsinh').val();
+				var gioi_tinh = $('#gioi_tinh').val();
+				var email = $('#email').val();
+				var pass = $('#pass').val();
+				var repass = $('#repass').val();
+					$.ajax({
+						dataType: "json",
+						type:"POST",
+						url:"<?=base_url('home/dangky_home'); ?>",
+						data:{ten:ten,ngsinh:ngsinh,gioi_tinh:gioi_tinh,email:email,pass:pass,repass:repass},
+						success: function(result){
+							if(result == 1)
+							{
+								alert("Mật khẩu không đúng");
+								//setTimeout(function(){
+//									location.reload();
+//								},1000);
+							}
+							else if (result == 2)
+							{
+								alert("Tài khoản đã tồn tại");
+							}
+						}
+					});
+				
+			}
+		</script>
 		<div class="col-md-6 agileinfo_banner_bottom_left">
 			<h3> <?=$this ->lang->line('You_can_choose_the_program_that_matches_your_level'); ?></h3>
 			<strong><?=$this->lang->line('Online_learning_has_the_following_benefits '); ?> </strong>

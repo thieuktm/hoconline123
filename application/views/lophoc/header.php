@@ -28,11 +28,11 @@
 			</button>
 
 				<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Khóa Học</a>
 					</li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="<?=base_url('menu'); ?>">Kích Hoạt hóa học</a>
 					</li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="<?=base_url('capnhat'); ?>">Chỉnh sửa thông tin</a>
 					</li>
 					<li role="presentation" class="divider"></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1" href="<?=base_url('home/dangxuat'); ?>">Đăng xuất</a>
@@ -84,7 +84,7 @@
 											<a href="#">Connect with Google</a>
 										</div>
 										<div class="button-bottom">
-											<p>Already have an account? <a href="#small-dialog" class="play-icon popup-with-zoom-anim">Login</a></p>
+											<p>Bạn đã có tài khoản chưa? <a href="#small-dialog" class="play-icon popup-with-zoom-anim">Đăng Nhập</a></p>
 										</div>
 									</div>
 									<div class="signup">
@@ -120,7 +120,7 @@
 									</div>
 									<div class="clearfix"> </div>
 								</div>		
-								<div id="small-dialog4" class="mfp-hide">
+								<!--<div id="small-dialog4" class="mfp-hide">
 									<h3>Feedback</h3> 
 									<div class="feedback-grids">
 										<div class="feedback-grid">
@@ -156,7 +156,7 @@
 												<p><a href="#small-dialog6" class="play-icon popup-with-zoom-anim">Aliquam eget ante non orci fac</a></p>
 											</div>
 										</div>
-								</div>
+								</div>-->
 								<div id="small-dialog6" class="mfp-hide">
 									<div class="video-information-text">
 										<h4>Video information & settings</h4>
@@ -199,7 +199,7 @@
 							<a href="#">Connect with Google</a>
 						</div>
 						<div class="button-bottom">
-							<p>New account? <a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Signup</a></p>
+							<p>Tài khoản mới? <a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Đăng ký</a></p>
 						</div>
 					</div>
 					<div class="signup">
@@ -209,7 +209,7 @@
 							<input type="submit" name="dangnhap"  value="LOGIN"/>
 						</form>
 						<div class="forgot">
-							<a href="#">Forgot password ?</a>
+							<a href="#">Quên mật khẩu ?</a>
 						</div>
 					</div>
 					<div class="clearfix"> </div>

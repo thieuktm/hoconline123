@@ -352,7 +352,7 @@ background: -ms-linear-gradient(to right, rgba(0, 128, 0, 0.7),rgba(0, 0, 255, 0
 .agileinfo_banner_bottom_right1_grid{
 	padding:2em;
 }
-.agileinfo_banner_bottom_right1_grid input[type="text"], .agileinfo_banner_bottom_right1_grid input[type="email"] {
+.agileinfo_banner_bottom_right1_grid input[type="text"], .agileinfo_banner_bottom_right1_grid input[type="email"], .agileinfo_banner_bottom_right1_grid input[type="password"], .agileinfo_banner_bottom_right1_grid input[type="date"], .agileinfo_banner_bottom_right1_grid select {
     width: 100%;
     padding: .9em 1.5em;
     color: #999;
@@ -365,7 +365,7 @@ background: -ms-linear-gradient(to right, rgba(0, 128, 0, 0.7),rgba(0, 0, 255, 0
 .agileinfo_banner_bottom_right1_grid input::-webkit-input-placeholder,.agileinfo_mail_grid_right input[type="text"]::-webkit-input-placeholder, .agileinfo_mail_grid_right input[type="email"]::-webkit-input-placeholder{
 	color:#555 !important;
 }
-.agileinfo_banner_bottom_right1_grid input[type="submit"] {
+.agileinfo_banner_bottom_right1_grid input[type="submit"], .dangky {
     width: 100%;
     background: #000;
     padding: 13px;
@@ -383,7 +383,7 @@ background: -ms-linear-gradient(to right, rgba(0, 128, 0, 0.7),rgba(0, 0, 255, 0
 	-ms-transition:0.5s all;
 	transition:0.5s all;	
 }
-.agileinfo_banner_bottom_right1_grid input[type="submit"]:hover{
+.agileinfo_banner_bottom_right1_grid input[type="submit"]:hover, .dangky:hover{
 	background:#00B5B5;
 }
 /*-- //About --*/

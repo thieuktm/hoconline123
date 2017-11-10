@@ -18,7 +18,7 @@ class Lophoc extends CI_Controller {
 		$data['cap1'] = $this->Mlophoc->cap1();
 		$data['cap2'] = $this->Mlophoc->cap2();
 		$data['cap3'] = $this->Mlophoc->cap3();
-		$data['cap4'] = $this->Mlophoc->cap4();;
+		$data['cap4'] = $this->Mlophoc->cap4();
 		
 		
 		$this->load->view('lophoc',$data);

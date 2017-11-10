@@ -28,29 +28,20 @@ class Mhocvien extends CI_Model{
 		else
 			return FALSE;
 	}
-	public function dangky($email, $pass)
+	public function dangky($data = array())
 	{
-		$data = array(
-			'email' => $email,
-			'pass' => md5($pass),
-		);
 		$this->db->insert('hoc_vien', $data);
 	}
-	public function cap2()
+	public function thongtin($email)
 	{
-		$this->db->from('lop_hoc');
-		$this->db->where('cap = 2');
-		//$this->db->order_by('MaLH', 'desc');
-		//$this->db->limit();
-		return $this->db->get()->result_array();
+		$this->db->from('hoc_vien');
+		$this->db->where('email', $email);
+		return $this->db->get()->row_array();
 	}
-	public function cap3()
+	public function capnhat($MaHV, $data=array())
 	{
-		$this->db->from('lop_hoc');
-		$this->db->where('cap = 3');
-		//$this->db->order_by('MaLH', 'desc');
-		//$this->db->limit();
-		return $this->db->get()->result_array();
+		$this->db->where('MaHV', $MaHV);
+		$this->db->update('hoc_vien', $data);
 	}
 	public function cap4()
 	{

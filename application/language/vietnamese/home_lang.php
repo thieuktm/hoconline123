@@ -6,14 +6,18 @@ $lang['home']                   = 'Trang chủ';
 $lang['about']                  = 'Giới thiệu';
 $lang['services']               = 'Hỗ trợ';
 $lang['faculties']              = 'Chức năng';
+$lang['GALLERY']                = 'Tổng Hợp';
+$lang['MAIL_US']                = 'Mail';
 
 $lang['join_now']				= 'Tham gia ngay';
 $lang['class_online']           = 'LỚP HỌC ONLINE';
 $lang['name']           		= 'Họ tên';
+$lang['date_of_birth']          = 'Ngày Sinh';
 $lang['location']           	= 'Địa chỉ';
+$lang['sex']                    = 'Giới Tính';
 $lang['phone_number']           = 'Số điên thoại';
 
-$lang['You_can_choose_the_program_that_matches_your_level'] = 'Bạn có thể chọn chương trình phù hợp với trình độ của bạn';
+$lang['You_can_choose_the_program_that_matches_your_level'] = 'Bạn chọn chương trình học phù hợp';
 $lang['Online_learning_has_the_following_benefits '] = 'Học trực tuyến có những lợi ích sau:'; 
 $lang['1.Reduce_the_cost_of_study'] = '1. Giảm chi phí học tập';
 $lang['2.Self-regulation']      ='2. Tự điều chỉnh: Là một người học trực tuyến. Bạn có thể điều chỉnh tốc độ của khóa học' ; 

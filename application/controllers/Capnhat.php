@@ -12,31 +12,52 @@ class Capnhat extends CI_Controller {
 	}
 	public function index()
 	{
-		echo $_SESSION['login'];
-		//$this->load->view('home');
+		$email = $_SESSION['login'];
+		$data['title'] = 'CLASS ONLINE | Home';
+		$data['active'] = 0;
+		$data['thongtin'] = $this->mhocvien->thongtin($email);
+		$data['content'] = 'suathongtin';
+		$this->load->view('lophoc', $data);
 	}
-	public function dangky()
+	public function chinhsua($MaHV)
 	{
-		if(isset($_POST['dangky']))
+		if(isset($_POST['capnhat']))
 		{
-			$email = $this->input->post('email');
-			$pass = $this->input->post('pass');
-			$repass = $this->input->post('repass');
-			if($this->mhocvien->check_mail($email) == TRUE)
-			{
-				if($pass == $repass)
-				{
-					$this->mhocvien->dangky($email,$pass);
-					$this->session->set_userdata("login", $email);
-					redirect(base_url('capnhat'));
-				}
-				else
-					echo '<script>alert("Mật khẩu không đúng.");</script>';
-			}
-			else
-				echo '<script>alert("Tài khoản đã tồn tại.");</script>';
+			$ten = $this->input->post('ten');
+			$dchi = $this->input->post('dchi');
+			$ngsinh = $this->input->post('ngsinh');
+			$gtinh = $this->input->post('gtinh');
+			$dat = array(
+				'ho_ten' => $ten,
+				'dia_chi' => $dchi,
+				'ngay_sinh' => $ngsinh,
+				'gioi_tinh' => $gtinh,
+			);
+			$this->mhocvien->capnhat($MaHV, $dat);
+			redirect(base_url('lophoc'));
+			
 		}
 		//$this->load->view('home');
 	}
+//	public function dky($MaHV)
+//	{
+//		if(isset($_POST['capnhat']))
+//		{
+//			$ten = $this->input->post('ten');
+//			$dchi = $this->input->post('dchi');
+//			$ngsinh = $this->input->post('ngsinh');
+//			$gtinh = $this->input->post('gtinh');
+//			$dat = array(
+//				'ho_ten' => $ten,
+//				'dia_chi' => $dchi,
+//				'ngay_sinh' => $ngsinh,
+//				'gioi_tinh' => $gtinh,
+//			);
+//			$this->mhocvien->capnhat($MaHV, $dat);
+//			redirect(base_url('lophoc'));
+//			
+//		}
+//		$this->load->view('home');
+//	}
 }
 ?>
