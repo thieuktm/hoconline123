@@ -6,16 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Literature web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 <!--// Meta tag Keywords -->
 <!-- css files -->
+<link rel="stylesheet" href="<?=base_url(); ?>css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
 <link rel="stylesheet" href="<?=base_url(); ?>css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
 <link rel="stylesheet" href="<?=base_url(); ?>css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
 <link rel="stylesheet" href="<?=base_url(); ?>css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
 <link rel="stylesheet" href="<?=base_url(); ?>css/flexslider.css" type="text/css" media="screen" property="" /> <!-- Flexslider-CSS -->
 <link href="<?=base_url(); ?>css/mislider.css" rel="stylesheet" type="text/css" /> <!-- Testimonials-CSS -->
 <link href="<?=base_url(); ?>css/mislider-custom.css" rel="stylesheet" type="text/css" /> <!-- Testimonials-CSS -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
 <!-- //css files -->
 <!-- online-fonts -->
 <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
@@ -133,13 +136,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="container">
 		<h3 class="tittle-w3l"> 
         <?=$this->lang->line('about'); ?></h3>
-        <!--<form class="form-horizontal" role="form" >-->
 		<div class="col-md-6 agileinfo_banner_bottom_right">
 			<div class="agileinfo_banner_bottom_right1">	
 				<h3><?=$this->lang->line('join_now'); ?></h3>
 				
 				<div class="agileinfo_banner_bottom_right1_grid">
-													
+					<form class="form-horizontal" action="javascript:void(0)" role="form" enctype="multipart/form-data" method="post" id="form_dangky">		
 						<input type="text" name="ten" id="ten" placeholder="<?=$this->lang->line('name'); ?>" required>
 						<input type="date" name="ngsinh" id="ngsinh" placeholder="<?=$this->lang->line('date_of_birth'); ?>" required>
 						<select name="gioi_tinh" id="gioi_tinh">
@@ -152,13 +154,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<input type="password" name="repass" id="repass" placeholder="Nhập lại mật khẩu" required>
 						
 						
-						<button class="dangky" type="button" name="dangky" onClick="return dangky_home()"><?=$this->lang->line('sigin'); ?></button>
-					<!--</form>-->
+						<button class="dangky" id="dangky" type="submit" name="dangky" onClick="return dangky_home()" ><?=$this->lang->line('sigin'); ?></button>
+					</form>
 				</div>
 			</div>
 		</div>
-		<script>
-			function dangky_home(){
+		<script type="text/javascript">
+			function dangky_home() {
 				var ten = $('#ten').val();
 				var ngsinh = $('#ngsinh').val();
 				var gioi_tinh = $('#gioi_tinh').val();
@@ -174,9 +176,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							if(result == 1)
 							{
 								alert("Mật khẩu không đúng");
-								//setTimeout(function(){
-//									location.reload();
-//								},1000);
 							}
 							else if (result == 2)
 							{
@@ -185,7 +184,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						}
 					});
 				
-			}
+			};
 		</script>
 		<div class="col-md-6 agileinfo_banner_bottom_left">
 			<h3> <?=$this ->lang->line('You_can_choose_the_program_that_matches_your_level'); ?></h3>

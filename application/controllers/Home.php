@@ -46,40 +46,36 @@ class Home extends CI_Controller {
 	}
 	public function dangky_home()
 	{
-		if(isset($_POST['dangky']))
+		$ten = $this->input->post('ten');
+		$ngsinh = $this->input->post('ngsinh');
+		$gioi_tinh = $this->input->post('gioi_tinh');
+		$email = $this->input->post('email');
+		$pass = $this->input->post('pass');
+		$repass = $this->input->post('repass');
+		date_default_timezone_set('Asia/Ho_Chi_Minh');
+		$day = date('Y-m-d H:i:s');
+		if($this->mhocvien->check_mail($email) == TRUE)
 		{
-			$ten = $this->input->post('ten');
-			$ngsinh = $this->input->post('ngsinh');
-			$gioi_tinh = $this->input->post('gioi_tinh');
-			$email = $this->input->post('email');
-			$pass = $this->input->post('pass');
-			$repass = $this->input->post('repass');
-			date_default_timezone_set('Asia/Ho_Chi_Minh');
-			$day = date('Y-m-d H:i:s');
-			if($this->mhocvien->check_mail($email) == TRUE)
+			if($pass == $repass)
 			{
-				if($pass == $repass)
-				{
-					$dat = array(
-						'ho_ten' => $ten,
-						'ngay_sinh' => $ngsinh,
-						'gioi_tinh' => $gioi_tinh,
-						'email' => $email,
-						'pass' => md5($pass),
-						'ngay_dk' => $day,
-					);
-					$this->mhocvien->dangky($dat);
-					$this->session->set_userdata("login", $email);
-					redirect(base_url('lophoc'));
-				}
-				else
-					die(json_encode('1'));
-					  
+				$dat = array(
+					'ho_ten' => $ten,
+					'ngay_sinh' => $ngsinh,
+					'gioi_tinh' => $gioi_tinh,
+					'email' => $email,
+					'pass' => md5($pass),
+					'ngay_dk' => $day,
+				);
+				$this->mhocvien->dangky($dat);
+				$this->session->set_userdata("login", $email);
+				redirect(base_url('lophoc'));
 			}
 			else
-				die(json_encode('2'));
+				die(json_encode('1'));
+
 		}
-	
+		else
+			die(json_encode('2'));
 	}
 	public function dangnhap()
 	{
