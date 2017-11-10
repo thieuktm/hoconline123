@@ -141,7 +141,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 				<h3><?=$this->lang->line('join_now'); ?></h3>
 				
 				<div class="agileinfo_banner_bottom_right1_grid">
-					<form class="form-horizontal" action="javascript:void(0)" role="form" enctype="multipart/form-data" method="post" id="form_dangky">		
+					<?php
+//					form_open(base_url('home/dangky_home'),array('class'=>'form-horizontal',));
+//					?>
+					<form class="form-horizontal" action="javascript:void(0)" role="form" enctype="multipart/form-data" method="post">		
 						<input type="text" name="ten" id="ten" placeholder="<?=$this->lang->line('name'); ?>" required>
 						<input type="date" name="ngsinh" id="ngsinh" placeholder="<?=$this->lang->line('date_of_birth'); ?>" required>
 						<select name="gioi_tinh" id="gioi_tinh">
@@ -180,6 +183,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							else if (result == 2)
 							{
 								alert("Tài khoản đã tồn tại");
+							}
+							else
+							{
+								alert("Đăng ký thành công");
+								setTimeout(function(){
+									//location.reload();
+									window.location="<?=base_url('lophoc'); ?>";
+								},1000);
 							}
 						}
 					});

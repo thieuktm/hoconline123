@@ -68,7 +68,7 @@ class Home extends CI_Controller {
 				);
 				$this->mhocvien->dangky($dat);
 				$this->session->set_userdata("login", $email);
-				redirect(base_url('lophoc'));
+				die(json_encode('3'));
 			}
 			else
 				die(json_encode('1'));
