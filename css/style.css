@@ -512,9 +512,9 @@ background: -ms-linear-gradient(to right, rgba(0, 128, 0, 0.7),rgba(0, 0, 255, 0
     opacity: 0.8;
 }
 .agile-homes-w3l.grid figure figcaption {
-	    padding: 5em 4em;
+	padding: 5em 2em;
 	color: #fff;
-	font-size: 1.3em;
+	font-size: 1.1em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }

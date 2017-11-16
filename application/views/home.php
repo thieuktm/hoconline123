@@ -137,7 +137,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 					<a href="<?=base_url('lophoc/cap4'); ?>">
 						<h4 style="color: red">Chương Trình Học</h4>
 						<br>
-						<h3>Đào Tạo Nghề</h3>
+						<h3 style="color:dodgerblue">Đào Tạo Nghề</h3>
 						</br>
 					</a>
 					</div>
@@ -263,7 +263,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 				</a>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-4 w3l-services-grid">
-			<a href ="<?=base_url('lophoc/cap1'); ?>">
+			<a href ="<?=base_url('lophoc/index'); ?>">
 				<div class="w3ls-services-img">
 					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 				</div>
