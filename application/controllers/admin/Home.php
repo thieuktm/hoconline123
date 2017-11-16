@@ -12,8 +12,11 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
-		echo 'đây là trang admin';
-		//$this->load->view('home');
+		if(!isset($_SESSION['admin']))
+		{
+			redirect(base_url('admin/login'));
+		}
+		$this->load->view('admin/index');
 	}
 	public function dangky()
 	{
