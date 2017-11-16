@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Lophoc extends CI_Controller {
+class Giaovien extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
@@ -12,7 +12,7 @@ class Lophoc extends CI_Controller {
 	{
 		$data['title'] = 'CLASS ONLINE | Home';
 		$data['active'] = 1;
-		$data['content'] = 'lophoc/contentgvien';
+		$data['content'] = 'giaovien/content';
 		$data['lophoc_moi'] = $this->Mgiaovien->lophoc(3);
 		$data['lophoc_hot'] = $this->Mgiaovien->lophoc(12);
 		$data['cap1'] = $this->Mgiaovien->cap1();
@@ -21,7 +21,7 @@ class Lophoc extends CI_Controller {
 		$data['cap4'] = $this->Mgiaovien->cap4();
 		$data['giaovien1'] = $this->Mgiaovien->giaovien1();
 		
-		$this->load->view('lophoc',$data);
+		$this->load->view('giaovien',$data);
 	}
 	public function cap1()
 	{

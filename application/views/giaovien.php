@@ -24,10 +24,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
   <body>
 <?php	
-	$this->load->view('lophoc/header');
-	$this->load->view('lophoc/menugiaovien');
-	$this->load->view($contentgvien);
-	$this->load->view('lophoc/footer');
+	$this->load->view('giaovien/header');
+	$this->load->view('giaovien/menu');
+	$this->load->view($content);
+	$this->load->view('giaovien/footer');
 ?>	
 		</div>
 		<div class="clearfix"> </div>
