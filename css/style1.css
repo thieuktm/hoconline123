@@ -1275,7 +1275,7 @@ width:100%;
     text-decoration: none;
 }
 .media:nth-child(3) {
-  padding-left: 4em;
+  /*padding-left: 4em;*/
 }
 .media:nth-child(5) {
   padding-left: 4em;
