@@ -227,9 +227,10 @@ a.w3-join:hover {
     top: 87%;
     left: 20%;
 }
-.agile_text h3 {
-    font-size: 2em;
-    color:#FCB941;
+.agile_text h3 
+{
+    font-size: 1.7em;
+    color:black;
 	margin-bottom:.5em;
 }
 .agile_text.text2-agile h3 {

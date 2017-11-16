@@ -1,4 +1,5 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+
+ <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
 	<div class="navbar-header">
 	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -7,7 +8,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	  </button>
-	  <a class="navbar-brand" href="index.html"><h1><img src="<?=base_url(); ?>images/logo.png" alt="" width="200px" /></h1></a>
+	  <a class="navbar-brand" href="<?=base_url('home'); ?>"><h1><img src="<?=base_url(); ?>images/logo.png" alt="" width="200px" /></h1></a>
 	</div>
 	<div id="navbar" class="navbar-collapse collapse">
 		<div class="top-search">

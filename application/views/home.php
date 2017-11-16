@@ -42,7 +42,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 						</div>
 						<h1>
                         <a class="navbar-brand" href="<?=base_url(); ?>"><?=$this->lang->line('class_online'); ?>
-                       <center>  <h2> <?=$this->lang->line('your sent future'); ?> </h2> </center>
+                       <center>  <h4> <?=$this->lang->line('your sent future'); ?> </h4> </center>
                        </a>
                        </h1>
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -69,7 +69,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							<li>
 								<div class="wthree_banner_info_grid">
 									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-									<h3><?=$this->lang->line('class_online'); ?></h3>
+									<h3 style="color:gold"><?=$this->lang->line('class_online'); ?></h3>
 									<p> always companion </p>
 									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
 								</div>
@@ -77,7 +77,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							<li>
 								<div class="wthree_banner_info_grid">
 									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-									<h3><?=$this->lang->line('class_online'); ?></h3>
+									<h3 style="color:gold"><?=$this->lang->line('class_online'); ?></h3>
 									<p>self-practicing science</p>
 									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
 								</div>
@@ -85,7 +85,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							<li>
 								<div class="wthree_banner_info_grid">
 									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-									<h3><?=$this->lang->line('class_online'); ?></h3>
+									<h3 style="color:gold"><?=$this->lang->line('class_online'); ?></h3>
 									<p>guide you to understand</p>
 									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
 								</div>
@@ -103,26 +103,43 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 			<div class="agile_team_grids">
 				<div class="col-md-3 col-sm-3 col-xs-3 agile_team_grid  agile_team_gridf">
 					<div class="agile_text text1-agile">
-						<h3>01</h3>
-						<h5>NEW CLASSROOM TECHNOLOGY</h5>
+					     <a href="<?=base_url('lophoc/cap1'); ?>">
+						<h4 style="color: red">Chương Trình Học</h4>
+						<br>
+						<h2><center>Cấp 1</center> </h2>
+						</br>
+						</a>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-3 agile_team_grid  agile_team_gridf">
 					<div class="agile_text text2-agile">
-						<h3>02</h3>
-						<h5>PRIOR LEARNING ASSESSMENT</h5>
+					<a href="<?=base_url('lophoc/cap2'); ?>">
+						<h4  style="color: red">Chương Trình Học</h4>
+						<br>
+						<h2><center>Cấp 2</center></h2>
+						
+						</br>
+					</a>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-3 agile_team_grid  agile_team_gridf">
 					<div class="agile_text text3-agile">
-						<h3>03</h3>
-						<h5>CAREER OPPORTUNITIES </h5>
+					<a href="<?=base_url('lophoc/cap3'); ?>">
+						<h4 style="color: red">Chương Trình Học</h4>
+						<br>
+						<h2><center>Cấp 3</center></h2>
+						</br>
+						 </a>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-3 agile_team_grid  agile_team_gridf">
 					<div class="agile_text text1-agile">
-						<h3>04</h3>
-						<h5>Connect with business to create jobs</h5>
+					<a href="<?=base_url('lophoc/cap4'); ?>">
+						<h4 style="color: red">Chương Trình Học</h4>
+						<br>
+						<h3>Đào Tạo Nghề</h3>
+						</br>
+					</a>
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -198,19 +215,30 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 			};
 		</script>
 		<div class="col-md-6 agileinfo_banner_bottom_left">
-			<h3> <?=$this ->lang->line('You_can_choose_the_program_that_matches_your_level'); ?></h3>
-			<strong><?=$this->lang->line('Online_learning_has_the_following_benefits '); ?> </strong>
-            <br><?=$this->lang->line('1.Reduce_the_cost_of_study'); ?> </br>
-            <a1><?=$this ->lang->line('2.Self-regulation'); ?></a1>
-            <br><?=$this->lang->line('3.Synchronization'); ?> </br>
-            <a2><?=$this->lang->line('4.Interaction_and_Collaboration'); ?> </a2>
-            <br><?=$this->lang->line('5. Efficiency'); ?></br>
-            <a3><?=$this->lang->line('6.Easy-to-access-and-convenient'); ?></a3>
+			<h3 > <?=$this ->lang->line('You_can_choose_the_program_that_matches_your_level'); ?></h3>
+			<br>
+			<h4 style="color:firebrick"><?=$this->lang->line
+				('Online_learning_has_the_following_benefits '); ?> </h4>
+			</br>
+			<br>
+            <h4 style="color: black"><?=$this->lang->line('1.Reduce_the_cost_of_study'); ?> </h4>
+            <h4 style="color: black"><?=$this ->lang->line('2.Self-regulation'); ?></h4>
+            <h4 style="color: black"><?=$this->lang->line('3.Synchronization'); ?> </h4>
+            <h4 style="color: black"><?=$this->lang->line('4.Interaction_and_Collaboration'); ?> </h4>
+            <h4 style="color: black"><?=$this->lang->line('5. Efficiency'); ?></h4>
+            <h4 style="color: black"><?=$this->lang->line('6.Easy-to-access-and-convenient'); ?></h4>
+		    </br>
 			<ul>
-				<li><i class="fa fa-leanpub" aria-hidden="true"></i><?=$this->lang->line('The_level_of_students'); ?></li>
-				<li><i class="fa fa-graduation-cap" aria-hidden="true"></i><?=$this->lang->line('The-level-Master-degree'); ?></li>
-				<li><i class="fa fa-book" aria-hidden="true"></i><?=$this->lang->line('Research_papers.'); ?></li>
-			</ul>
+				<h3 style="color: black"> <i class="fa fa-leanpub" aria-hidden="true"></i><?=$this->lang->line('The_level_of_students'); ?>
+				</h3>
+			
+			
+				<h3 style="color: black"><i class="fa fa-graduation-cap" aria-hidden="true"></i><?=$this->lang->line('The-level-Master-degree'); ?></h3>
+				
+			
+				<h3 style="color: black"><i class="fa fa-book" aria-hidden="true"></i><?=$this->lang->line('Research_papers.'); ?>
+				</h3>
+				</ul>
 		</div>
 		<div class="clearfix"> </div>
 	</div>
@@ -222,15 +250,20 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 		<h3 class="tittle-w3l"><?=$this->lang->line('services'); ?></h3>
 		<div class="w3-services-grids">
 			<div class="col-md-4 col-sm-4 col-xs-4 w3l-services-grid">
+				<a href ="<?=base_url('lophoc/giaovien1'); ?>">
 				<div class="w3ls-services-img">
 					<i class="fa fa-users" aria-hidden="true"></i>
 				</div>
+				
 				<div class="agileits-services-info">
-					<h4><?=$this ->lang->line('LIST_TEACHERS'); ?></h4>
+					<h4> <?=$this ->lang->line('LIST_TEACHERS'); ?> 
+					</h4>
 					<p><?=$this ->lang->line('You _an_choose_the_conformity_teacher_for_you'); ?> </p>
 				</div>
+				</a>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-4 w3l-services-grid">
+			<a href ="<?=base_url('lophoc/cap1'); ?>">
 				<div class="w3ls-services-img">
 					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 				</div>
@@ -238,6 +271,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 					<h4><?=$this->lang->line('Online_Courses'); ?> </h4>
 					<p><?=$this->lang->line('Choose_the_right_online_course_for_you_to_study');?> </p>
 				</div>
+				</a>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-4 w3l-services-grid">
 				<div class="w3ls-services-img">
@@ -403,7 +437,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 <!-- gallery -->
 <div id="gallery" class="gallery">
 	<div class="container">
-		<h3 class="tittle-w3l">Our Gallery</h3>
+		<h3 class="tittle-w3l"> <?=$this->lang->line('GALLERY'); ?></h3>
 		<div class="gallery-grids">
 			<section>
 				<ul id="da-thumbs" class="da-thumbs">
@@ -439,7 +473,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							<img src="images/g5.jpg" alt="" />
 							<div>
 								<h5><?=$this->lang->line('Choose_course'); ?></h5>
-								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
+								<span>Thư Viện Online</span>
 							</div>
 						</a>
 					</li>
@@ -448,7 +482,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							<img src="images/g7.png" alt="" />
 							<div>
 								<h5><?=$this->lang->line('Choose_course'); ?></h5>
-								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
+								<span>Khóa Học Cấp Bằng Quốc Tế</span>
 							</div>
 						</a>
 					</li>
@@ -457,7 +491,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							<img src="images/g10.jpg" alt="" />
 							<div>
 								<h5><?=$this->lang->line('Choose_course'); ?></h5>
-								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
+								<span>Ôn luyện Thi Anh Văn</span>
 							</div>
 						</a>
 					</li>
@@ -466,7 +500,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							<img src="images/g9.png" alt="" />
 							<div>
 								<h5><?=$this->lang->line('Choose_course'); ?></h5>
-								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
+								<span>Đề Thi Cho Các Khóa Học</span>
 							</div>
 						</a>
 					</li>
@@ -475,7 +509,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							<img src="images/g15.png" alt="" />
 							<div>
 								<h5><?=$this->lang->line('Choose_course'); ?></h5>
-								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
+								<span>Nghiên Cứu Khoa Học Chuyên Sâu</span>
 							</div>
 						</a>
 					</li>
@@ -484,7 +518,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							<img src="images/g14.png" alt="" />
 							<div>
 								<h5><?=$this->lang->line('Choose_course'); ?></h5>
-								<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
+								<span>Tư Vấn Làm Việc Với Doanh Nghiệp/span>
 							</div>
 						</a>
 					</li>
@@ -496,7 +530,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 </div>
 <!-- //gallery -->
 <!-- newsletter -->
-<div class="newsletter">
+<!-- <div class="newsletter">
 	<div class="container">
 		<h3 class="tittle-w3l">Newsletter</h3>
 		<p class="nunc nunc1">Subscribe to our Email and get Updates right in your inbox</p>
@@ -505,7 +539,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 			<input type="submit" value="Subscribe Now">
 		</form>
 	</div>
-</div>
+</div> -->
 <!-- //newsletter -->
 <!-- testimonials -->
 <div class="testimonials">
@@ -564,7 +598,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 <!-- mail -->
 <div class="mail" id="mail">
 	<div class="container">
-		<h3 class="tittle-w3l">Mail Us</h3>
+		<h3 class="tittle-w3l">Phản Hồi Mail</h3>
 		<div class="agileinfo_mail_grids">
 			<div class="col-md-7 agileinfo_mail_grid_right">
 				<form action="#" method="post">
@@ -574,7 +608,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 					</div>
 					<div class="col-md-6 col-sm-6 wthree_contact_left_grid">
 						<input type="text" name="Telephone" placeholder="Số Điện Thoại" required>
-						<input type="text" name="Subject" placeholder="Môn Học" required>
+						<input type="text" name="Subject" placeholder="Mã Môn Học" required>
 					</div>
 					<div class="clearfix"> </div>
 					<textarea name="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>Message...</textarea>
@@ -635,11 +669,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 <!-- //mail -->
 <!-- footer -->
 <div class="footer">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="w3ls_footer_grid">
-			<div class="col-md-6 col-sm-8 col-xs-8 w3ls_footer_grid_left">
+			<div class="col-md-6 col-sm-8 col-xs-8 w3ls_footer_grid_left_2">
 				<div class="w3ls_footer_grid_left1">
-					<h3>Follow Us</h3>
+					<h3>Đồ án học online</h3>
 					<div class="w3ls_footer_grid_left1_pos">
 						<ul>
 							<li><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>
@@ -655,7 +689,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 			</div>
 			<div class="clearfix"> </div>
 		</div>
-		<div class="col-md-6 w3ls_footer_grid1_left">
+		<div class="col-md-6 w3ls_footer_grid1_left_2">
 			<p>&copy; 2017 doantotnghiep-NguyenVanThieu-10119052</p>
 		</div>
 		<div class="col-md-6 w3ls_footer_grid1_right">
@@ -667,13 +701,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 					<a href="#services" class="scroll"><?=$this->lang->line('services'); ?></a>
 				</li>
 				<li>
-					<a href="#faculties" class="scroll">Faculties</a>
+					<a href="#faculties" class="scroll"><?=$this->lang->line('Faculties'); ?></a>
 				</li>
 				<li>
-					<a href="#gallery" class="scroll">Gallery</a>
+					<a href="#gallery" class="scroll"><?=$this->lang->line('GALLERY'); ?></a>
 				</li>
 				<li>
-					<a href="#mail" class="scroll">Mail Us</a>
+					<a href="#mail" class="scroll"><?=$this->lang->line('MAIL_US'); ?></a>
 				</li>
 			</ul>
 		</div>
