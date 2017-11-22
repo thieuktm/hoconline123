@@ -5,7 +5,8 @@
 				<h3>Etiam molestie nisl eget consequat pharetra</h3>	
 			</div>
 			<div class="embed-responsive embed-responsive-16by9">
-				<iframe src="https://www.youtube.com/embed/oYiT-vLjhC4" allowfullscreen></iframe>
+				 <?php print_r($chitiet)?>
+				
 			</div>
 		</div>
 		<!--<div class="song-grid-right">
@@ -71,7 +72,7 @@
 						<input type="text" placeholder="Name" required=" ">			           					   
 						<input type="text" placeholder="Email" required=" ">
 						<input type="text" placeholder="Phone" required=" ">
-						<textarea placeholder="Message" required=" "></textarea>
+						<textarea placeholder="Message" required></textarea>
 						<input type="submit" value="SEND">
 						<div class="clearfix"> </div>
 					</form>

@@ -68,7 +68,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 						<ul class="slides">
 							<li>
 								<div class="wthree_banner_info_grid">
-									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+									<i class="fa fa-graduation-cap" ; style ="color:firebrick"></i>
 									<h3 style="color:gold"><?=$this->lang->line('class_online'); ?></h3>
 									<p> always companion </p>
 									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
@@ -76,7 +76,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							</li>
 							<li>
 								<div class="wthree_banner_info_grid">
-									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+									<i class="fa fa-graduation-cap" style ="color:firebrick"></i>
 									<h3 style="color:gold"><?=$this->lang->line('class_online'); ?></h3>
 									<p>self-practicing science</p>
 									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
@@ -84,7 +84,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 							</li>
 							<li>
 								<div class="wthree_banner_info_grid">
-									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+									<i class="fa fa-graduation-cap"  style ="color:firebrick"></i>
 									<h3 style="color:gold"><?=$this->lang->line('class_online'); ?></h3>
 									<p>guide you to understand</p>
 									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
@@ -250,7 +250,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 		<h3 class="tittle-w3l"><?=$this->lang->line('services'); ?></h3>
 		<div class="w3-services-grids">
 			<div class="col-md-4 col-sm-4 col-xs-4 w3l-services-grid">
-				<a href ="<?=base_url('lophoc/giaovien1'); ?>">
+				<a href ="<?=base_url('giaovien/giaovien1'); ?>">
 				<div class="w3ls-services-img">
 					<i class="fa fa-users" aria-hidden="true"></i>
 				</div>

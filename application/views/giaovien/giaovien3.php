@@ -5,27 +5,24 @@
 				<h3>Giáo Viên Cấp 3</h3>
 			</div>
 			<?php
-			foreach($cap1 as $tam)
+			foreach( $giaovien3 as $tam)
 			{
 			?>
-			<div class="col-md-3 resent-grid recommended-grid">
-				<div class="resent-grid-img recommended-grid-img">
-					<a href="<?=base_url('lop/'.$tam['MaLH']); ?>"><img src="<?=base_url($tam['poster']); ?>" alt="" /></a>
-					<div class="time small-time">
-						<p>2:34</p>
-					</div>
-					<div class="clck small-clck">
-						<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+			<div class="container-fluid">
+				<div class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object" src="<?=base_url($tam['Avatar']); ?>" alt="" width="100px">
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading">Ten Giao Vien:<b><?= ($tam['TenGV']);?></b></h4> 
+						<h4 class="media-heading">mail giao vien:<?= ($tam['mail']);?></h4> 
+						<h4 class="media-heading">SDT: <?= ($tam['SDT']);?></h4> 
 					</div>
 				</div>
-				<div class="resent-grid-info recommended-grid-info video-info-grid">
-					<h5><a href="<?=base_url('lop/'.$tam['MaLH']); ?>" class="title"><?=$tam['TenLH']; ?></a></h5>
-					<ul>
-						<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-						<li class="right-list"><p class="views views-info"><?=$tam['Soluong_HV']; ?> học viên</p></li>
-					</ul>
-				</div>
+	
 			</div>
+
+
 			<?php
 			}
 			?>

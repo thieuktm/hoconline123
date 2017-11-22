@@ -25,7 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <body>
 <?php	
 	$this->load->view('lophoc/header');
-	$this->load->view($menu);
+	$this->load->view('lophoc/menu');
 	$this->load->view($content);
 	$this->load->view('lophoc/footer');
 ?>	

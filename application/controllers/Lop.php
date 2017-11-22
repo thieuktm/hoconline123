@@ -18,15 +18,35 @@ class Lop extends CI_Controller {
 		$data['lophoc_hot'] = $this->Mlophoc->lophoc(16);
 		$data['cap1'] = $this->Mlophoc->cap1();
 		$data['cap2'] = $this->Mlophoc->cap2();
-		
+		$data['chitiet'] = $this->Mlophoc->chitiet($id);
+		$data['chi_tiet'] = $this->Mlophoc->chi_tiet();
 		$this->load->view('lophoc',$data);
 	}
+		public function chitiet($id)
+	{
+		$data['title'] = 'CLASS ONLINE | Home';
+		$data['active'] = 0;
+		$data['content'] = 'lophoc/hienthi';
+		$data['chitiet'] = $this->Mlophoc->chitiet($id);
+		$this->load->view('lophoc',$data);
+	}
+		public function chi_tiet()
+	{
+		$data['title'] = 'CLASS ONLINE | Home';
+		$data['active'] = 0;
+		$data['content'] = 'lophoc/hienthi';
+		$data['chi_tiet'] = $this->Mlophoc->chi_tiet();
+		$this->load->view('lophoc',$data);
+	}
+	
 	public function cap1()
 	{
 		$data['title'] = 'CLASS ONLINE | Cấp 1';
 		$data['active'] = 2;
 		$data['content'] = 'lophoc/cap1';
 		$data['cap1'] = $this->Mlophoc->cap1();
+		$data['chi_tiet'] = $this->Mlophoc->chi_tiet();
+		$data['chitiet'] = $this->Mlophoc->chitiet($id);
 		$this->load->view('lophoc', $data);
 	}
 	public function cap2()

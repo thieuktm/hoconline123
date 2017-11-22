@@ -24,6 +24,24 @@ class Lophoc extends CI_Controller {
 		$data['giaovien2'] = $this->Mlophoc->giaovien2();
 		$data['giaovien3'] = $this->Mlophoc->giaovien3();
 		$data['giaovien4'] = $this->Mlophoc->giaovien4();
+		$data['chitiet'] = $this->Mlophoc->chitiet($id);
+		$data['chi_tiet'] = $this->Mlophoc->chi_tiet();
+		$this->load->view('lophoc',$data);
+	}
+		public function chitiet($id1)
+	{
+		$data['title'] = 'CLASS ONLINE | Home';
+		$data['active'] = 0;
+		$data['content'] = 'lophoc/hienthi';
+		$data['chitiet'] = $this->Mlophoc->chitiet($id);
+		$this->load->view('lophoc',$data);
+	}
+		public function chi_tiet()
+	{
+		$data['title'] = 'CLASS ONLINE | Home';
+		$data['active'] = 0;
+		$data['content'] = 'lophoc/hienthi';
+		$data['chi_tiet'] = $this->Mlophoc->chi_tiet();
 		$this->load->view('lophoc',$data);
 	}
 	public function cap1()

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 10, 2017 lúc 12:12 PM
+-- Thời gian đã tạo: Th10 22, 2017 lúc 03:11 AM
 -- Phiên bản máy phục vụ: 5.7.19
 -- Phiên bản PHP: 5.6.31
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `hoconline`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id_admin` int(11) NOT NULL AUTO_INCREMENT,
+  `ten` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `acount` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pass` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id_admin`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `ten`, `acount`, `pass`) VALUES
+(1, 'Thiệu', 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
@@ -77,13 +99,41 @@ INSERT INTO `dang_ky` (`MaHV`, `MaMH`, `Diem`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `giaovien`
+--
+
+DROP TABLE IF EXISTS `giaovien`;
+CREATE TABLE IF NOT EXISTS `giaovien` (
+  `magv` int(11) NOT NULL,
+  `TenGV` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `SDT` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`magv`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `giaovien`
+--
+
+INSERT INTO `giaovien` (`magv`, `TenGV`, `mail`, `SDT`, `Avatar`) VALUES
+(3, 'Davir_DAM', 'asd@gamil.com', '123456778', 'images/img_avatar.png'),
+(4, 'Davir_RIM', 'asdq@gamil.com', '1234578', 'images/img_avatar.png'),
+(5, 'hand', 'easd@gamil.com', '123455678', 'images/img_avatar.png'),
+(6, 'gs_thieu', 'aysd@gamil.com', '12345678', 'images/img_avatar.png'),
+(7, '	\r\nDavir_Tom', 'ausd@gamil.com', '123456789', 'images/img_avatar.png'),
+(9, 'Davir_Josh', 'aysd@gamil.com', '12987654', 'images/img_avatar.png');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `giao_trinh`
 --
 
 DROP TABLE IF EXISTS `giao_trinh`;
 CREATE TABLE IF NOT EXISTS `giao_trinh` (
-  `MaMH` char(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Ma_Giaotrinh` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `MaMH` int(11) NOT NULL,
+  `Ma_Giaotrinh` int(11) NOT NULL,
   `TenGiaotrinh` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `video` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `noidungchinh` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -97,9 +147,9 @@ CREATE TABLE IF NOT EXISTS `giao_trinh` (
 --
 
 INSERT INTO `giao_trinh` (`MaMH`, `Ma_Giaotrinh`, `TenGiaotrinh`, `video`, `noidungchinh`, `noidungfull`, `gioithieu`) VALUES
-('10', 'Anh_van', 'tiếng anh', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn'),
-('14', 'ngu_van', 'ngữ Văn', '', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ'),
-('12', 'toan_lop1', 'toán', '', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư');
+(10, 1, 'tiếng anh', 'https://www.youtube.com/watch?v=ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn'),
+(14, 2, 'ngữ Văn', 'https://www.youtube.com/watch?v=7KX3VXzsVq8', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ'),
+(12, 3, 'toán', 'https://www.youtube.com/watch?v=j-giDZE0OT4', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư');
 
 -- --------------------------------------------------------
 
@@ -120,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `hoc_vien` (
   `ngay_dk` datetime NOT NULL,
   `active` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`MaHV`)
-) ENGINE=MyISAM AUTO_INCREMENT=1025 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=1027 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `hoc_vien`
@@ -140,7 +190,9 @@ INSERT INTO `hoc_vien` (`MaHV`, `ho_ten`, `email`, `pass`, `phone`, `dia_chi`, `
 (1021, 'thiệu', 'th@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', NULL, 'Đăk Nông', '1991-01-01', NULL, '2017-11-08 15:40:38', 1),
 (1022, 'abc', 'abc@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', NULL, NULL, '1990-11-11', '1', '2017-11-09 09:22:08', 1),
 (1023, 'văn thị', 'sdr@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, '1900-10-10', '1', '2017-11-09 09:29:42', 1),
-(1024, 'ư', 'r@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, '0011-12-12', '1', '2017-11-09 10:25:05', 1);
+(1024, 'ư', 'r@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, '0011-12-12', '1', '2017-11-09 10:25:05', 1),
+(1025, 'tran', 'tran1@gamil.com', '202cb962ac59075b964b07152d234b70', NULL, NULL, '0022-03-02', '1', '2017-11-14 09:31:27', 1),
+(1026, 'phi', 'p@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, '1212-12-12', '1', '2017-11-14 20:09:20', 1);
 
 -- --------------------------------------------------------
 
@@ -150,10 +202,9 @@ INSERT INTO `hoc_vien` (`MaHV`, `ho_ten`, `email`, `pass`, `phone`, `dia_chi`, `
 
 DROP TABLE IF EXISTS `lop_hoc`;
 CREATE TABLE IF NOT EXISTS `lop_hoc` (
-  `MaLH` int(11) NOT NULL,
+  `MaLH` char(11) COLLATE utf8mb4_unicode_ci NOT NULL,
   `TenLH` char(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `magv` int(11) NOT NULL,
-  `TenGV` char(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ngay_BD` datetime NOT NULL,
   `ngay_KT` datetime NOT NULL,
   `Soluong_HV` int(11) NOT NULL,
@@ -162,6 +213,7 @@ CREATE TABLE IF NOT EXISTS `lop_hoc` (
   `poster` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cap` int(11) NOT NULL,
   `hot` tinyint(4) NOT NULL DEFAULT '0',
+  `Ma_Giaotrinh` int(11) NOT NULL,
   PRIMARY KEY (`MaLH`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -169,25 +221,31 @@ CREATE TABLE IF NOT EXISTS `lop_hoc` (
 -- Đang đổ dữ liệu cho bảng `lop_hoc`
 --
 
-INSERT INTO `lop_hoc` (`MaLH`, `TenLH`, `magv`, `TenGV`, `ngay_BD`, `ngay_KT`, `Soluong_HV`, `hoc_phi`, `active`, `poster`, `cap`, `hot`) VALUES
-(1, 'Lớp 1', 5, 'hand', '2017-10-02 00:00:00', '2017-10-31 00:00:00', 12, NULL, 1, 'images/1.jpg', 1, 0),
-(2, 'Lớp 2', 6, 'gs_thieu', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 30, NULL, 1, 'images/1.jpg', 1, 0),
-(10, 'Lớp 10', 6, 'Davir_Tom', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 3, 0),
-(11, 'Lớp 11', 6, 'Davir_Tom', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 3, 0),
-(3, 'Lớp 3', 6, 'Davir_Josh', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 1, 0),
-(4, 'Lớp 4', 6, 'Davir_sam', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 1, 0),
-(5, 'Lớp 5', 7, 'Davir_RIM', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 1, 0),
-(8, 'Lớp 8', 8, 'Davir_DAM', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 2, 0),
-(6, 'Lớp 6', 5, 'hand', '2017-10-02 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 2, 0),
-(7, 'Lớp 7', 5, 'hand', '2017-10-02 00:00:00', '2017-10-31 00:00:00', 30, NULL, 1, 'images/1.jpg', 2, 0),
-(9, 'Lớp 9', 6, 'gs_thieu', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 30, NULL, 1, 'images/1.jpg', 2, 0),
-(12, 'Lớp 12', 6, 'Davir_Tom', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 3, 0),
-(13, 'Kỹ Sư', 6, 'Davir_Tom', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 4, 0),
-(14, 'Cư Nhân', 6, 'Davir_Josh', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 4, 0),
-(15, 'Cư Nhân Kinh Tế', 6, 'Davir_sam', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 4, 0),
-(16, 'Cư Nhân giáo Viên', 7, 'Davir_RIM', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 4, 0),
-(17, 'Kỹ Sư Công Nghệ', 8, 'Davir_DAM', '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/2.jpg', 4, 0),
-(19, 'Kỹ Thuật Viên', 5, 'hand', '2017-10-02 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 4, 0);
+INSERT INTO `lop_hoc` (`MaLH`, `TenLH`, `magv`, `ngay_BD`, `ngay_KT`, `Soluong_HV`, `hoc_phi`, `active`, `poster`, `cap`, `hot`, `Ma_Giaotrinh`) VALUES
+('1', 'Lớp 1', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 12, NULL, 1, 'images/1.jpg', 1, 0, 1),
+('2', 'Lớp 2', 6, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 30, NULL, 1, 'images/1.jpg', 1, 0, 1),
+('10', 'Lớp 10', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 3, 0, 3),
+('11', 'Lớp 11', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 3, 0, 1),
+('3', 'Lớp 3', 9, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 1, 0, 2),
+('4', 'Lớp 4', 8, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 1, 0, 3),
+('5', 'Lớp 5', 4, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 1, 0, 1),
+('8', 'Lớp 8', 3, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 2, 0, 2),
+('6', 'Lớp 6', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 2, 0, 3),
+('7', 'Lớp 7', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 30, NULL, 1, 'images/1.jpg', 2, 0, 1),
+('9', 'Lớp 9', 6, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 30, NULL, 1, 'images/1.jpg', 2, 0, 2),
+('12', 'Lớp 12', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 3, 0, 3),
+('13', 'Kỹ Sư', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 4, 0, 1),
+('14', 'Cư Nhân', 9, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 4, 0, 2),
+('15', 'Cư Nhân Kinh Tế', 8, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 4, 0, 3),
+('16', 'Cư Nhân giáo Viên', 4, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 4, 0, 1),
+('17', 'Kỹ Sư Công Nghệ', 3, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/2.jpg', 4, 0, 2),
+('19', 'Kỹ Thuật Viên', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 4, 0, 3),
+('8b', 'lơp nâng cao', 3, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 2, 0, 1),
+('6b', 'Lớp Năng khiếu', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 2, 0, 2),
+('7b', 'Lớp TÌm hiểu khoa học', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 30, NULL, 1, 'images/1.jpg', 2, 0, 3),
+('10b', 'Lớp Chuyên khối A', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 3, 0, 1),
+('11b', 'Lớp Chuyên khối C', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 3, 0, 2),
+('12b', 'Lớp Chuyên khối B', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 3, 0, 3);
 
 -- --------------------------------------------------------
 
