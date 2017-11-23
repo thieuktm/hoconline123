@@ -10,16 +10,22 @@ class Lop extends CI_Controller {
 	}
 	public function index($id)
 	{
-		$id = $this->uri->segment('3');
+		if($this->uri->segment('3'))
+		{
+			$gt = $this->uri->segment('3');
+		}
+		else
+			$gt = 0;
+		echo $gt;
 		$data['title'] = 'CLASS ONLINE | Home';
-		$data['active'] = 1;
+		$data['active'] = 0;
 		$data['content'] = 'lophoc/hienthi';
 		$data['lophoc_moi'] = $this->Mlophoc->lophoc(3);
 		$data['lophoc_hot'] = $this->Mlophoc->lophoc(16);
 		$data['cap1'] = $this->Mlophoc->cap1();
 		$data['cap2'] = $this->Mlophoc->cap2();
-		$data['chitiet'] = $this->Mlophoc->chitiet($id);
-		$data['chi_tiet'] = $this->Mlophoc->chi_tiet();
+		$data['chitiet'] = $chitiet = $this->Mlophoc->chitiet($id,$gt);
+		$data['bai_tt'] = $this->Mlophoc->bai_tt($id,$chitiet['Ma_Giaotrinh']);
 		$this->load->view('lophoc',$data);
 	}
 		public function chitiet($id)
