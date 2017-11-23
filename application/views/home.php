@@ -70,7 +70,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 								<div class="wthree_banner_info_grid">
 									<i class="fa fa-graduation-cap" ; style ="color:firebrick"></i>
 									<h3 style="color:gold"><?=$this->lang->line('class_online'); ?></h3>
-									<p> always companion </p>
+									<p style="color: yellow"> <?=$this->lang->line('always_companion'); ?> </p>
 									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
 								</div>
 							</li>
@@ -78,7 +78,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 								<div class="wthree_banner_info_grid">
 									<i class="fa fa-graduation-cap" style ="color:firebrick"></i>
 									<h3 style="color:gold"><?=$this->lang->line('class_online'); ?></h3>
-									<p>self-practicing science</p>
+									<p style="color:yellow"><?=$this->lang->line('Self-Practicing-Science'); ?></p>
 									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
 								</div>
 							</li>
@@ -86,7 +86,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 								<div class="wthree_banner_info_grid">
 									<i class="fa fa-graduation-cap"  style ="color:firebrick"></i>
 									<h3 style="color:gold"><?=$this->lang->line('class_online'); ?></h3>
-									<p>guide you to understand</p>
+									<p style="color:yellow"><?=$this->lang->line('learn_to_practice'); ?></p>
 									<a href="#about" class="w3-join scroll"><?=$this->lang->line('join_now'); ?></a>
 								</div>
 							</li>
@@ -528,20 +528,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 		</div>
 	</div>
 </div>
-<!-- //gallery -->
-<!-- newsletter -->
-<!-- <div class="newsletter">
-	<div class="container">
-		<h3 class="tittle-w3l">Newsletter</h3>
-		<p class="nunc nunc1">Subscribe to our Email and get Updates right in your inbox</p>
-		<form action="#" method="post">
-			<input type="email" name="email" placeholder="Your email..." required>
-			<input type="submit" value="Subscribe Now">
-		</form>
-	</div>
-</div> -->
-<!-- //newsletter -->
-<!-- testimonials -->
+
 <div class="testimonials">
 	<div class="container">
 	<h3 class="tittle-w3l"><?=$this->lang->line('People_success'); ?></h3>
@@ -594,8 +581,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 		</div>
 	</div>
 </div>
-<!-- //testimonials -->
-<!-- mail -->
 <div class="mail" id="mail">
 	<div class="container">
 		<h3 class="tittle-w3l">Phản Hồi Mail</h3>

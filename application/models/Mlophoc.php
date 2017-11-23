@@ -25,8 +25,7 @@ class Mlophoc extends CI_Model{
 	public function chi_tiet()
 	{	$this->db->select('*');
 		$this->db->from('lop_hoc,giao_trinh');
-		$this->db->where('lop_hoc.Ma_Giaotrinh = giao_trinh.Ma_Giaotrinh');
-	    
+		$this->db->where('lop_hoc.Ma_Giaotrinh = giao_trinh.Ma_Giaotrinh');    
 		$this->db->order_by('lop_hoc.MaLH', 'desc');
 		return $this->db->get()->result_array();
 	}

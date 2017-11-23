@@ -5,6 +5,7 @@
 				<h3>Etiam molestie nisl eget consequat pharetra</h3>	
 		</div>
 			<div class="video-grid">
+			-- load là video gọi từ file lop trong thư mục controller;
 				<iframe src="https://www.youtube.com/embed/oYiT-vLjhC4" allowfullscreen></iframe>
 			</div>
 		</div>

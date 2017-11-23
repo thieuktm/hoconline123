@@ -1,3 +1,4 @@
+<!-- phần mềm Menu có gì muốn có ở thanh công cụ -->
 <div class="col-sm-3 col-md-2 sidebar">
 	<div class="top-navigation">
 		<div class="t-menu">MENU</div>

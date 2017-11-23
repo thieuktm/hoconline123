@@ -11,6 +11,9 @@ $lang['MAIL_US']                = 'Gửi Mail';
 
 $lang['join_now']				= 'Tham gia ngay';
 $lang['class_online']           = 'LỚP HỌC ONLINE';
+$lang['always_companion']       = 'luôn luôn đồng hành';
+$lang['Self-Practicing-Science']       = 'Khoa học tự thực hành';
+$lang['learn_to_practice']       = 'học đi đôi thực hành';
 $lang['name']           		= 'Họ tên';
 $lang['date_of_birth']          = 'Ngày Sinh';
 $lang['location']           	= 'Địa chỉ';

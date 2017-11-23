@@ -4,7 +4,8 @@
 			<div class="recommended-info">
 				<h3>Giáo Viên Cấp 1</h3>
 			</div>
-			<?php
+<!--cú pháp vòng for trong php -->	
+		<?php
 			foreach( $giaovien1 as $tam)
 			{
 			?>
