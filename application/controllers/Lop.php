@@ -16,7 +16,6 @@ class Lop extends CI_Controller {
 		}
 		else
 			$gt = 0;
-		echo $gt;
 		$data['title'] = 'CLASS ONLINE | Home';
 		$data['active'] = 0;
 		$data['content'] = 'lophoc/hienthi';
