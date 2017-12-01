@@ -54,4 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['lop/(:num)'] = 'lop/index/$1';
+$route['lop/(:num)/(:num)'] = 'lop/index/$1/$2';
 $route['admin'] = 'admin/home/index';

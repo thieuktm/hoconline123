@@ -12,7 +12,7 @@ class Giaovien extends CI_Controller {
 	{
 		$data['title'] = 'CLASS ONLINE | Home';
 		$data['active'] = 1;
-		$data['content'] = 'giaovien/content';	/*biến content để gọi ra */
+		$data['content'] = 'giaovien/content';	/*biến content dẫn link để gọi ra */
 		$data['giaovien1'] = $this->Mgiaovien->giaovien1();
 		$data['giaovien2'] = $this->Mgiaovien->giaovien2();
 		$data['giaovien3'] = $this->Mgiaovien->giaovien3();

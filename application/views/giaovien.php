@@ -24,6 +24,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
   <body>
 <?php	
+	/*<!-- load khung ở trên và menu, khung dưới -->*/
 	$this->load->view('giaovien/header');
 	$this->load->view('giaovien/menu');
 	$this->load->view($content);

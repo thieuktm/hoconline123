@@ -1,4 +1,4 @@
-
+ <!--phần trên đăng ký và đăng nhập-->
  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
 	<div class="navbar-header">

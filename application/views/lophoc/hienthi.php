@@ -2,11 +2,10 @@
 	<div class="col-sm-8 single-left">
 		<div class="video">
 			<div class="song-info">
-				<h3>Etiam molestie nisl eget consequat pharetra</h3>	
+				<h3><?=$chitiet['TenMH'] ?></h3>	
 			</div>
 			<div class="embed-responsive embed-responsive-16by9">
-				 <?php print_r($chitiet)?>
-				
+				<iframe class="embed-responsive-item" src="<?=$chitiet['video'] ?>"></iframe>				
 			</div>
 		</div>
 		<!--<div class="song-grid-right">
@@ -45,8 +44,8 @@
 				<div class="load_more">	
 					<ul id="myList">
 						<li>
-							<h4>Published on 15 June 2015</h4>
-							<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
+							<h4>Giới thiệu môn học</h4>
+							<p><?=$chitiet['gioithieu'] ?></p>
 						</li>
 						<li>
 							<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
@@ -174,20 +173,27 @@
 		</div>
 	</div>
 	<div class="col-md-4 single-right">
-		<h3>Up Next</h3>
+		<h3>Bài tiếp theo</h3>
 		<div class="single-grid-right">
+			<?php
+			foreach($bai_tt as $tt)
+			{
+			?>
 			<div class="single-right-grids">
 				<div class="col-md-4 single-right-grid-left">
-					<a href="single.html"><img src="images/r1.jpg" alt="" /></a>
+					<a href="<?=base_url('lop/').$chitiet['MaLH'].'/'.$tt['Ma_Giaotrinh'] ?>"><img src="<?=base_url().$tt['poster']?>" alt="" /></a>
 				</div>
 				<div class="col-md-8 single-right-grid-right">
-					<a href="single.html" class="title"> Nullam interdum metus</a>
+					<a href="single.html" class="title"> <?=$tt['TenGiaotrinh'] ?></a>
 					<p class="author"><a href="#" class="author">John Maniya</a></p>
 					<p class="views">2,114,200 views</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
-			<div class="single-right-grids">
+			<?php
+			}
+			?>
+			<!--<div class="single-right-grids">
 				<div class="col-md-4 single-right-grid-left">
 					<a href="single.html"><img src="images/r2.jpg" alt="" /></a>
 				</div>
@@ -307,7 +313,7 @@
 					<p class="views">2,114,200 views</p>
 				</div>
 				<div class="clearfix"> </div>
-			</div>
+			</div>-->
 		</div>
 	</div>
 	<div class="clearfix"> </div>
