@@ -5,6 +5,10 @@ class Home extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+		if(!isset($_SESSION['admin']))
+		{
+			redirect(base_url('admin/login'));
+		}
 		$this->lang->load('home','vietnamese');  
 		$this->load->helper('url');
 		$this->load->model('mhocvien');
@@ -12,11 +16,9 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
-		if(!isset($_SESSION['admin']))
-		{
-			redirect(base_url('admin/login'));
-		}
-		$this->load->view('admin/index');
+		$data['title'] = 'Trang quản trị';
+		$data['content'] = 'admin/home';
+		$this->load->view('admin/index', $data);
 	}
 	public function dangky()
 	{
