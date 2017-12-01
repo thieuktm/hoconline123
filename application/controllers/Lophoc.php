@@ -25,7 +25,7 @@ class Lophoc extends CI_Controller {
 		$data['giaovien3'] = $this->Mlophoc->giaovien3();
 		$data['giaovien4'] = $this->Mlophoc->giaovien4();
 		//$data['chitiet'] = $this->Mlophoc->chitiet($id);
-		$data['chi_tiet'] = $this->Mlophoc->chi_tiet();
+		//$data['chi_tiet'] = $this->Mlophoc->chi_tiet();
 		$this->load->view('lophoc',$data);
 	}
 		public function chitiet($id1)
