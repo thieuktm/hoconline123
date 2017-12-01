@@ -30,7 +30,7 @@ class Login extends CI_Controller {
 	{
 		//đăng xuất
 		$this->session->unset_userdata("login");
-		redirect(base_url());
+		redirect(base_url('admin/login'));
 		//view
 		
 	}
