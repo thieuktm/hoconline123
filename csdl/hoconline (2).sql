@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 22, 2017 lúc 03:11 AM
+-- Thời gian đã tạo: Th12 02, 2017 lúc 05:04 AM
 -- Phiên bản máy phục vụ: 5.7.19
 -- Phiên bản PHP: 5.6.31
 
@@ -132,8 +132,8 @@ INSERT INTO `giaovien` (`magv`, `TenGV`, `mail`, `SDT`, `Avatar`) VALUES
 
 DROP TABLE IF EXISTS `giao_trinh`;
 CREATE TABLE IF NOT EXISTS `giao_trinh` (
-  `MaMH` int(11) NOT NULL,
-  `Ma_Giaotrinh` int(11) NOT NULL,
+  `MaMH` char(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Ma_Giaotrinh` char(11) COLLATE utf8mb4_unicode_ci NOT NULL,
   `TenGiaotrinh` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `video` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `noidungchinh` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -147,9 +147,18 @@ CREATE TABLE IF NOT EXISTS `giao_trinh` (
 --
 
 INSERT INTO `giao_trinh` (`MaMH`, `Ma_Giaotrinh`, `TenGiaotrinh`, `video`, `noidungchinh`, `noidungfull`, `gioithieu`) VALUES
-(10, 1, 'tiếng anh', 'https://www.youtube.com/watch?v=ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn'),
-(14, 2, 'ngữ Văn', 'https://www.youtube.com/watch?v=7KX3VXzsVq8', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ'),
-(12, 3, 'toán', 'https://www.youtube.com/watch?v=j-giDZE0OT4', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư');
+('1', '1', 'tiếng anh', 'https://www.youtube.com/embed/ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn'),
+('2', '2', 'ngữ Văn', 'https://www.youtube.com/embed/7KX3VXzsVq8', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ'),
+('3', '3', 'toán', 'https://www.youtube.com/embed/j-giDZE0OT4', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư'),
+('4', '1', 'tiếng anh', 'https://www.youtube.com/embed/ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn'),
+('5', '2', 'ngữ Văn', 'https://www.youtube.com/watch?v=uTtRrnSIPJs', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ'),
+('6', '3', 'toán', 'https://www.youtube.com/watch?v=6LUT0r1W16c', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư'),
+('7', '1', 'tiếng anh', 'https://www.youtube.com/embed/ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn'),
+('8', '2', 'ngữ Văn', 'https://www.youtube.com/embed/7KX3VXzsVq8', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ'),
+('9', '3', 'toán', 'https://www.youtube.com/embed/j-giDZE0OT4', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư'),
+('10', '1', 'tiếng anh', 'https://www.youtube.com/embed/ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn'),
+('11', '2', 'ngữ Văn', 'https://www.youtube.com/embed/7C80PsFX-fY', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ'),
+('12', '3', 'toán', 'https://www.youtube.com/embed/ZgpgavgE3Xg', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư');
 
 -- --------------------------------------------------------
 
@@ -170,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `hoc_vien` (
   `ngay_dk` datetime NOT NULL,
   `active` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`MaHV`)
-) ENGINE=MyISAM AUTO_INCREMENT=1027 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=1028 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `hoc_vien`
@@ -192,7 +201,8 @@ INSERT INTO `hoc_vien` (`MaHV`, `ho_ten`, `email`, `pass`, `phone`, `dia_chi`, `
 (1023, 'văn thị', 'sdr@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, '1900-10-10', '1', '2017-11-09 09:29:42', 1),
 (1024, 'ư', 'r@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, '0011-12-12', '1', '2017-11-09 10:25:05', 1),
 (1025, 'tran', 'tran1@gamil.com', '202cb962ac59075b964b07152d234b70', NULL, NULL, '0022-03-02', '1', '2017-11-14 09:31:27', 1),
-(1026, 'phi', 'p@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, '1212-12-12', '1', '2017-11-14 20:09:20', 1);
+(1026, 'phi', 'p@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, '1212-12-12', '1', '2017-11-14 20:09:20', 1),
+(1027, '', '', 'd41d8cd98f00b204e9800998ecf8427e', NULL, NULL, '0000-00-00', '1', '2017-12-01 12:04:28', 1);
 
 -- --------------------------------------------------------
 
@@ -239,7 +249,7 @@ INSERT INTO `lop_hoc` (`MaLH`, `TenLH`, `magv`, `ngay_BD`, `ngay_KT`, `Soluong_H
 ('15', 'Cư Nhân Kinh Tế', 8, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 4, 0, 3),
 ('16', 'Cư Nhân giáo Viên', 4, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 4, 0, 1),
 ('17', 'Kỹ Sư Công Nghệ', 3, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/2.jpg', 4, 0, 2),
-('19', 'Kỹ Thuật Viên', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 4, 0, 3),
+('18', 'Kỹ Thuật Viên', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 4, 0, 3),
 ('8b', 'lơp nâng cao', 3, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 2, 0, 1),
 ('6b', 'Lớp Năng khiếu', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 2, 0, 2),
 ('7b', 'Lớp TÌm hiểu khoa học', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 30, NULL, 1, 'images/1.jpg', 2, 0, 3),
@@ -268,9 +278,18 @@ CREATE TABLE IF NOT EXISTS `mon_hoc` (
 --
 
 INSERT INTO `mon_hoc` (`MaMH`, `TenMH`, `sotinchi`, `MaLH`, `active`) VALUES
-('10', 'Anh_van', 2, '', 1),
-('12', 'toan_lop1', 2, '', 1),
-('14', 'ngu_van', 2, '', 1);
+('1', 'Anh_van', 2, '1', 1),
+('2', 'toan_lop1', 2, '2', 1),
+('3', 'ngu_van', 2, '3', 1),
+('4', 'Anh_van', 2, '4', 1),
+('5', 'toan_lop1', 2, '5', 1),
+('6', 'ngu_van', 2, '6', 1),
+('7', 'Anh_van', 2, '7', 1),
+('8', 'toan_lop1', 2, '8', 1),
+('9', 'ngu_van', 2, '9', 1),
+('10', 'toan_lop10', 2, '10', 1),
+('11', 'ngu_van', 2, '11', 1),
+('12', 'Anh_van', 2, '12', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
