@@ -12,7 +12,7 @@
 	<ul class="breadcrumb">
 		<li>
 			<i class="icon-home"></i>
-			<a href="<?=base_url('admin')?>">Home</a>
+			<a href="<?=base_url('admin')?>">Trang chủ</a>
 			<i class="icon-angle-right"></i> 
 		</li>
 		<li>
@@ -38,15 +38,9 @@
 				<form class="form-horizontal" action="<?=base_url('admin/quantri/chinhsua/'.$admin['id_admin'])?>" method="post" enctype="multipart/form-data">
 					<fieldset>
 					  <div class="control-group">
-						<label class="control-label" for="focusedInput">Tên</label>
+						<label class="control-label" for="ten">Tên</label>
 						<div class="controls">
-						  <input name="ten" class="input-xlarge focused" id="focusedInput" type="text" value="<?=$admin['ten']?>">
-						</div>
-					  </div>
-					  <div class="control-group">
-						<label class="control-label" for="focusedInput">User</label>
-						<div class="controls">
-						  <input name="user" class="input-xlarge focused" id="focusedInput" type="text" value="<?=$admin['user']?>">
+						  <input name="ten" class="input-xlarge focused" id="ten" type="text" value="<?=$admin['ten']?>">
 						</div>
 					  </div>
 					  <div class="control-group">
@@ -65,8 +59,8 @@
 						</div>
 					  </div>
 					  <div class="form-actions">
-						<button type="submit" name="luu" class="btn btn-primary">Save changes</button>
-						<button class="btn">Cancel</button>
+						<button type="submit" name="luu" class="btn btn-primary">Lưu</button>
+						<a class="btn" href="<?=base_url('admin/quantri')?>">Thoát</a>
 					  </div>
 					</fieldset>
 				  </form>
@@ -129,9 +123,9 @@
 					setTimeout(function(){
                         	location.reload();
                         },1000);
-                }else if(result == 2){
-                    alert("Mật khẩu cũ không đúng!");
                 }else if(result == 3){
+                    alert("Mật khẩu cũ không đúng!");
+                }else if(result == 2){
 					alert("Mật khẩu mới không trùng khớp!");
 				}
 				else{

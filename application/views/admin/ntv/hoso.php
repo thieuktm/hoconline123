@@ -12,16 +12,21 @@
 	<ul class="breadcrumb">
 		<li>
 			<i class="icon-home"></i>
-			<a href="<?=base_url() ?>">Home</a>
+			<a href="<?=base_url('admin') ?>">Home</a>
 			<i class="icon-angle-right"></i>
 		</li>
-		<li><a href="#">Nhà tuyển dụng</a>
+		<li><a href="<?=base_url('admin/ntv'); ?>">Người tìm việc</a>
+			<i class="icon-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Hồ sơ tìm việc</a>
+		</li>
 	</ul>
 
 	<div class="row-fluid sortable">
 		<div class="box span12">
 			<div class="box-header" data-original-title>
-				<h2><i class="halflings-icon list white"></i><span class="break"></span>Danh sách nhà tuyển dụng</h2>
+				<h2><i class="halflings-icon list white"></i><span class="break"></span>Danh sách hồ sơ của <?=$ntv['ho']?> <?=$ntv['ten']?></h2>
 				<div class="box-icon">
 					<a href="javascript:void(0)" data-toggle="modal" data-target="#modal_add_title"><i class="halflings-icon white plus"></i></a>
 					<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
@@ -33,35 +38,35 @@
 				<table class="table table-striped table-bordered bootstrap-datatable datatable">
 					<thead>
 						<tr>
-							<th>Tên công ty</th>
-							<th>Email</th>
-							<th>Phone</th>
-							<th>Địa chỉ</th>
-							<th>Mã số thuế</th>
-							<th>Active</th>
-							<th>Chỉnh sửa</th>
+							<th>Tiêu đề</th>
+							<th>Ngành nghề</th>
+							<th>Địa điểm làm việc</th>
+							<th>Kinh nghiệm</th>
+							<th>Trình độ</th>
+							<th>Mức lương</th>
+							<th>Vip</th>
+							<th>Xóa hồ sơ</th>
 						</tr>
 					</thead>
 					<tbody>
 						<?php
-						foreach($ntd as $tmp)
+						foreach($hoso as $tmp)
 						{
 						?>
 						<tr>
-							<td><?=$tmp['ten_cty'] ?></td>
-							<td><?=$tmp['email'] ?></td>
-							<td><?=$tmp['phone'] ?></td>
-							<td><?=$tmp['dia_chi'] ?></td>
-							<td><?=$tmp['ms_thue'] ?></td>
-							<td><input type="checkbox" id="active_<?=$tmp['id_ntd'] ?>" value="1" <?php if($tmp['active'] == '1') echo "checked"; ?> onclick="return update_info(<?=$tmp['id_ntd']?>)" ></td>
+							<td><?=$tmp['tieu_de'] ?></td>
+							<td><?=$tmp['ten_nn'] ?></td>
+							<td><?=$tmp['ten_dd'] ?></td>
+							<td><?=$tmp['ten_kn'] ?></td>
+							<td><?=$tmp['trinh_do'] ?></td>
+							<td><?=$tmp['muc_luong'] ?></td>
+							<td><input type="checkbox" id="active_<?=$tmp['id_hoso'] ?>" value="1" <?php if($tmp['vip'] == '1') echo "checked"; ?> onclick="return update_info(<?=$tmp['id_hoso']?>)" ></td>
 							<td class="center">
-								<a class="btn btn-info" href="<?=base_url('admin/ntd/chinhsua/'.$tmp['id_ntd']) ?>">
-									<i class="halflings-icon white edit"></i>  
-								</a>
-								<a class="btn btn-danger" onclick="return xoa_ntd(<?=$tmp['id_ntd']?>)" href="javascript:void(0)">
+								<a class="btn btn-danger" onclick="return xoa_hoso(<?=$tmp['id_hoso']?>)" href="javascript:void(0)">
 									<i class="halflings-icon white trash"></i> 
 								</a>
 							</td>
+							<di
 						</tr>
 						<?php
 						}
@@ -78,12 +83,15 @@
 
 <!-- end: Content -->
 <script type="text/javascript">
-    function xoa_ntd(id){
+	function chinhsua_ntv(id){
+        $('.lis-data').attr('data-id',id);
+    }
+    function xoa_ntv(id){
         if (confirm("Bạn có muốn xóa không?")) {
             $.ajax({
                 dataType: "json",
                 type:"POST",
-                url:"<?=base_url('admin/ntd/xoa'); ?>",
+                url:"<?=base_url('admin/ntv/xoa'); ?>",
                 data:{id:id},
                 success: function(result){
                     if(result == 1){
@@ -108,8 +116,8 @@
         };
         $.ajax({
             method:"POST",
-            url:"<?=base_url('admin/ntd/active'); ?>",
-            data:{id:id,active:value},
+            url:"<?=base_url('admin/ntv/vip'); ?>",
+            data:{id:id,vip:value},
 			success: function(result)
 			{
 				if(result == 1)
@@ -118,5 +126,23 @@
 					alert('Lỗi!');
 			}
         });
+    }
+	function xoa_hoso(id){
+        if (confirm("Bạn có muốn xóa không?")) {
+            $.ajax({
+                dataType: "json",
+                type:"POST",
+                url:"<?=base_url('admin/ntv/xoa_hoso'); ?>",
+                data:{id:id},
+                success: function(result){
+                    if(result == 1){
+                        alert("Xóa thành công");
+                        setTimeout(function(){
+                        	location.reload();
+                        },1000);
+                    }
+                }
+            });
+        }
     }
 </script>

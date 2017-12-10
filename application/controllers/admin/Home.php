@@ -12,6 +12,7 @@ class Home extends CI_Controller {
 		$this->lang->load('home','vietnamese');  
 		$this->load->helper('url');
 		$this->load->model('mhocvien');
+		$this->load->model('madmin');
 		
 	}
 	public function index()

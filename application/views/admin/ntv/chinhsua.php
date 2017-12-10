@@ -124,6 +124,12 @@
             </div>
             <div class="modal-body">
                 <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="mk" class="control-label">Mật khẩu cũ</label>
+                        <div class="controls">
+                            <input type="password" class="form-control" id="mk" placeholder="Mật khẩu cũ" />
+                        </div>
+                    </div>
 					<div class="form-group">
                         <label for="pass" class="control-label">Mật khẩu mới</label>
                         <div class="controls">
@@ -147,13 +153,14 @@
 </div>
 <script type="text/javascript">
     function luu_pass(id){
+        var mk   = $('#mk').val();
         var pass   = $('#pass').val();
         var repass   = $('#repass').val();
         $.ajax({
             dataType: "json",
             type:"POST",
             url:"<?=base_url('admin/ntd/luu_pass'); ?>",
-            data:{id:id,pass:pass,repass:repass},
+            data:{id:id,mk:mk,pass:pass,repass:repass},
             success: function(result){
                 if(result == 1){
                     alert("Lưu thành công");
@@ -161,6 +168,8 @@
                         	location.reload();
                         },1000);
                 }else if(result == 2){
+                    alert("Mật khẩu cũ không đúng!");
+                }else if(result == 3){
 					alert("Mật khẩu mới không trùng khớp!");
 				}
 				else{

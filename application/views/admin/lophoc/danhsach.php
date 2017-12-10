@@ -12,11 +12,11 @@
 	<ul class="breadcrumb">
 		<li>
 			<i class="icon-home"></i>
-			<a href="<?=base_url() ?>">Home</a>
+			<a href="<?=base_url() ?>">Trang chủ</a>
 			<i class="icon-angle-right"></i>
 		</li>
 		<li>
-			<a href="<?=base_url('admin/vieclam') ?>">Việc làm</a>
+			<a href="<?=base_url('admin/vieclam') ?>">Lớp học</a>
 			<i class="icon-angle-right"></i>
 		</li>
 		<li><a href="#">Danh sách</a>
@@ -25,9 +25,9 @@
 	<div class="row-fluid sortable">
 		<div class="box span12">
 			<div class="box-header" data-original-title>
-				<h2><i class="halflings-icon list white"></i><span class="break"></span>Danh sách việc làm</h2>
+				<h2><i class="halflings-icon list white"></i><span class="break"></span>Danh sách lớp học</h2>
 				<div class="box-icon">
-					<a href="#" class="btn-setting"><i class="halflings-icon white plus"></i></a>
+					<a href="<?=base_url('admin/lophoc/them')?>" class=""><i class="halflings-icon white plus"></i></a>
 					<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
 					<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
 					<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
@@ -37,32 +37,40 @@
 				<table class="table table-striped table-bordered bootstrap-datatable datatable">
 					<thead>
 						<tr>
-							<th>Tiêu đề</th>
-							<th>Nhà tuyển dụng</th>
-							<th>Ngành nghề</th>
-							<th>Địa điểm</th>
-							<th>Ngày hết hạn</th>
+							<th>Poster</th>
+							<th>Tên lớp học</th>
+							<th>Tên giáo viên</th>
+							<th>Ngày bắt đầu</th>
+							<th>Ngày kết thúc</th>
+							<th>Số lượng</th>
+							<th>Học phí</th>
+							<th>Cấp</th>
 							<th>Active</th>
+							<th>Hot</th>
 							<th>Chỉnh sửa</th>
 						</tr>
 					</thead>
 					<tbody>
 						<?php
-						foreach($vieclam as $vl)
+						foreach($lophoc as $tmp)
 						{
 						?>
 						<tr>
-							<td><?=$vl['tieu_de'] ?></td>
-							<td><?=$vl['ten_cty'] ?></td>
-							<td><?=$vl['ten_nn'] ?></td>
-							<td><?=$vl['ten_dd'] ?></td>
-							<td><?=$vl['ngay_hh'] ?></td>
-							<td><input type="checkbox" id="active_<?=$vl['id_vl'] ?>" value="1" <?php if($vl['active_vl'] == '1') echo "checked"; ?> onclick="return update_info(<?=$vl['id_vl']?>)" ></td>
+							<td><img src="<?=base_url($tmp['poster']) ?>" width="64px"></td>
+							<td><?=$tmp['TenLH'] ?></td>
+							<td><?=$tmp['TenGV'] ?></td>
+							<td><?=$tmp['ngay_BD'] ?></td>
+							<td><?=$tmp['ngay_KT'] ?></td>
+							<td><?=$tmp['Soluong_HV'] ?></td>
+							<td><?=$tmp['hoc_phi'] ?></td>
+							<td><?=$tmp['cap'] ?></td>
+							<td><input type="checkbox" id="active_<?=$tmp['MaLH'] ?>" value="1" <?php if($tmp['active'] == '1') echo "checked"; ?> onclick="return update_info(<?=$tmp['MaLH']?>)" ></td>
+							<td><input type="checkbox" id="hot_<?=$tmp['MaLH'] ?>" value="1" <?php if($tmp['hot'] == '1') echo "checked"; ?> onclick="return update_info(<?=$tmp['MaLH']?>)" ></td>
 							<td class="center">
-								<a class="btn btn-info" href="#">
+								<a class="btn btn-info" href="<?=base_url('admin/lophoc/chinhsua/'.$tmp['MaLH'])?>">
 									<i class="halflings-icon white edit"></i>  
 								</a>
-								<a class="btn btn-danger" href="#">
+								<a class="btn btn-danger" onclick="return xoa_lophoc(<?=$tmp['MaLH']?>)" href="javascript:void(0)">
 									<i class="halflings-icon white trash"></i> 
 								</a>
 							</td>
@@ -89,7 +97,7 @@
         };
         $.ajax({
             method:"POST",
-            url:"<?=base_url('admin/vieclam/active_vl'); ?>",
+            url:"<?=base_url('admin/vieclam/active_tmp'); ?>",
             data:{id:id,active:value},
 			success: function(result)
 			{

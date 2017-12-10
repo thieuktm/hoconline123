@@ -12,35 +12,74 @@ class Madmin extends CI_Model{
 		$this->db->from('admin');
 		$this->db->where('acount', $acount);
 		$this->db->where('pass', $pass);
+		$this->db->where('active', 1);
 		$kq = $this->db->count_all_results();
 		if($kq == 1)
 			return TRUE;
 		else
 			return FALSE;
 	}
-	//phần dưới này chưa dùng đến
-	public function dangky($data = array())
+	public function danhsach()
 	{
-		$this->db->insert('hoc_vien', $data);
+		$this->db->from('admin');
+		return $this->db->get()->result_array();
 	}
-	public function thongtin($email)
+	public function thongtin($acount)
 	{
-		$this->db->from('hoc_vien');
-		$this->db->where('email', $email);
+		$this->db->from('admin');
+		$this->db->where('acount', $acount);
 		return $this->db->get()->row_array();
 	}
-	public function capnhat($MaHV, $data=array())
+	public function capnhat($data=array(),$id)
 	{
-		$this->db->where('MaHV', $MaHV);
-		$this->db->update('hoc_vien', $data);
+		$this->db->where('id_admin', $id);
+		return $this->db->update('admin', $data);
 	}
-	public function cap4()
+	public function check_acount($acount)
 	{
-		$this->db->from('lop_hoc');
-		$this->db->where('cap = 4');
-		//$this->db->order_by('MaLH', 'desc');
-		//$this->db->limit();
-		return $this->db->get()->result_array();
+		$this->db->select('*');
+		$this->db->from('admin');
+		$this->db->where('acount', $acount);
+		$kq = $this->db->get()->result_array();
+		if(count($kq) != 0)
+		{
+			return FALSE;
+		}
+		else
+		{
+			return TRUE;
+		}
+	}
+	public function check_pass($pass,$id)
+	{
+		$this->db->select('*');
+		$this->db->from('admin');
+		$this->db->where('id_admin', $id);
+		$this->db->where('pass', md5($pass));
+		$kq = $this->db->get()->result_array();
+		if(count($kq) != 0)
+		{
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
+		}
+	}
+	public function them_ad($db = array())
+	{
+		return $this->db->insert('admin',$db);
+	}
+	public function xoa_ad($id)
+	{
+		$this->db->where('id_admin', $id);
+		return $this->db->delete('admin');
+	}
+	public function chinhsua($id)
+	{
+		$this->db->from('admin');
+		$this->db->where('id_admin', $id);
+		return $this->db->get()->row_array();
 	}
 	public function countAll(){
 		return $this->db->count_all($this->_table); 

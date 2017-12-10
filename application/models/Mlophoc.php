@@ -103,6 +103,36 @@ class Mlophoc extends CI_Model{
 		//$this->db->limit();
 		return $this->db->get()->result_array();
 	}
+	public function danhsach()
+	{
+		$this->db->from('lop_hoc, giaovien');
+		$this->db->where('lop_hoc.magv = giaovien.magv');
+		//$this->db->order_by('MaLH', 'desc');
+		//$this->db->limit();
+		return $this->db->get()->result_array();
+	}
+	public function danhsach_giaovien()
+	{
+		$this->db->from('giaovien');
+		$this->db->order_by('TenGV', 'asc');
+		return $this->db->get()->result_array();
+	}
+	public function them($data = array())
+	{
+		return $this->db->insert('lop_hoc',$data);
+	}
+	public function chinhsua($id)
+	{
+		$this->db->from('lop_hoc, giaovien');
+		$this->db->where('lop_hoc.magv = giaovien.magv');
+		$this->db->where('lop_hoc.MaLH', $id);
+		return $this->db->get()->row_array();
+	}
+	public function capnhat($data=array(),$id)
+	{
+		$this->db->where('MaLH', $id);
+		return $this->db->update('lop_hoc', $data);
+	}
 	public function countAll(){
 		return $this->db->count_all($this->_table); 
 	}

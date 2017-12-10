@@ -1,3 +1,9 @@
+<?php
+	if(isset($_SESSION['admin']))
+	{
+		$acount = $this->madmin->thongtin($_SESSION['admin']);
+	}
+?>
 <!-- start: Header -->
 <div class="navbar">
 	<div class="navbar-inner">
@@ -7,7 +13,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="index.html"><span>ADMIN</span></a>
+			<a class="brand" href="<?=base_url('admin')?>"><span>ADMIN</span></a>
 
 			<!-- start: Header Menu -->
 			<div class="nav-no-collapse header-nav">
@@ -262,14 +268,14 @@
 					<!-- start: User Dropdown -->
 					<li class="dropdown">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-							<i class="halflings-icon white user"></i> Admin
+							<i class="halflings-icon white user"></i> <?=$acount['ten']?>
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
 							<li class="dropdown-menu-title">
 								<span>Account Settings</span>
 							</li>
-							<li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
+							<li><a href="<?=base_url('admin/quantri/chinhsua/'.$acount['id_admin'])?>"><i class="halflings-icon user"></i> Chỉnh sửa</a></li>
 							<li><a href="<?=base_url('admin/login/dangxuat') ?>"><i class="halflings-icon off"></i> Đăng xuất</a></li>
 						</ul>
 					</li>
