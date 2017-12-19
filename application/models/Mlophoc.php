@@ -133,6 +133,11 @@ class Mlophoc extends CI_Model{
 		$this->db->where('MaLH', $id);
 		return $this->db->update('lop_hoc', $data);
 	}
+	public function xoa_lophoc($id)
+	{
+		$this->db->where('MaLH', $id);
+		return $this->db->delete('lop_hoc');
+	}
 	public function countAll(){
 		return $this->db->count_all($this->_table); 
 	}

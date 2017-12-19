@@ -65,7 +65,7 @@
 							<td><?=$tmp['hoc_phi'] ?></td>
 							<td><?=$tmp['cap'] ?></td>
 							<td><input type="checkbox" id="active_<?=$tmp['MaLH'] ?>" value="1" <?php if($tmp['active'] == '1') echo "checked"; ?> onclick="return update_info(<?=$tmp['MaLH']?>)" ></td>
-							<td><input type="checkbox" id="hot_<?=$tmp['MaLH'] ?>" value="1" <?php if($tmp['hot'] == '1') echo "checked"; ?> onclick="return update_info(<?=$tmp['MaLH']?>)" ></td>
+							<td><input type="checkbox" id="hot_<?=$tmp['MaLH'] ?>" value="1" <?php if($tmp['hot'] == '1') echo "checked"; ?> onclick="return lop_hot(<?=$tmp['MaLH']?>)" ></td>
 							<td class="center">
 								<a class="btn btn-info" href="<?=base_url('admin/lophoc/chinhsua/'.$tmp['MaLH'])?>">
 									<i class="halflings-icon white edit"></i>  
@@ -97,7 +97,7 @@
         };
         $.ajax({
             method:"POST",
-            url:"<?=base_url('admin/vieclam/active_tmp'); ?>",
+            url:"<?=base_url('admin/lophoc/active'); ?>",
             data:{id:id,active:value},
 			success: function(result)
 			{
@@ -107,5 +107,44 @@
 					alert('Lỗi!');
 			}
         });
+    }
+	function lop_hot(id){
+        var value = 0;
+        if($("#hot_"+id).is(":checked") == true){
+            value =1;
+        };
+        $.ajax({
+            method:"POST",
+            url:"<?=base_url('admin/lophoc/lop_hot'); ?>",
+            data:{id:id,hot:value},
+			success: function(result)
+			{
+				if(result == 1)
+					alert('Hoàn tất!');
+				else
+					alert('Lỗi!');
+			}
+        });
+    }
+	function xoa_lophoc(id){
+        if (confirm("Bạn có muốn xóa không?")) {
+            $.ajax({
+                dataType: "json",
+                type:"POST",
+                url:"<?=base_url('admin/lophoc/xoa'); ?>",
+                data:{id:id},
+                success: function(result){
+                    if(result == 1){
+                        alert("Xóa thành công");
+                        setTimeout(function(){
+                        	location.reload();
+                        },1000);
+                    }
+					else{
+						alert("Lỗi!");
+					}
+                }
+            });
+        }
     }
 </script>

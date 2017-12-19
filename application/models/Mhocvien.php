@@ -54,4 +54,15 @@ class Mhocvien extends CI_Model{
 	public function countAll(){
 		return $this->db->count_all($this->_table); 
 	}
+	public function danhsach()
+	{
+		$this->db->from('hoc_vien');
+		return $this->db->get()->result_array();
+	}
+	public function get($id)
+	{
+		$this->db->from('hoc_vien');
+		$this->db->where('MaHV',$id);
+		return $this->db->get()->result_array();
+	}
 }

@@ -1,0 +1,98 @@
+<?php
+if(isset($thongbao)) echo $thongbao;
+?>
+<noscript>
+	<div class="alert alert-block span10">
+		<h4 class="alert-heading">Warning!</h4>
+		<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+	</div>
+</noscript>
+
+<!-- start: Content -->
+<div id="content" class="span10">
+
+
+	<ul class="breadcrumb">
+		<li>
+			<i class="icon-home"></i>
+			<a href="<?=base_url('admin')?>">Trang chủ</a>
+			<i class="icon-angle-right"></i> 
+		</li>
+		<li>
+			<a href="<?=base_url('admin/giaovien')?>">Giáo viên</a>
+			<i class="icon-angle-right"></i> 
+		</li>
+		<li>
+			<a href="#">Chỉnh sửa giáo viên</a>
+		</li>
+	</ul>
+
+	<div class="row-fluid sortable">
+		<div class="box span12">
+			<div class="box-header" data-original-title>
+				<h2><i class="halflings-icon white edit"></i><span class="break"></span>Chỉnh sửa giáo viên</h2>
+				<div class="box-icon">
+					<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
+					<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+					<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+				</div>
+			</div>
+			<div class="box-content">
+				<form class="form-horizontal" action="<?=base_url('admin/giaovien/chinhsua/'.$giaovien['magv'])?>" method="post" enctype="multipart/form-data">
+					<fieldset>
+						<div class="control-group">
+							<label class="control-label" for="tengv">Tên giáo viên</label>
+							<div class="controls">
+								<input name="TenGV" class="input-xlarge focused" id="tengv" type="text" value="<?=$giaovien['TenGV'] ?>">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="email">Email</label>
+							<div class="controls">
+								<input name="mail" type="email" class="input-xlarge focused" id="email" value="<?=$giaovien['mail'] ?>">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="sdt">Số điện thoại</label>
+							<div class="controls">
+								<input name="SDT" type="text" class="input-xlarge focused" id="sdt" value="<?=$giaovien['SDT'] ?>">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="avatar">Avatar</label>
+							<div class="controls" hidden="">
+								<input name="Avatar" id="avatar" type="file" hidden>
+								<input name="Avatar_cu" type="text" hidden value="<?=$giaovien['Avatar'] ?>">
+							</div>
+							<div class="controls">
+								<label for="avatar" onClick="return chonhinh()"><img src="<?=base_url($giaovien['Avatar'])?>"  width="200px" class="img-responsive" name="imgupload" style="border-radius: 5px;border: 1px solid darkgray"></label>
+								
+							</div>
+						</div>
+						<div class="form-actions">
+							<button type="submit" name="luu" class="btn btn-primary">Lưu</button>
+							<a class="btn" href="<?=base_url('admin/lophoc')?>">Thoát</a>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+		</div><!--/span-->
+	</div><!--/row-->
+</div><!--/.fluid-container-->
+
+<!-- end: Content -->
+<script type="text/javascript">
+	function chonhinh() 
+	{
+	$('[name = Avatar]').change(function () {
+        if ( window.FileReader ) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('[name = imgupload]').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    })
+	}
+</script>

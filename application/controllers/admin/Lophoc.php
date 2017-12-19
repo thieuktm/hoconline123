@@ -85,7 +85,20 @@ class Lophoc extends CI_Controller {
 		$dat = array(
 			'active' => $active
 		);
-		$kq = $this->madmin->capnhat($dat,$id);
+		$kq = $this->mlophoc->capnhat($dat,$id);
+		if(isset($kq))
+			die(json_encode(1));
+		else
+			die(json_encode(0));
+	}
+	public function lop_hot()
+	{
+		$id = $this->input->post('id');
+		$hot = $this->input->post('hot');
+		$dat = array(
+			'hot' => $hot
+		);
+		$kq = $this->mlophoc->capnhat($dat,$id);
 		if(isset($kq))
 			die(json_encode(1));
 		else
@@ -117,10 +130,10 @@ class Lophoc extends CI_Controller {
 			die(json_encode(3));
 	}
 	
-	public function xoa_ad()
+	public function xoa()
 	{
 		$id = $this->input->post('id');
-		$kq = $this->madmin->xoa_ad($id);
+		$kq = $this->mlophoc->xoa_lophoc($id);
 		if(isset($kq))
 			die(json_encode(1));
 		else

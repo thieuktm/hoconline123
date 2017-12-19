@@ -48,4 +48,29 @@ class Mgiaovien extends CI_Model{
 	public function countAll(){
 			return $this->db->count_all($this->_table); 
 	}
+	public function danhsach()
+	{
+		$this->db->from('giaovien');
+		return $this->db->get()->result_array();
+	}
+	public function them($db = array())
+	{
+		return $this->db->insert('giaovien',$db);
+	}
+	public function get($id)
+	{
+		$this->db->from('giaovien');
+		$this->db->where('magv', $id);
+		return $this->db->get()->row_array();
+	}
+	public function capnhat($data=array(),$id)
+	{
+		$this->db->where('magv', $id);
+		return $this->db->update('giaovien', $data);
+	}
+	public function xoa_gv($id)
+	{
+		$this->db->where('magv', $id);
+		return $this->db->delete('giaovien');
+	}
 }
