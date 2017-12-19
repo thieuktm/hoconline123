@@ -13,6 +13,7 @@ class Lophoc extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('mlophoc');
 		$this->load->model('madmin');
+		$this->load->model('mtime');
 	}
 	public function index()
 	{
@@ -77,12 +78,6 @@ class Lophoc extends CI_Controller {
 		}
 		$this->load->view('admin/index', $data);
 	}
-	public function chuan_time($str)
-	{
-		str_replace( 'T', ' ', $str);
-		$time = strtotime($str.":00");
-		return date("Y-m-d H:i:s", $time);
-	}
 	public function active()
 	{
 		$id = $this->input->post('id');
@@ -95,33 +90,6 @@ class Lophoc extends CI_Controller {
 			die(json_encode(1));
 		else
 			die(json_encode(0));
-	}
-	public function them_ad()
-	{
-		$ten = $this->input->post('ten');
-		$acount = $this->input->post('acount');
-		$pass = $this->input->post('pass');
-		$repass = $this->input->post('repass');
-		if($this->madmin->check_acount($acount) == TRUE)
-		{
-			if($pass == $repass)
-			{
-				$dat = array(
-					'ten' => $ten,
-					'acount' => $acount,
-					'pass' => md5($pass),
-				);
-				$kq = $this->madmin->them_ad($dat);
-				if(isset($kq))
-					die(json_encode(1));
-				else
-					die(json_encode(0));
-			}
-			else
-				die(json_encode(2));
-		}
-		else
-			die(json_encode(3));
 	}
 	public function luu_pass()
 	{
@@ -167,8 +135,8 @@ class Lophoc extends CI_Controller {
 		{
 			$ten_lh = $this->input->post('TenLH');
 			$magv = $this->input->post('magv');
-			$ngay_BD = $this->chuan_time($this->input->post('ngay_BD'));
-			$ngay_KT = $this->chuan_time($this->input->post('ngay_KT'));
+			$ngay_BD = $this->mtime->chuan_time($this->input->post('ngay_BD'));
+			$ngay_KT = $this->mtime->chuan_time($this->input->post('ngay_KT'));
 			$Soluong_HV = $this->input->post('Soluong_HV');
 			$hoc_phi = $this->input->post('hoc_phi');
 			$cap = $this->input->post('cap');
@@ -188,28 +156,29 @@ class Lophoc extends CI_Controller {
 			{
 				$img = $this->upload->data();
 				$poster = $config['upload_path'].$img['file_name'];
-				$dat = array(
-					'TenLH' => $ten_lh,
-					'magv' => $magv,
-					'ngay_BD' => $ngay_BD,
-					'ngay_KT' => $ngay_KT,
-					'Soluong_HV' => $Soluong_HV,
-					'hoc_phi' => $hoc_phi,
-					'active' => $active,
-					'hot' => $hot,
-					'poster' => $poster,
-					'cap' => $cap,
-				);
-				$kq = $this->mlophoc->capnhat($dat, $id);
-				if(isset($kq))
-					$data['thongbao'] = '<script>alert("Thêm mới thành công.")</script>';
-				else
-					$data['thongbao'] = '<script>alert("Thêm mới thất bại.")</script>';
             }
 			else
 			{
-                $data['thongbao'] = '<script>alert("Upload hình không thành công!")</script>';
+                $poster = $this->input->post('images');
             }
+			
+			$dat = array(
+				'TenLH' => $ten_lh,
+				'magv' => $magv,
+				'ngay_BD' => $ngay_BD,
+				'ngay_KT' => $ngay_KT,
+				'Soluong_HV' => $Soluong_HV,
+				'hoc_phi' => $hoc_phi,
+				'active' => $active,
+				'hot' => $hot,
+				'poster' => $poster,
+				'cap' => $cap,
+			);
+			$kq = $this->mlophoc->capnhat($dat, $id);
+			if(isset($kq))
+				$data['thongbao'] = '<script>alert("Cập nhât thành công.")</script>';
+			else
+				$data['thongbao'] = '<script>alert("Cập nhật thất bại.")</script>';
 		}
 		$data['lophoc'] = $this->mlophoc->chinhsua($id);
 		$this->load->view('admin/index', $data);

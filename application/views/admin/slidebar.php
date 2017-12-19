@@ -11,7 +11,7 @@
 					<li><a class="submenu" href="<?=base_url('admin/lophoc/them') ?>"><i class="icon-plus"></i><span class="hidden-tablet"> Thêm lớp học</span></a></li>
 				</ul>	
 			</li>
-			<li><a href="<?=base_url('admin/ntd') ?>"><i class="icon-group"></i><span class="hidden-tablet"> Nhà tuyển dụng</span></a></li>
+			<li><a href="<?=base_url('admin/giaovien') ?>"><i class="icon-group"></i><span class="hidden-tablet"> Giáo viên</span></a></li>
 			<li><a href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Charts</span></a></li>
 			<li><a href="typography.html"><i class="icon-font"></i><span class="hidden-tablet"> Typography</span></a></li>
 			<li><a href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
