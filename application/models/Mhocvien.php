@@ -41,7 +41,7 @@ class Mhocvien extends CI_Model{
 	public function capnhat($MaHV, $data=array())
 	{
 		$this->db->where('MaHV', $MaHV);
-		$this->db->update('hoc_vien', $data);
+		return $this->db->update('hoc_vien', $data);
 	}
 	public function cap4()
 	{
@@ -63,6 +63,11 @@ class Mhocvien extends CI_Model{
 	{
 		$this->db->from('hoc_vien');
 		$this->db->where('MaHV',$id);
-		return $this->db->get()->result_array();
+		return $this->db->get()->row_array();
+	}
+	public function xoa_hocvien($id)
+	{
+		$this->db->where('MaHV', $id);
+		return $this->db->delete('hoc_vien');
 	}
 }

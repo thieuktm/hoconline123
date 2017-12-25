@@ -13,6 +13,7 @@ class Hocvien extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('mhocvien');
 		$this->load->model('madmin');
+		$this->load->model('mtime');
 		
 	}
 	public function index()
@@ -29,91 +30,84 @@ class Hocvien extends CI_Controller {
 		$dat = array(
 			'active' => $active
 		);
-		$kq = $this->madmin->capnhat($dat,$id);
-		if(isset($kq))
-			die(json_encode(1));
-		else
-			die(json_encode(0));
+		$kq = $this->mhocvien->capnhat($id,$dat);
+		echo($kq);
 	}
-	public function them_ad()
-	{
-		$ten = $this->input->post('ten');
-		$acount = $this->input->post('acount');
-		$pass = $this->input->post('pass');
-		$repass = $this->input->post('repass');
-		if($this->madmin->check_acount($acount) == TRUE)
-		{
-			if($pass == $repass)
-			{
-				$dat = array(
-					'ten' => $ten,
-					'acount' => $acount,
-					'pass' => md5($pass),
-				);
-				$kq = $this->madmin->them_ad($dat);
-				if(isset($kq))
-					die(json_encode(1));
-				else
-					die(json_encode(0));
-			}
-			else
-				die(json_encode(2));
-		}
-		else
-			die(json_encode(3));
-	}
+	
 	public function luu_pass()
 	{
 		$id = $this->input->post('id');
-		$mk = $this->input->post('mk');
 		$pass = $this->input->post('pass');
 		$repass = $this->input->post('repass');
-		if($this->madmin->check_pass($mk,$id) == TRUE)
+		if($pass == $repass)
 		{
-			if($pass == $repass)
-			{
-				$dat = array(
-					'pass' => md5($pass),
-				);
-				$kq = $this->madmin->capnhat($dat,$id);
-				if(isset($kq))
-					die(json_encode(1));
-				else
-					die(json_encode(0));
-			}
+			$dat = array(
+				'pass' => md5($pass),
+			);
+			$kq = $this->mhocvien->capnhat($id,$dat);
+			if($kq == 1)
+				die(json_encode(1));
 			else
-				die(json_encode(2));
+				die(json_encode(0));
 		}
 		else
-			die(json_encode(3));
+			die(json_encode(2));
 	}
 	
-	public function xoa_ad()
+	public function xoa_hocvien()
 	{
 		$id = $this->input->post('id');
-		$kq = $this->madmin->xoa_ad($id);
-		if(isset($kq))
-			die(json_encode(1));
-		else
-			die(json_encode(0));
+		$kq = $this->mhocvien->xoa_hocvien($id);
+		echo $kq;
 	}
 	public function chinhsua($id)
 	{
-		$data['title'] = 'Chỉnh sửa quản trị viên';
+		$data['title'] = 'Chỉnh sửa thông tin học viên';
+		
 		if(isset($_POST['luu']))
 		{
-			$ten = $this->input->post('ten');
-			$dat = array(
-				'ten' => $ten,
-			);
-			$kq = $this->madmin->capnhat($dat,$id);
-			if(isset($kq))
-				echo '<script>alert("Cập nhật thành công!")</script>';
+			//upload avatar
+			$config['upload_path'] = 'images/hocvien/';
+            $config['allowed_types'] = 'gif|jpg|png';
+            $this->load->library("upload", $config);
+            if($this->upload->do_upload("avatar_hv"))
+			{
+				$img = $this->upload->data();
+				$avatar_hv = $config['upload_path'].$img['file_name'];
+			}
 			else
-				echo '<script>alert("Lỗi!")</script>';
+				$avatar_hv = $this->input->post('images');;
+			//end upload avatar
+			$ho_ten = $this->input->post('ho_ten');
+			$email = $this->input->post('email');
+			$phone = $this->input->post('phone');
+			$dia_chi = $this->input->post('dia_chi');
+			$ngay_sinh = $this->input->post('ngay_sinh');
+			$gioi_tinh = $this->input->post('gioi_tinh');
+			$ngay_dk = $this->input->post('ngay_dk');
+			if($this->input->post('active'))
+				$active = $this->input->post('active');
+			else
+				$active = 0;
+			$dat = array(
+				'ho_ten' => $ho_ten,
+				'email' => $email,
+				'phone' => $phone,
+				'dia_chi' => $dia_chi,
+				'ngay_sinh' => $ngay_sinh,
+				'gioi_tinh' => $gioi_tinh,
+				'ngay_dk' => $ngay_dk,
+				'avatar_hv' => $avatar_hv,
+				'active' => $active,
+			);
+			$kq = $this->mhocvien->capnhat($id,$dat);
+			if($kq == 1)
+				$data['thongbao'] = '<script>alert("Cập nhật thành công!")</script>';
+			else
+				$data['thongbao'] = '<script>alert("Lỗi!")</script>';
 		}
-		$data['admin'] = $this->madmin->chinhsua($id);
-		$data['content'] = 'admin/admin/chinhsua';
+		$data['hocvien'] = $this->mhocvien->get($id);
+		$data['content'] = 'admin/hocvien/chinhsua';
 		$this->load->view('admin/index', $data);
 	}
 }

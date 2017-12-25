@@ -54,20 +54,20 @@
 						?>
 						<tr>
 							<td><?=$tmp['MaHV'] ?></td>
-							<td><?=$tmp['avatar_hv'] ?></td>
+							<td><img src="<?=base_url($tmp['avatar_hv']) ?>" width="60px" ></td>
 							<td><?=$tmp['ho_ten'] ?></td>
 							<td><?=$tmp['email'] ?></td>
 							<td><?=$tmp['phone'] ?></td>
 							<td><?=$tmp['dia_chi'] ?></td>
 							<td><?=$tmp['ngay_sinh'] ?></td>
-							<td><?=$tmp['gioi_tinh'] ?></td>
+							<td><?php if($tmp['gioi_tinh'] == 1) echo 'Nam'; else echo 'Nữ' ?></td>
 							<td><?=$tmp['ngay_dk'] ?></td>
 							<td><input type="checkbox" id="active_<?=$tmp['MaHV'] ?>" value="1" <?php if($tmp['active'] == '1') echo "checked"; ?> onclick="return update_info(<?=$tmp['MaHV']?>)" ></td>
 							<td class="center">
-								<a class="btn btn-info" href="<?=base_url('admin/quantri/chinhsua/'.$tmp['MaHV']) ?>">
+								<a class="btn btn-info" href="<?=base_url('admin/hocvien/chinhsua/'.$tmp['MaHV']) ?>">
 									<i class="halflings-icon white edit"></i>  
 								</a>
-								<a class="btn btn-danger" onclick="return xoa_ad(<?=$tmp['MaHV']?>)" href="javascript:void(0)">
+								<a class="btn btn-danger" onclick="return xoa_hocvien(<?=$tmp['MaHV']?>)" href="javascript:void(0)">
 									<i class="halflings-icon white trash"></i> 
 								</a>
 							</td>
@@ -87,12 +87,12 @@
 
 <!-- end: Content -->
 <script type="text/javascript">
-    function xoa_ad(id){
+    function xoa_hocvien(id){
         if (confirm("Bạn có muốn xóa không?")) {
             $.ajax({
                 dataType: "json",
                 type:"POST",
-                url:"<?=base_url('admin/quantri/xoa_ad'); ?>",
+                url:"<?=base_url('admin/hocvien/xoa_hocvien'); ?>",
                 data:{id:id},
                 success: function(result){
                     if(result == 1){
@@ -115,7 +115,7 @@
         };
         $.ajax({
             method:"POST",
-            url:"<?=base_url('admin/quantri/active'); ?>",
+            url:"<?=base_url('admin/hocvien/active'); ?>",
             data:{id:id,active:value},
 			success: function(result)
 			{
