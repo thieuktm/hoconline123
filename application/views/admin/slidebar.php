@@ -13,6 +13,8 @@
 			</li>
 			<li><a href="<?=base_url('admin/giaovien') ?>"><i class="icon-group"></i><span class="hidden-tablet"> Giáo viên</span></a></li>
 			<li><a href="<?=base_url('admin/hocvien') ?>"><i class="icon-group"></i><span class="hidden-tablet"> Học viên</span></a></li>
+			<li><a href="<?=base_url('admin/monhoc') ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> Môn học</span></a></li>
+			<li><a href="<?=base_url('admin/giaotrinh') ?>"><i class="icon-book"></i><span class="hidden-tablet"> Giáo trình</span></a></li>
 			
 		</ul>
 	</div>
