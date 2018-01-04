@@ -24,7 +24,7 @@
 			<div class="box-header" data-original-title>
 				<h2><i class="halflings-icon list white"></i><span class="break"></span>Danh sách giáo trình</h2>
 				<div class="box-icon">
-					<a href="<?=base_url('admin/monhoc/them')?>"><i class="halflings-icon white plus"></i></a>
+					<a href="<?=base_url('admin/giaotrinh/them')?>"><i class="halflings-icon white plus"></i></a>
 					<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
 					<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
 					<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
@@ -62,7 +62,7 @@
 							</td>
 							<td><input type="checkbox" id="active_<?=$tmp['Ma_Giaotrinh'] ?>" value="1" <?php if($tmp['active_gt'] == '1') echo "checked"; ?> onclick="return update_info(<?=$tmp['Ma_Giaotrinh']?>)" ></td>
 							<td class="center">
-								<a class="btn btn-info" href="<?=base_url('admin/monhoc/chinhsua/'.$tmp['Ma_Giaotrinh']) ?>">
+								<a class="btn btn-info" href="<?=base_url('admin/giaotrinh/chinhsua/'.$tmp['Ma_Giaotrinh']) ?>">
 									<i class="halflings-icon white edit"></i>  
 								</a>
 								<a class="btn btn-danger" onclick="return xoa_giaotrinh(<?=$tmp['Ma_Giaotrinh']?>)" href="javascript:void(0)">

@@ -31,7 +31,7 @@ class Giaotrinh extends CI_Controller {
 		$id = $this->input->post('id');
 		$active = $this->input->post('active');
 		$dat = array(
-			'active_mh' => $active
+			'active_gt' => $active
 		);
 		$kq = $this->mmonhoc->capnhat($id,$dat);
 		echo($kq);
@@ -69,20 +69,24 @@ class Giaotrinh extends CI_Controller {
 		
 		if(isset($_POST['luu']))
 		{
-			$TenMH = $this->input->post('TenMH');
-			$sotinchi = $this->input->post('sotinchi');
 			$MaLH = $this->input->post('MaLH');
-			$magv = $this->input->post('magv');
-			if($this->input->post('active_mh'))
-				$active_mh = $this->input->post('active_mh');
+			$TenGiaotrinh = $this->input->post('TenGiaotrinh');
+			$video = $this->input->post('video');
+			$noidungchinh = $this->input->post('noidungchinh');
+			$noidungfull = $this->input->post('noidungfull');
+			$gioithieu = $this->input->post('gioithieu');
+			if($this->input->post('active_gt'))
+				$active_gt = $this->input->post('active_gt');
 			else
-				$active_mh = 0;
+				$active_gt = 0;
 			$dat = array(
-				'TenMH' => $TenMH,
-				'sotinchi' => $sotinchi,
 				'MaLH' => $MaLH,
-				'magv' => $magv,
-				'active_mh' => $active_mh,
+				'TenGiaotrinh' => $TenGiaotrinh,
+				'video' => $video,
+				'noidungchinh' => $noidungchinh,
+				'noidungfull' => $noidungfull,
+				'gioithieu' => $gioithieu,
+				'active_gt' => $active_gt,
 			);
 			$kq = $this->mmonhoc->capnhat($id,$dat);
 			if($kq == 1)
@@ -98,34 +102,38 @@ class Giaotrinh extends CI_Controller {
 	}
 	public function them()
 	{
-		$data['title'] = 'Thêm môn học mới';
+		$data['title'] = 'Thêm giáo trình mới';
 		
 		if(isset($_POST['them']))
 		{
-			$TenMH = $this->input->post('TenMH');
-			$sotinchi = $this->input->post('sotinchi');
-			$MaLH = $this->input->post('MaLH');
-			$magv = $this->input->post('magv');
-			if($this->input->post('active_mh'))
-				$active_mh = $this->input->post('active_mh');
+			$MaMH = $this->input->post('MaMH');
+			$TenGiaotrinh = $this->input->post('TenGiaotrinh');
+			$video = $this->input->post('video');
+			$noidungchinh = $this->input->post('noidungchinh');
+			$noidungfull = $this->input->post('noidungfull');
+			$gioithieu = $this->input->post('gioithieu');
+			if($this->input->post('active_gt'))
+				$active_gt = $this->input->post('active_gt');
 			else
-				$active_mh = 0;
+				$active_gt = 0;
 			$dat = array(
-				'TenMH' => $TenMH,
-				'sotinchi' => $sotinchi,
-				'MaLH' => $MaLH,
-				'magv' => $magv,
-				'active_mh' => $active_mh,
+				'MaMH' => $MaMH,
+				'TenGiaotrinh' => $TenGiaotrinh,
+				'video' => $video,
+				'noidungchinh' => $noidungchinh,
+				'noidungfull' => $noidungfull,
+				'gioithieu' => $gioithieu,
+				'active_gt' => $active_gt,
 			);
-			$kq = $this->mmonhoc->them($dat);
+			$kq = $this->mgiaotrinh->them($dat);
 			if($kq == 1)
-				$data['thongbao'] = '<script>alert("Thêm môn học mới thành công!")</script>';
+				$data['thongbao'] = '<script>alert("Thêm giáo trình mới thành công!")</script>';
 			else
 				$data['thongbao'] = '<script>alert("Lỗi!")</script>';
 		}
-		$data['lophoc'] = $this->mlophoc->danhsach();
+		$data['monhoc'] = $this->mmonhoc->danhsach();
 		$data['giaovien'] = $this->mgiaovien->danhsach();
-		$data['content'] = 'admin/monhoc/them';
+		$data['content'] = 'admin/giaotrinh/them';
 		$this->load->view('admin/index', $data);
 	}
 }

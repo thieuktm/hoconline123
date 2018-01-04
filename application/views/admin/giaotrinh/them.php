@@ -19,18 +19,18 @@ if(isset($thongbao)) echo $thongbao;
 			<i class="icon-angle-right"></i> 
 		</li>
 		<li>
-			<a href="<?=base_url('admin/monhoc')?>">Môn học</a>
+			<a href="<?=base_url('admin/giaotrinh')?>">Giáo trình</a>
 			<i class="icon-angle-right"></i> 
 		</li>
 		<li>
-			<a href="#">Thêm môn học mới</a>
+			<a href="#">Thêm giáo trình mới</a>
 		</li>
 	</ul>
 
 	<div class="row-fluid sortable">
 		<div class="box span12">
 			<div class="box-header" data-original-title>
-				<h2><i class="halflings-icon white edit"></i><span class="break"></span>Thêm môn học mới</h2>
+				<h2><i class="halflings-icon white edit"></i><span class="break"></span>Thêm giáo trình mới</h2>
 				<div class="box-icon">
 					<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
 					<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
@@ -38,29 +38,17 @@ if(isset($thongbao)) echo $thongbao;
 				</div>
 			</div>
 			<div class="box-content">
-				<form class="form-horizontal" action="<?=base_url('admin/monhoc/them')?>" method="post" enctype="multipart/form-data">
+				<form class="form-horizontal" action="<?=base_url('admin/giaotrinh/them')?>" method="post" enctype="multipart/form-data">
 					<fieldset>
 					  <div class="control-group">
-						<label class="control-label" for="TenMH">Tên môn học</label>
+						<label class="control-label" for="MaMH">Môn học</label>
 						<div class="controls">
-						  <input name="TenMH" class="input-xlarge focused" id="TenMH" type="text" value="">
-						</div>
-					  </div>
-					  <div class="control-group">
-						<label class="control-label" for="sotinchi">Số tín chỉ</label>
-						<div class="controls">
-						  <input name="sotinchi" class="input-xlarge focused" id="sotinchi" type="number" value="">
-						</div>
-					  </div>
-					  <div class="control-group">
-						<label class="control-label" for="MaLH">Lớp học</label>
-						<div class="controls">
-						  <select name="MaLH" id="MaLH">
+						  <select name="MaMH" id="MaMH" data-rel="chosen">
 						  <?php
-							foreach($lophoc as $tmp)
+							foreach($monhoc as $tmp)
 							{
 						  ?>
-						  	<option value="<?=$tmp['MaLH']?>"><?=$tmp['TenLH']?></option>
+						  	<option value="<?=$tmp['MaMH']?>"><?=$tmp['TenMH']?> - <?=$tmp['TenLH'] ?></option>
 						  <?php
 							}
 			   			  ?>
@@ -68,26 +56,41 @@ if(isset($thongbao)) echo $thongbao;
 						</div>
 					  </div>
 					  <div class="control-group">
-						<label class="control-label" for="MaLH">Giáo viên</label>
+						<label class="control-label" for="TenGiaotrinh">Tên giáo trình</label>
 						<div class="controls">
-						  <select name="magv" id="magv">
-						  <?php
-							foreach($giaovien as $tmp)
-							{
-						  ?>
-						  	<option value="<?=$tmp['magv']?>" ><?=$tmp['TenGV']?></option>
-						  <?php
-							}
-			   			  ?>
-						  </select>
+						  <input name="TenGiaotrinh" class="input-xlarge focused" id="TenGiaotrinh" type="text" value="">
+						</div>
+					  </div>
+					  <div class="control-group">
+						<label class="control-label" for="video">Link video</label>
+						<div class="controls">
+						  <input name="video" class="input-xlarge focused" id="video" type="text" value="">
+						</div>
+					  </div>
+					  <div class="control-group">
+						<label class="control-label" for="noidungchinh">Nội dung chính</label>
+						<div class="controls">
+						  <textarea class="cleditor" name="noidungchinh" id="noidungchinh" rows="3"></textarea>
+						</div>
+					  </div>
+					  <div class="control-group">
+						<label class="control-label" for="noidungfull">Nội dung đầy đủ</label>
+						<div class="controls">
+						  <textarea class="cleditor" name="noidungfull" id="noidungfull" rows="3"></textarea>
+						</div>
+					  </div>
+					  <div class="control-group">
+						<label class="control-label" for="gioithieu">Giới thiệu</label>
+						<div class="controls">
+						  <textarea class="cleditor" name="gioithieu" id="gioithieu" rows="3"></textarea>
 						</div>
 					  </div>
 					  <div class="control-group">
 						<label class="control-label" for="optionsCheckbox2">Active</label>
 						<div class="controls">
 						  <label class="checkbox">
-							<input name="active_mh" type="checkbox" id="optionsCheckbox2" value="1" checked >
-							Chọn để kích hoạt môn học
+							<input name="active_gt" type="checkbox" id="optionsCheckbox2" value="1" checked >
+							Chọn để kích hoạt giáo trình
 						  </label>
 						</div>
 					  </div>

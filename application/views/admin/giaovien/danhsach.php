@@ -30,7 +30,6 @@
 				<table class="table table-striped table-bordered bootstrap-datatable datatable">
 					<thead>
 						<tr>
-							<th>Tên giáo trình</th>
 							<th>Mã giáo viên</th>
 							<th>Avatar</th>
 							<th>Tên giáo viên</th>
@@ -42,7 +41,6 @@
 					<tbody>
 						<?php
 						foreach($giaovien as $tmp)
-						foreach($giaotrinh as $tmp)
 						{
 						?>
 						<tr>

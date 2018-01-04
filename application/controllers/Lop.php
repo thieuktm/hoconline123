@@ -24,6 +24,7 @@ class Lop extends CI_Controller {
 		$data['cap1'] = $this->Mlophoc->cap1();
 		$data['cap2'] = $this->Mlophoc->cap2();
 		$data['chitiet'] = $chitiet = $this->Mlophoc->chitiet($id,$gt);
+		print_r($id);
 		$data['bai_tt'] = $this->Mlophoc->bai_tt($id,$chitiet['Ma_Giaotrinh']);
 		$this->load->view('lophoc',$data);
 	}
