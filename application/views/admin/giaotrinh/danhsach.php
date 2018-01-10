@@ -90,7 +90,7 @@
             $.ajax({
                 dataType: "json",
                 type:"POST",
-                url:"<?=base_url('admin/monhoc/xoa_giaotrinh'); ?>",
+                url:"<?=base_url('admin/giaotrinh/xoa_giaotrinh'); ?>",
                 data:{id:id},
                 success: function(result){
                     if(result == 1){

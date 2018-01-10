@@ -13,7 +13,7 @@ class Mgiaotrinh extends CI_Model{
 	}
 	public function capnhat($id, $data=array())
 	{
-		$this->db->where('MaMH', $id);
+		$this->db->where('Ma_Giaotrinh', $id);
 		return $this->db->update('giao_trinh', $data);
 	}
 	public function cap4()
@@ -37,12 +37,12 @@ class Mgiaotrinh extends CI_Model{
 	public function get($id)
 	{
 		$this->db->from('giao_trinh');
-		$this->db->where('MaMH',$id);
+		$this->db->where('Ma_Giaotrinh',$id);
 		return $this->db->get()->row_array();
 	}
-	public function xoa_monhoc($id)
+	public function xoa_giaotrinh($id)
 	{
-		$this->db->where('MaMH', $id);
+		$this->db->where('Ma_Giaotrinh', $id);
 		return $this->db->delete('giao_trinh');
 	}
 }

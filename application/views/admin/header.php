@@ -18,6 +18,7 @@
 			<!-- start: Header Menu -->
 			<div class="nav-no-collapse header-nav">
 				<ul class="nav pull-right">
+<!--
 					<li class="dropdown hidden-phone">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 							<i class="icon-bell"></i>
@@ -104,7 +105,9 @@
 							</li>	
 						</ul>
 					</li>
+-->
 					<!-- start: Notifications Dropdown -->
+<!--
 					<li class="dropdown hidden-phone">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 							<i class="icon-calendar"></i>
@@ -166,8 +169,10 @@
 							</li>	
 						</ul>
 					</li>
+-->
 					<!-- end: Notifications Dropdown -->
 					<!-- start: Message Dropdown -->
+<!--
 					<li class="dropdown hidden-phone">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 							<i class="icon-envelope"></i>
@@ -264,6 +269,7 @@
 							</li>	
 						</ul>
 					</li>
+-->
 
 					<!-- start: User Dropdown -->
 					<li class="dropdown">

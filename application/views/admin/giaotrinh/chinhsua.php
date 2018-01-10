@@ -19,18 +19,18 @@ if(isset($thongbao)) echo $thongbao;
 			<i class="icon-angle-right"></i> 
 		</li>
 		<li>
-			<a href="<?=base_url('admin/monhoc')?>">Môn học</a>
+			<a href="<?=base_url('admin/giaotrinh')?>">Giáo trình</a>
 			<i class="icon-angle-right"></i> 
 		</li>
 		<li>
-			<a href="#">Chỉnh sửa</a>
+			<a href="#">Chỉnh sửa giáo trình</a>
 		</li>
 	</ul>
 
 	<div class="row-fluid sortable">
 		<div class="box span12">
 			<div class="box-header" data-original-title>
-				<h2><i class="halflings-icon white edit"></i><span class="break"></span>Chỉnh sửa môn học</h2>
+				<h2><i class="halflings-icon white edit"></i><span class="break"></span>Chỉnh sửa giáo trình</h2>
 				<div class="box-icon">
 					<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
 					<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
@@ -38,29 +38,17 @@ if(isset($thongbao)) echo $thongbao;
 				</div>
 			</div>
 			<div class="box-content">
-				<form class="form-horizontal" action="<?=base_url('admin/monhoc/chinhsua/'.$monhoc['MaMH'])?>" method="post" enctype="multipart/form-data">
+				<form class="form-horizontal" action="<?=base_url('admin/giaotrinh/chinhsua/'.$giaotrinh['Ma_Giaotrinh'])?>" method="post" enctype="multipart/form-data">
 					<fieldset>
 					  <div class="control-group">
-						<label class="control-label" for="TenMH">Tên môn học</label>
+						<label class="control-label" for="MaMH">Môn học</label>
 						<div class="controls">
-						  <input name="TenMH" class="input-xlarge focused" id="TenMH" type="text" value="<?=$monhoc['TenMH']?>">
-						</div>
-					  </div>
-					  <div class="control-group">
-						<label class="control-label" for="sotinchi">Số tín chỉ</label>
-						<div class="controls">
-						  <input name="sotinchi" class="input-xlarge focused" id="sotinchi" type="number" value="<?=$monhoc['sotinchi']?>">
-						</div>
-					  </div>
-					  <div class="control-group">
-						<label class="control-label" for="MaLH">Lớp học</label>
-						<div class="controls">
-						  <select name="MaLH" id="MaLH">
+						  <select name="MaMH" id="MaMH" data-rel="chosen">
 						  <?php
-							foreach($lophoc as $tmp)
+							foreach($monhoc as $tmp)
 							{
 						  ?>
-						  	<option value="<?=$tmp['MaLH']?>" <?php if($monhoc['MaLH'] == $tmp['MaLH']) echo 'selected'; ?>><?=$tmp['TenLH']?></option>
+						  	<option value="<?=$tmp['MaMH']?>" <?php if($tmp['MaMH'] == $giaotrinh['MaMH']) echo 'selected'; ?>><?=$tmp['TenMH']?> - <?=$tmp['TenLH'] ?></option>
 						  <?php
 							}
 			   			  ?>
@@ -68,32 +56,47 @@ if(isset($thongbao)) echo $thongbao;
 						</div>
 					  </div>
 					  <div class="control-group">
-						<label class="control-label" for="MaLH">Giáo viên</label>
+						<label class="control-label" for="TenGiaotrinh">Tên giáo trình</label>
 						<div class="controls">
-						  <select name="magv" id="magv">
-						  <?php
-							foreach($giaovien as $tmp)
-							{
-						  ?>
-						  	<option value="<?=$tmp['magv']?>" <?php if($tmp['magv'] == $monhoc['magv']) echo 'selected'; ?> ><?=$tmp['TenGV']?></option>
-						  <?php
-							}
-			   			  ?>
-						  </select>
+						  <input name="TenGiaotrinh" class="input-xlarge focused" id="TenGiaotrinh" type="text" value="<?=$giaotrinh['TenGiaotrinh'] ?>">
+						</div>
+					  </div>
+					  <div class="control-group">
+						<label class="control-label" for="video">Link video</label>
+						<div class="controls">
+						  <input name="video" class="input-xlarge focused" id="video" type="text" value="<?=$giaotrinh['video'] ?>">
+						</div>
+					  </div>
+					  <div class="control-group">
+						<label class="control-label" for="noidungchinh">Nội dung chính</label>
+						<div class="controls">
+						  <textarea class="cleditor" name="noidungchinh" id="noidungchinh" rows="3"><?=$giaotrinh['noidungchinh'] ?></textarea>
+						</div>
+					  </div>
+					  <div class="control-group">
+						<label class="control-label" for="noidungfull">Nội dung đầy đủ</label>
+						<div class="controls">
+						  <textarea class="cleditor" name="noidungfull" id="noidungfull" rows="3"><?=$giaotrinh['noidungfull'] ?></textarea>
+						</div>
+					  </div>
+					  <div class="control-group">
+						<label class="control-label" for="gioithieu">Giới thiệu</label>
+						<div class="controls">
+						  <textarea class="cleditor" name="gioithieu" id="gioithieu" rows="3"><?=$giaotrinh['gioithieu'] ?></textarea>
 						</div>
 					  </div>
 					  <div class="control-group">
 						<label class="control-label" for="optionsCheckbox2">Active</label>
 						<div class="controls">
 						  <label class="checkbox">
-							<input name="active_mh" type="checkbox" id="optionsCheckbox2" value="1" <?php if($monhoc['active_mh'] == 1) echo('checked'); ?> >
-							Chọn để kích hoạt môn học
+							<input name="active_gt" type="checkbox" id="optionsCheckbox2" value="1" <?php if($giaotrinh['active_gt'] == 1) echo 'checked'; ?> >
+							Chọn để kích hoạt giáo trình
 						  </label>
 						</div>
 					  </div>
 					  <div class="form-actions">
 						<button type="submit" name="luu" class="btn btn-primary">Lưu</button>
-						<a class="btn" href="<?=base_url('admin/monhoc')?>">Thoát</a>
+						<a class="btn" href="<?=base_url('admin/giaotrinh')?>">Thoát</a>
 					  </div>
 					</fieldset>
 				  </form>
@@ -103,71 +106,3 @@ if(isset($thongbao)) echo $thongbao;
 </div><!--/.fluid-container-->
 
 <!-- end: Content -->
-<div id="modal_pass" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header bg-info">
-                <button type="button" class="close" data-dismiss="modal">×</button>
-                <h6 class="modal-title">Đổi mật khẩu</h6>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal">
-					<div class="form-group">
-                        <label for="pass" class="control-label">Mật khẩu mới</label>
-                        <div class="controls">
-                            <input type="password" class="form-control" id="pass" placeholder="Mật khẩu mới" />
-                        </div>
-                    </div>
-					<div class="form-group">
-                        <label for="repass" class="control-label">Nhập lại mật khẩu mới</label>
-                        <div class="controls">
-                            <input type="password" class="form-control" id="repass" placeholder="Nhập lại mật khẩu mới" />
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-info lis-data" onclick="return luu_pass(<?=$monhoc['MaMH']?>);"> Lưu</button>
-                <button type="button" class="btn btn-link" data-dismiss="modal">Đóng</button>
-            </div>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    function luu_pass(id){
-        var pass   = $('#pass').val();
-        var repass   = $('#repass').val();
-        $.ajax({
-            dataType: "json",
-            type:"POST",
-            url:"<?=base_url('admin/monhoc/luu_pass'); ?>",
-            data:{id:id,pass:pass,repass:repass},
-            success: function(result){
-                if(result == 1){
-                    alert("Lưu thành công");
-					setTimeout(function(){
-                        	location.reload();
-                        },1000);
-                }else if(result == 2){
-					alert("Mật khẩu mới không trùng khớp!");
-				}
-				else{
-					alert("Lỗi!")
-				}
-            }
-        });
-    }
-
-	function chonhinh() 
-	{
-	$('[name = avatar_hv]').change(function () {
-        if ( window.FileReader ) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('[name = imgupload]').attr('src', e.target.result);
-            }
-            reader.readAsDataURL(this.files[0]);
-        }
-    })
-	}
-</script>

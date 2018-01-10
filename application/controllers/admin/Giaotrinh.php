@@ -33,43 +33,23 @@ class Giaotrinh extends CI_Controller {
 		$dat = array(
 			'active_gt' => $active
 		);
-		$kq = $this->mmonhoc->capnhat($id,$dat);
+		$kq = $this->mgiaotrinh->capnhat($id,$dat);
 		echo($kq);
 	}
 	
-	public function luu_pass()
+	public function xoa_giaotrinh()
 	{
 		$id = $this->input->post('id');
-		$pass = $this->input->post('pass');
-		$repass = $this->input->post('repass');
-		if($pass == $repass)
-		{
-			$dat = array(
-				'pass' => md5($pass),
-			);
-			$kq = $this->mmonhoc->capnhat($id,$dat);
-			if($kq == 1)
-				die(json_encode(1));
-			else
-				die(json_encode(0));
-		}
-		else
-			die(json_encode(2));
-	}
-	
-	public function xoa_monhoc()
-	{
-		$id = $this->input->post('id');
-		$kq = $this->mmonhoc->xoa_monhoc($id);
+		$kq = $this->mgiaotrinh->xoa_giaotrinh($id);
 		echo $kq;
 	}
 	public function chinhsua($id)
 	{
-		$data['title'] = 'Chỉnh sửa thông tin môn học';
+		$data['title'] = 'Chỉnh sửa giáo trình';
 		
 		if(isset($_POST['luu']))
 		{
-			$MaLH = $this->input->post('MaLH');
+			$MaMH = $this->input->post('MaMH');
 			$TenGiaotrinh = $this->input->post('TenGiaotrinh');
 			$video = $this->input->post('video');
 			$noidungchinh = $this->input->post('noidungchinh');
@@ -80,7 +60,7 @@ class Giaotrinh extends CI_Controller {
 			else
 				$active_gt = 0;
 			$dat = array(
-				'MaLH' => $MaLH,
+				'MaMH' => $MaMH,
 				'TenGiaotrinh' => $TenGiaotrinh,
 				'video' => $video,
 				'noidungchinh' => $noidungchinh,
@@ -88,16 +68,16 @@ class Giaotrinh extends CI_Controller {
 				'gioithieu' => $gioithieu,
 				'active_gt' => $active_gt,
 			);
-			$kq = $this->mmonhoc->capnhat($id,$dat);
+			$kq = $this->mgiaotrinh->capnhat($id,$dat);
 			if($kq == 1)
 				$data['thongbao'] = '<script>alert("Cập nhật thành công!")</script>';
 			else
 				$data['thongbao'] = '<script>alert("Lỗi!")</script>';
 		}
-		$data['monhoc'] = $this->mmonhoc->get($id);
-		$data['lophoc'] = $this->mlophoc->danhsach();
+		$data['giaotrinh'] = $this->mgiaotrinh->get($id);
+		$data['monhoc'] = $this->mmonhoc->danhsach();
 		$data['giaovien'] = $this->mgiaovien->danhsach();
-		$data['content'] = 'admin/monhoc/chinhsua';
+		$data['content'] = 'admin/giaotrinh/chinhsua';
 		$this->load->view('admin/index', $data);
 	}
 	public function them()

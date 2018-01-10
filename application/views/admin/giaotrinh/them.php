@@ -96,7 +96,7 @@ if(isset($thongbao)) echo $thongbao;
 					  </div>
 					  <div class="form-actions">
 						<button type="submit" name="them" class="btn btn-primary">Thêm</button>
-						<a class="btn" href="<?=base_url('admin/monhoc')?>">Thoát</a>
+						<a class="btn" href="<?=base_url('admin/giaotrinh')?>">Thoát</a>
 					  </div>
 					</fieldset>
 				  </form>
