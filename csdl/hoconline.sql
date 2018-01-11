@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th1 04, 2018 lúc 11:56 AM
+-- Thời gian đã tạo: Th1 11, 2018 lúc 04:38 PM
 -- Phiên bản máy phục vụ: 5.7.19
 -- Phiên bản PHP: 5.6.31
 
@@ -101,6 +101,31 @@ INSERT INTO `dang_ky` (`MaHV`, `MaMH`, `Diem`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `email`
+--
+
+DROP TABLE IF EXISTS `email`;
+CREATE TABLE IF NOT EXISTS `email` (
+  `id_email` int(11) NOT NULL AUTO_INCREMENT,
+  `tieu_de` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tin_nhan` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `ngay_gui` datetime NOT NULL,
+  PRIMARY KEY (`id_email`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `email`
+--
+
+INSERT INTO `email` (`id_email`, `tieu_de`, `email`, `phone`, `tin_nhan`, `status`, `ngay_gui`) VALUES
+(1, 'lạlfalflaf', 'a@gmail.com', '0123456789', 'afjlajflajf à a;fj a;f', 0, '2018-01-11 21:29:41');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `giaovien`
 --
 
@@ -144,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `giao_trinh` (
   `gioithieu` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `active_gt` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`Ma_Giaotrinh`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `giao_trinh`
@@ -162,7 +187,10 @@ INSERT INTO `giao_trinh` (`Ma_Giaotrinh`, `MaMH`, `TenGiaotrinh`, `video`, `noid
 (10, 8, 'toán', 'https://www.youtube.com/embed/j-giDZE0OT4', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư', 1),
 (11, 8, 'tiếng anh', 'https://www.youtube.com/embed/ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn', 1),
 (12, 9, 'ngữ Văn', 'https://www.youtube.com/embed/7C80PsFX-fY', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1),
-(13, 9, 'toán', 'https://www.youtube.com/embed/ZgpgavgE3Xg', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư', 1);
+(13, 9, 'toán', 'https://www.youtube.com/embed/ZgpgavgE3Xg', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư', 1),
+(14, 13, 'Bài 2', 'abc', 'Nội dung chính', 'nội dung full', 'giới thiệu', 1),
+(15, 1, 'Bài 2', 'abc', 'nnnnnnnnnnnnnnslflslflalsfs', 'slfjlaslfjalsf;á;fjasjf;a;f', 'slfja;sj;fa', 1),
+(16, 16, 'Bài 1', 'link cập nhật sau', 'Nội dung chưa soạn', 'Nội dung chưa soạn', '<div>Môn học này học sinh tự học không cần dạy</div>', 1);
 
 -- --------------------------------------------------------
 
@@ -191,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `hoc_vien` (
 --
 
 INSERT INTO `hoc_vien` (`MaHV`, `ho_ten`, `email`, `pass`, `phone`, `dia_chi`, `ngay_sinh`, `gioi_tinh`, `ngay_dk`, `avatar_hv`, `active`) VALUES
-(1010, 'aaaaaa', 'a@gmail.com', '202cb962ac59075b964b07152d234b70', '0123456789', 'thfs', '2017-08-17', '0', '2016-12-20 00:04:00', 'images/hocvien/img_avatar21.png', 1),
+(1010, 'aaaaaa', 'a@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0123456789', 'thfs', '2017-08-17', '0', '2016-12-20 00:04:00', 'images/hocvien/img_avatar21.png', 1),
 (1011, 'b', 'b@gmail.com', '', '0123456789', 'sdffh', '2017-10-02', '0', '2017-10-10 00:00:00', '', 1),
 (1012, 'c', 'c@gmail.com', '', '123456789', 'edfg', '2017-10-05', '1', '2017-10-09 00:00:00', '', 1),
 (1013, 'e', 'e@gmail.com', '', '0123456789', 'errt', '2017-10-04', '1', '2017-10-24 00:00:00', '', 1),
@@ -228,14 +256,14 @@ CREATE TABLE IF NOT EXISTS `lop_hoc` (
   `cap` int(11) NOT NULL,
   `hot` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`MaLH`)
-) ENGINE=MyISAM AUTO_INCREMENT=346 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=347 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `lop_hoc`
 --
 
 INSERT INTO `lop_hoc` (`MaLH`, `TenLH`, `magv`, `ngay_BD`, `ngay_KT`, `Soluong_HV`, `hoc_phi`, `active`, `poster`, `cap`, `hot`) VALUES
-(1, 'Lớp 1', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 12, NULL, 1, 'images/1.jpg', 1, 1),
+(1, 'Lớp 1', 5, '2017-10-02 00:00:00', '2017-10-31 00:00:00', 12, 0, 1, 'images/1.jpg', 1, 1),
 (2, 'Lớp 2', 6, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 30, NULL, 1, 'images/1.jpg', 1, 1),
 (10, 'Lớp 10', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 3, 1),
 (11, 'Lớp 11', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/1.jpg', 3, 0),
@@ -261,7 +289,8 @@ INSERT INTO `lop_hoc` (`MaLH`, `TenLH`, `magv`, `ngay_BD`, `ngay_KT`, `Soluong_H
 (121, 'Lớp Chuyên khối B', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 3, 0),
 (342, 'abc', 6, '2017-12-10 05:31:28', '2017-12-11 07:17:14', 24, 400000, 1, 'images/poster/Screenshot_(5)1.png', 0, 0),
 (343, 'ádfasdfasd', 7, '1970-01-01 00:33:37', '1970-01-01 00:33:37', 24, 400000, 1, 'images/poster/Screenshot_(1)1.png', 4, 0),
-(344, 'học', 4, '1970-01-01 00:00:00', '1970-01-01 00:00:00', 24, 400000, 1, 'images/poster/Screenshot_(5)2.png', 4, 0);
+(344, 'học', 4, '1970-01-01 00:00:00', '1970-01-01 00:00:00', 24, 400000, 1, 'images/poster/Screenshot_(5)2.png', 4, 0),
+(346, 'abc', 10, '2018-01-11 12:10:00', '2018-01-11 12:10:00', 24, 400000, 1, 'images/poster/Screenshot_(1)3.png', 4, 0);
 
 -- --------------------------------------------------------
 
@@ -278,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `mon_hoc` (
   `magv` int(11) NOT NULL,
   `active_mh` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`MaMH`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `mon_hoc`
@@ -297,7 +326,8 @@ INSERT INTO `mon_hoc` (`MaMH`, `TenMH`, `sotinchi`, `MaLH`, `magv`, `active_mh`)
 (10, 'toan_lop10', 2, '10', 6, 1),
 (11, 'ngu_van', 2, '11', 6, 1),
 (12, 'Anh_van', 2, '12', 6, 1),
-(13, 'Lý', 2, '8', 6, 1);
+(13, 'Lý', 2, '8', 6, 1),
+(16, 'Tự học', 3, '344', 10, 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
