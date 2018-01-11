@@ -32,8 +32,8 @@ class Lophoc extends CI_Controller {
 			$ten_lh = $this->input->post('TenLH');
 			$magv = $this->input->post('magv');
 			
-			$ngay_BD = $this->chuan_time($this->input->post('ngay_BD'));
-			$ngay_KT = $this->chuan_time($this->input->post('ngay_KT'));
+			$ngay_BD = $this->mtime->chuan_time($this->input->post('ngay_BD'));
+			$ngay_KT = $this->mtime->chuan_time($this->input->post('ngay_KT'));
 			$Soluong_HV = $this->input->post('Soluong_HV');
 			$hoc_phi = $this->input->post('hoc_phi');
 			$cap = $this->input->post('cap');
