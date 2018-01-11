@@ -8,11 +8,7 @@ class Home extends CI_Controller {
 		$this->lang->load('home','vietnamese');  
 		$this->load->helper('url');
 		$this->load->model('mhocvien');
-<<<<<<< HEAD
 		$this->load->model('memail');
-=======
->>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
-		
 	}
 	public function index()
 	{
@@ -115,7 +111,6 @@ class Home extends CI_Controller {
 		//view
 		
 	}
-<<<<<<< HEAD
 	public function guitin() 
 	{
 		date_default_timezone_set('Asia/Ho_Chi_Minh');
@@ -142,9 +137,6 @@ class Home extends CI_Controller {
 			}
 		}
 	}
-=======
-	
->>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
 	
 }
 ?>

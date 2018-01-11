@@ -3,12 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Quantri extends CI_Controller {
 
-<<<<<<< HEAD
-	public function __construct() {
-=======
 	public function __construct()
 	{
->>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
 		parent::__construct();
 		if(!isset($_SESSION['admin']))
 		{

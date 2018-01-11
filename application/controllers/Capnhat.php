@@ -16,13 +16,6 @@ class Capnhat extends CI_Controller {
 		$data['title'] = 'CLASS ONLINE | Home';
 		$data['active'] = 0;
 		$data['thongtin'] = $this->mhocvien->thongtin($email);
-<<<<<<< HEAD
-		$data['content'] = 'suathongtin';
-		$this->load->view('lophoc', $data);
-	}
-	public function chinhsua($MaHV)
-	{
-=======
 		$data['content'] = 'lophoc/suathongtin';
 		$this->load->view('lophoc', $data);
 	}
@@ -31,7 +24,6 @@ class Capnhat extends CI_Controller {
 		$email = $_SESSION['login'];
 		$thongtin = $this->mhocvien->thongtin($email);
 		$MaHV = $thongtin['MaHV'];
->>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
 		if(isset($_POST['capnhat']))
 		{
 			$ten = $this->input->post('ten');

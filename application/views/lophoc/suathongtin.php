@@ -7,12 +7,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-offset-2 col-sm-8">
-				
-<<<<<<< HEAD
-					<form class="form-horizontal" role="form" action="<?=base_url('capnhat/chinhsua/'.$thongtin['MaHV']); ?>" enctype="multipart/form-data" method="post">
-=======
 					<form class="form-horizontal" role="form" action="<?=base_url('Capnhat/chinhsua') ?>" enctype="multipart/form-data" method="post">
->>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
 						<div class="form-group">
 						<br>
 							<label for="ten" class="col-sm-2 control-label" style="color:brown">Tên</label>
