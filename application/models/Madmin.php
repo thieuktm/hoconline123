@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <?php
+=======
+
+ <?php
+>>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Madmin extends CI_Model{

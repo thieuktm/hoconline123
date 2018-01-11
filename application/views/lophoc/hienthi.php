@@ -63,7 +63,22 @@
 					</ul>
 				</div>
 		</div>
+<<<<<<< HEAD
 		<div class="all-comments">
+=======
+		<!--tạo cách cmnt cho websites.-->
+		<div class="all-comments">
+		<div class="fb-comments" data-href="<?=base_url('lop/'.$chitiet['MaMH'])?>" data-numposts="5" width="100%"></div>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.11&appId=166785530598560';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+<!--
+>>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
 			<div class="all-comments-info">
 				<a href="#">All Comments (8,657)</a>
 				<div class="box">
@@ -84,6 +99,11 @@
 					</ul>
 				</div>
 			</div>
+<<<<<<< HEAD
+=======
+-->
+<!--
+>>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
 			<div class="media-grids">
 				<div class="media">
 					<h5>Tom Brown</h5>
@@ -170,6 +190,10 @@
 					</div>
 				</div>
 			</div>
+<<<<<<< HEAD
+=======
+-->
+>>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
 		</div>
 	</div>
 	<div class="col-md-4 single-right">

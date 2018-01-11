@@ -19,6 +19,7 @@ class Lop extends CI_Controller {
 		$data['title'] = 'CLASS ONLINE | Home';
 		$data['active'] = 0;
 		$data['content'] = 'lophoc/hienthi';
+<<<<<<< HEAD
 		$data['lophoc_moi'] = $this->Mlophoc->lophoc(3);
 		$data['lophoc_hot'] = $this->Mlophoc->lophoc(16);
 		$data['cap1'] = $this->Mlophoc->cap1();
@@ -28,6 +29,29 @@ class Lop extends CI_Controller {
 		$data['bai_tt'] = $this->Mlophoc->bai_tt($id,$chitiet['Ma_Giaotrinh']);
 		$this->load->view('lophoc',$data);
 	}
+=======
+		//thông báo chưa có tài khoản.
+		if(!isset($_SESSION['login']))
+			
+		{ 
+			$data['thongbao']= '<script>alert("bạn chưa có đăng ký hoặc đăng nhập trước!");location.assign(" '.base_url('lophoc').' ");</script>';
+		    echo($data['thongbao']);
+		}
+		else
+		{
+			$data['lophoc_moi'] = $this->Mlophoc->lophoc(3);
+			$data['lophoc_hot'] = $this->Mlophoc->lophoc(16);
+			$data['cap1'] = $this->Mlophoc->cap1();
+			$data['cap2'] = $this->Mlophoc->cap2();
+			$data['chitiet'] = $chitiet = $this->Mlophoc->chitiet($id,$gt);
+			print_r($id);
+			$data['bai_tt'] = $this->Mlophoc->bai_tt($id,$chitiet['Ma_Giaotrinh']);
+			$this->load->view('lophoc',$data);
+		}
+       }
+	
+	
+>>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
 		public function chitiet($id)
 	{
 		$data['title'] = 'CLASS ONLINE | Home';

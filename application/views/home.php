@@ -586,6 +586,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 		<h3 class="tittle-w3l">Phản Hồi Mail</h3>
 		<div class="agileinfo_mail_grids">
 			<div class="col-md-7 agileinfo_mail_grid_right">
+<<<<<<< HEAD
 				<form action="<?=base_url('home/guitin') ?>" method="post" enctype="multipart/form-data">
 					<div class="col-md-6 col-sm-6 wthree_contact_left_grid">
 						<input type="text" name="name" placeholder="Họ Và Tên" required>
@@ -598,6 +599,20 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 					<div class="clearfix"> </div>
 					<textarea name="message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>Message...</textarea>
 					<input type="submit" name="gui" value="Send">
+=======
+				<form action="#" method="post">
+					<div class="col-md-6 col-sm-6 wthree_contact_left_grid">
+						<input type="text" name="Name" placeholder="Họ Và Tên" required>
+						<input type="email" name="Email" placeholder="Email" required>
+					</div>
+					<div class="col-md-6 col-sm-6 wthree_contact_left_grid">
+						<input type="text" name="Telephone" placeholder="Số Điện Thoại" required>
+						<input type="text" name="Subject" placeholder="Mã Môn Học" required>
+					</div>
+					<div class="clearfix"> </div>
+					<textarea name="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>Message...</textarea>
+					<input type="submit" value="Send">
+>>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
 					<input type="reset" value="Clear">
 				</form>
 			</div>
@@ -675,7 +690,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 			<div class="clearfix"> </div>
 		</div>
 		<div class="col-md-6 w3ls_footer_grid1_left_2">
+<<<<<<< HEAD
 			<p>&copy; 2017 doantotnghiep-NguyenVanThieu-10119052</p>
+=======
+			<p>&copy; 2017-2018 doantotnghiep-NguyenVanThieu-10119052</p>
+>>>>>>> 8d008b730926480d5d5f303fbe8d257a3a52718b
 		</div>
 		<div class="col-md-6 w3ls_footer_grid1_right">
 			<ul>
