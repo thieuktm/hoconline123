@@ -586,18 +586,18 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 		<h3 class="tittle-w3l">Phản Hồi Mail</h3>
 		<div class="agileinfo_mail_grids">
 			<div class="col-md-7 agileinfo_mail_grid_right">
-				<form action="#" method="post">
+				<form action="<?=base_url('home/guitin') ?>" method="post" enctype="multipart/form-data">
 					<div class="col-md-6 col-sm-6 wthree_contact_left_grid">
-						<input type="text" name="Name" placeholder="Họ Và Tên" required>
-						<input type="email" name="Email" placeholder="Email" required>
+						<input type="text" name="name" placeholder="Họ Và Tên" required>
+						<input type="email" name="email" placeholder="Email" required>
 					</div>
 					<div class="col-md-6 col-sm-6 wthree_contact_left_grid">
-						<input type="text" name="Telephone" placeholder="Số Điện Thoại" required>
-						<input type="text" name="Subject" placeholder="Mã Môn Học" required>
+						<input type="text" name="phone" placeholder="Số Điện Thoại" required>
+						<input type="text" name="title" placeholder="Tiêu đề" required>
 					</div>
 					<div class="clearfix"> </div>
-					<textarea name="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>Message...</textarea>
-					<input type="submit" value="Send">
+					<textarea name="message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>Message...</textarea>
+					<input type="submit" name="gui" value="Send">
 					<input type="reset" value="Clear">
 				</form>
 			</div>

@@ -8,6 +8,7 @@ class Home extends CI_Controller {
 		$this->lang->load('home','vietnamese');  
 		$this->load->helper('url');
 		$this->load->model('mhocvien');
+		$this->load->model('memail');
 		
 	}
 	public function index()
@@ -111,7 +112,32 @@ class Home extends CI_Controller {
 		//view
 		
 	}
-	
+	public function guitin() 
+	{
+		date_default_timezone_set('Asia/Ho_Chi_Minh');
+		if(isset($_POST['gui']))
+		{
+			$tieu_de = $this->input->post('title');
+			$email = $this->input->post('email');
+			$phone = $this->input->post('phone');
+			$tin_nhan = $this->input->post('message');
+			$ngay_gui = date('Y-m-d H:i:s');
+			$dat = array(
+				'tieu_de' => $tieu_de,
+				'email' => $email,
+				'phone' => $phone,
+				'tin_nhan' => $tin_nhan,
+				'ngay_gui' => $ngay_gui,
+			);
+			$kq = $this->memail->them($dat);
+			if($kq == 1) {
+				echo '<script>alert("Gửi tin thành công.");location.assign("'.base_url().'");</script>';
+			}
+			else {
+				echo '<script>alert("Gửi tin thất bại.");location.assign("'.base_url().'");</script>';
+			}
+		}
+	}
 	
 }
 ?>
