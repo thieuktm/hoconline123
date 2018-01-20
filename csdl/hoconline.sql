@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th1 11, 2018 lúc 04:38 PM
+-- Thời gian đã tạo: Th1 17, 2018 lúc 12:59 AM
 -- Phiên bản máy phục vụ: 5.7.19
 -- Phiên bản PHP: 5.6.31
 
@@ -114,14 +114,15 @@ CREATE TABLE IF NOT EXISTS `email` (
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `ngay_gui` datetime NOT NULL,
   PRIMARY KEY (`id_email`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `email`
 --
 
 INSERT INTO `email` (`id_email`, `tieu_de`, `email`, `phone`, `tin_nhan`, `status`, `ngay_gui`) VALUES
-(1, 'lạlfalflaf', 'a@gmail.com', '0123456789', 'afjlajflajf à a;fj a;f', 0, '2018-01-11 21:29:41');
+(1, 'lạlfalflaf', 'a@gmail.com', '0123456789', 'afjlajflajf à a;fj a;f', 0, '2018-01-11 21:29:41'),
+(2, 'lớp 1', 'thieuktm@gmail.com', '0939054936', 'tôi thấy hợp lý', 0, '2018-01-12 09:02:47');
 
 -- --------------------------------------------------------
 
@@ -169,28 +170,41 @@ CREATE TABLE IF NOT EXISTS `giao_trinh` (
   `gioithieu` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `active_gt` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`Ma_Giaotrinh`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `giao_trinh`
 --
 
 INSERT INTO `giao_trinh` (`Ma_Giaotrinh`, `MaMH`, `TenGiaotrinh`, `video`, `noidungchinh`, `noidungfull`, `gioithieu`, `active_gt`) VALUES
-(1, 1, 'tiếng anh', 'https://www.youtube.com/embed/ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn', 1),
-(2, 2, 'ngữ Văn', 'https://www.youtube.com/embed/7KX3VXzsVq8', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1),
-(3, 3, 'toán', 'https://www.youtube.com/embed/j-giDZE0OT4', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư', 1),
-(5, 4, 'tiếng anh', 'https://www.youtube.com/embed/ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn', 1),
-(6, 5, 'ngữ Văn', 'https://www.youtube.com/watch?v=uTtRrnSIPJs', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1),
-(7, 6, 'toán', 'https://www.youtube.com/watch?v=6LUT0r1W16c', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư', 1),
-(8, 7, 'tiếng anh', 'https://www.youtube.com/embed/ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn', 1),
+(1, 1, 'tiếng anh', 'https://www.youtube.com/embed/NFdPCkvZPgo', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn', 1),
+(2, 2, 'ngữ Văn', 'https://www.youtube.com/embed/8aBSZlbXqjs', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1),
+(3, 3, 'toán', 'https://www.youtube.com/embed/o4bjVm_5Es0', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư', 1),
+(5, 4, 'toán', 'https://www.youtube.com/embed/E5vG91ymZ88', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn', 1),
+(6, 5, 'ngữ Văn', 'https://www.youtube.com/embed/NLPU3A309u8', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1),
+(7, 6, 'toán', 'https://www.youtube.com/embed/1_N-TK4Mb90', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư', 1),
+(8, 7, 'tiếng anh', 'https://www.youtube.com/embed/qS81e4Y4mjw', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn', 1),
 (9, 7, 'ngữ Văn', 'https://www.youtube.com/embed/7KX3VXzsVq8', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1),
-(10, 8, 'toán', 'https://www.youtube.com/embed/j-giDZE0OT4', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư', 1),
+(10, 8, 'toán', 'https://www.youtube.com/embed/D6IDb-woIyg', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư', 1),
 (11, 8, 'tiếng anh', 'https://www.youtube.com/embed/ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn', 1),
-(12, 9, 'ngữ Văn', 'https://www.youtube.com/embed/7C80PsFX-fY', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1),
+(12, 9, 'ngữ Văn', 'https://www.youtube.com/embed/WrIYr0Cgr7Y', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1),
 (13, 9, 'toán', 'https://www.youtube.com/embed/ZgpgavgE3Xg', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư', 1),
-(14, 13, 'Bài 2', 'abc', 'Nội dung chính', 'nội dung full', 'giới thiệu', 1),
-(15, 1, 'Bài 2', 'abc', 'nnnnnnnnnnnnnnslflslflalsfs', 'slfjlaslfjalsf;á;fjasjf;a;f', 'slfja;sj;fa', 1),
-(16, 16, 'Bài 1', 'link cập nhật sau', 'Nội dung chưa soạn', 'Nội dung chưa soạn', '<div>Môn học này học sinh tự học không cần dạy</div>', 1);
+(14, 13, 'Bài 2', 'https://www.youtube.com/embed/egBZj1lH66w', 'Nội dung chính', 'nội dung full', 'giới thiệu', 1),
+(15, 1, 'Bài 2', 'https://www.youtube.com/embed/54_Vh7UJfVs', 'nnnnnnnnnnnnnnslflslflalsfs', 'slfjlaslfjalsf;á;fjasjf;a;f', 'slfja;sj;fa', 1),
+(16, 16, 'Bài 1', 'https://www.youtube.com/embed/68-8jLKL0wM', 'Nội dung chưa soạn', 'Nội dung chưa soạn', '<div>Môn học này học sinh tự học không cần dạy</div>', 1),
+(20, 10, 'Bài 1', 'https://www.youtube.com/embed/68-8jLKL0wM', 'Nội dung chưa soạn', 'Nội dung chưa soạn', '<div>Môn học này học sinh tự học không cần dạy</div>', 1),
+(22, 11, 'Bài 1', 'https://www.youtube.com/embed/68-8jLKL0wM', 'Nội dung chưa soạn', 'Nội dung chưa soạn', '<div>Môn học này học sinh tự học không cần dạy</div>', 1),
+(23, 12, 'Bài 1', 'https://www.youtube.com/embed/68-8jLKL0wM', 'Nội dung chưa soạn', 'Nội dung chưa soạn', '<div>Môn học này học sinh tự học không cần dạy</div>', 1),
+(24, 13, 'ngữ Văn', 'https://www.youtube.com/embed/WrIYr0Cgr7Y', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1),
+(60, 30, 'tiếng anh', 'https://www.youtube.com/embed/ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn', 1),
+(61, 31, 'ngữ Văn', 'https://www.youtube.com/embed/WrIYr0Cgr7Y', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1),
+(62, 32, 'toán', 'https://www.youtube.com/embed/ZgpgavgE3Xg', 'là toán tổng hợp từ mức cơ ban đến mức khó để phân loại học viên tăng tính học hỏi ham học', '', 'Toán là nơi là mang niềm đam mê với công thức và suy tư', 1),
+(63, 33, 'Bài 2', 'https://www.youtube.com/embed/egBZj1lH66w', 'Nội dung chính', 'nội dung full', 'giới thiệu', 1),
+(64, 34, 'Bài 1', 'https://www.youtube.com/embed/68-8jLKL0wM', 'Nội dung chưa soạn', 'Nội dung chưa soạn', '<div>Môn học này học sinh tự học không cần dạy</div>', 1),
+(46, 80, 'Bài 1', 'https://www.youtube.com/embed/68-8jLKL0wM', 'Nội dung chưa soạn', 'Nội dung chưa soạn', '<div>Môn học này học sinh tự học không cần dạy</div>', 1),
+(47, 82, 'ngữ Văn', 'https://www.youtube.com/embed/WrIYr0Cgr7Y', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1),
+(48, 83, 'tiếng anh', 'https://www.youtube.com/embed/ap2asVc3Csg', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới', '', 'tiếng anh là ngôn ngữ được thế giới sử dụng như là ngôn ngữ chung giao tiếp với tất cả con người của khắp thế giới. Mang lại tiếng nói chung và kiến cả thế giới gần nhau hơn hiểu nhau hơn', 1),
+(49, 84, 'ngữ Văn', 'https://www.youtube.com/embed/WrIYr0Cgr7Y', 'môn ngữ văn cuốn giáo trình mang lại cho ta kiến thức cơ bản về ngôn ngữ tiếng việt, và cho thấy sự đa dạng và phong phú ngữ điệu', '', 'Ngữ Văn là nơi là mang niềm đam mê với các giao tiếp và sự hấp dẫn của ngôn từ', 1);
 
 -- --------------------------------------------------------
 
@@ -256,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `lop_hoc` (
   `cap` int(11) NOT NULL,
   `hot` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`MaLH`)
-) ENGINE=MyISAM AUTO_INCREMENT=347 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=348 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `lop_hoc`
@@ -288,9 +302,9 @@ INSERT INTO `lop_hoc` (`MaLH`, `TenLH`, `magv`, `ngay_BD`, `ngay_KT`, `Soluong_H
 (111, 'Lớp Chuyên khối C', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 3, 0),
 (121, 'Lớp Chuyên khối B', 7, '2017-10-03 00:00:00', '2017-10-31 00:00:00', 25, NULL, 1, 'images/3.jpg', 3, 0),
 (342, 'abc', 6, '2017-12-10 05:31:28', '2017-12-11 07:17:14', 24, 400000, 1, 'images/poster/Screenshot_(5)1.png', 0, 0),
-(343, 'ádfasdfasd', 7, '1970-01-01 00:33:37', '1970-01-01 00:33:37', 24, 400000, 1, 'images/poster/Screenshot_(1)1.png', 4, 0),
 (344, 'học', 4, '1970-01-01 00:00:00', '1970-01-01 00:00:00', 24, 400000, 1, 'images/poster/Screenshot_(5)2.png', 4, 0),
-(346, 'abc', 10, '2018-01-11 12:10:00', '2018-01-11 12:10:00', 24, 400000, 1, 'images/poster/Screenshot_(1)3.png', 4, 0);
+(346, 'abc', 10, '2018-01-11 12:10:00', '2018-01-11 12:10:00', 24, 400000, 1, 'images/poster/Screenshot_(1)3.png', 4, 0),
+(347, 'tieng han', 3, '2018-01-12 12:12:00', '2018-01-19 00:12:00', 0, 250000, 1, 'images/poster/e1.jpg', 4, 0);
 
 -- --------------------------------------------------------
 
@@ -307,7 +321,7 @@ CREATE TABLE IF NOT EXISTS `mon_hoc` (
   `magv` int(11) NOT NULL,
   `active_mh` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`MaMH`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=85 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `mon_hoc`
@@ -326,8 +340,17 @@ INSERT INTO `mon_hoc` (`MaMH`, `TenMH`, `sotinchi`, `MaLH`, `magv`, `active_mh`)
 (10, 'toan_lop10', 2, '10', 6, 1),
 (11, 'ngu_van', 2, '11', 6, 1),
 (12, 'Anh_van', 2, '12', 6, 1),
-(13, 'Lý', 2, '8', 6, 1),
-(16, 'Tự học', 3, '344', 10, 1);
+(13, 'Lý', 2, '13', 6, 1),
+(16, 'Tự học', 3, '344', 10, 1),
+(30, 'toan_lop10', 2, '101', 6, 1),
+(31, 'ngu_van', 2, '111', 6, 1),
+(32, 'Anh_van', 2, '121', 6, 1),
+(33, 'Lý', 2, '342', 6, 1),
+(34, 'Tự học', 3, '17', 10, 1),
+(80, 'toan_lop10', 2, '14', 6, 1),
+(82, 'ngu_van', 2, '15', 6, 1),
+(83, 'Anh_van', 2, '16', 6, 1),
+(84, 'Lý', 2, '18', 6, 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

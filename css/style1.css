@@ -2783,3 +2783,34 @@ background: url(../images/social.png) no-repeat 0px 0px;
 .container-card {
     padding: 2px 16px;
 }
+.top-search {
+	position: relative;
+	width: 100%;
+}
+.form-search {
+	position: relative;
+}
+.result {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 15;
+	border: 1px solid #A2A2A2;
+	background-color: #FFFFFF;
+	padding: 15px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.26);
+	
+}
+.result a{
+	font-size: 14px;
+	display: block;
+	color: #333333;
+	text-decoration: none;
+	padding: 5px;
+	font-weight: bold;
+}
+.result a:hover {
+	color: #2C3AD3;
+	text-decoration: none;
+	background: #FCF6A6;
+}

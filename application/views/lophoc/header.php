@@ -1,5 +1,4 @@
-
- <nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
 	<div class="navbar-header">
 	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -12,9 +11,12 @@
 	</div>
 	<div id="navbar" class="navbar-collapse collapse">
 		<div class="top-search">
-			<form class="navbar-form navbar-right" action="#" method="get">
-				<input type="text" name="tukhoa" class="form-control" placeholder="Search...">
+			<form class="navbar-form navbar-right form-search" action="#" method="get">
+				<input type="text" name="tukhoa" id="tukhoa" class="form-control" placeholder="Search...">
 				<input type="submit" value=" ">
+				<div class="result" id="result">
+					<a href="#">kết quả tìm kiếm</a>
+				</div>
 			</form>
 		</div>
 		 <div class="header-top-right">
@@ -225,3 +227,26 @@
 	<div class="clearfix"> </div>
   </div>
 </nav>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#tukhoa").keyup(function(){
+			var rong = $("#tukhoa").width();
+			$("#result").css({'display': 'block', 'width' : rong});
+			var tukhoa = $('#tukhoa').val();
+			$.ajax({
+				method:"POST",
+				url:"<?=base_url('timkiem'); ?>",
+				data:{tukhoa:tukhoa},
+				success: function(result)
+				{
+					console.log(result);
+					$('#result').html(result);
+				}
+			});
+		});
+		$(window).click(function(){
+			$("#result").css('display', 'none');
+		});
+		
+	});
+</script>
