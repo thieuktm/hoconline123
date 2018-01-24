@@ -190,12 +190,13 @@
 		<h3>Bài tiếp theo</h3>
 		<div class="single-grid-right">
 			<?php
+			if(isset($bai_tt)){
 			foreach($bai_tt as $tt)
 			{
 			?>
 			<div class="single-right-grids">
 				<div class="col-md-4 single-right-grid-left">
-					<a href="<?=base_url('lop/').$chitiet['MaLH'].'/'.$tt['Ma_Giaotrinh'] ?>"><img src="<?=base_url().$tt['poster']?>" alt="" /></a>
+					<a href="<?=base_url('lop/').$chitiet['MaMH'].'/'.$tt['Ma_Giaotrinh'] ?>"><img src="<?=base_url().$tt['poster']?>" alt="" /></a>
 				</div>
 				<div class="col-md-8 single-right-grid-right">
 					<a href="single.html" class="title"> <?=$tt['TenGiaotrinh'] ?></a>
@@ -205,6 +206,7 @@
 				<div class="clearfix"> </div>
 			</div>
 			<?php
+			}
 			}
 			?>
 			<!--<div class="single-right-grids">

@@ -7,6 +7,7 @@ class Lophoc extends CI_Controller {
 		parent::__construct();
 		$this->lang->load('home','vietnamese'); 
 		$this->load->model('Mlophoc');
+		$this->load->model('Mmonhoc');
 	}
 	public function index()
 	{
@@ -48,37 +49,41 @@ class Lophoc extends CI_Controller {
 	public function cap1()
 	{
 		$data['title'] = 'CLASS ONLINE | Cấp 1';
+		$data['tencap'] = 'Cấp 1';
 		$data['active'] = 2;
-		$data['content'] = 'lophoc/cap1';
+		$data['content'] = 'lophoc/cap';
 		$data['menu'] = 'lophoc/menu';
-		$data['cap1'] = $this->Mlophoc->cap1();
+		$data['cap'] = $this->Mlophoc->cap(1);
 		$this->load->view('lophoc', $data);
 	}
 	public function cap2()
 	{
 		$data['title'] = 'CLASS ONLINE | Cấp 2';
+		$data['tencap'] = 'Cấp 2';
 		$data['active'] = 3;
-		$data['content'] = 'lophoc/cap2';
+		$data['content'] = 'lophoc/cap';
 		$data['menu'] = 'lophoc/menu';
-		$data['cap2'] = $this->Mlophoc->cap2();
+		$data['cap'] = $this->Mlophoc->cap(2);
 		$this->load->view('lophoc', $data);
 	}
 	public function cap3()
 	{
 		$data['title'] = 'CLASS ONLINE | Cấp 3';
+		$data['tencap'] = 'Cấp 3';
 		$data['active'] = 4;
-		$data['content'] = 'lophoc/cap3';
+		$data['content'] = 'lophoc/cap';
 		$data['menu'] = 'lophoc/menu';
-		$data['cap3'] = $this->Mlophoc->cap3();
+		$data['cap'] = $this->Mlophoc->cap(3);
 		$this->load->view('lophoc', $data);
 	}
 	public function cap4()
 	{
 		$data['title'] = 'CLASS ONLINE | Đào Tạo Nghề';
+		$data['tencap'] = 'Đào Tạo Nghề';
 		$data['active'] = 5;
-		$data['content'] = 'lophoc/cap4';
+		$data['content'] = 'lophoc/cap';
 		$data['menu'] = 'lophoc/menu';
-		$data['cap4'] = $this->Mlophoc->cap4();
+		$data['cap'] = $this->Mlophoc->cap(4);
 		$this->load->view('lophoc', $data);
 	}
 	public function giaovien1()
@@ -122,6 +127,14 @@ class Lophoc extends CI_Controller {
 		$data['title'] = 'CLASS ONLINE | Bài học';
 		$data['active'] = 0;
 		$data['content'] = 'lophoc/baihoc';
+		$this->load->view('lophoc', $data);
+	}
+	public function monhoc($id)
+	{
+		$data['title'] = 'CLASS ONLINE | Môn học';
+		$data['active'] = 0;
+		$data['content'] = 'lophoc/monhoc';
+		$data['monhoc'] = $this->Mmonhoc->monhoc($id);
 		$this->load->view('lophoc', $data);
 	}
 }

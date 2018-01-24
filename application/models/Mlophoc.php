@@ -16,33 +16,35 @@ class Mlophoc extends CI_Model{
 	}
 	public function chitiet($id,$gt)
 	{	$this->db->select('*');
-		$this->db->from('lop_hoc,giao_trinh,mon_hoc');
-		$this->db->where('lop_hoc.MaLH = mon_hoc.MaLH');
-	    $this->db->where('lop_hoc.MaLH=',$id);
+		$this->db->from('giao_trinh,mon_hoc, lop_hoc,giaovien');
+	    $this->db->where('mon_hoc.MaMH=',$id);
 	    $this->db->where('mon_hoc.MaMH = giao_trinh.MaMH');
+	 	$this->db->where('mon_hoc.MaLH = lop_hoc.MaLH');
+	 	$this->db->where('mon_hoc.magv = giaovien.magv');
 	 	if($gt != 0)
 		{
 			$this->db->where('giao_trinh.Ma_Giaotrinh', $gt);
 		}
-		$this->db->order_by('giao_trinh.Ma_Giaotrinh', 'asc');
+	 	$this->db->order_by('giao_trinh.Ma_Giaotrinh', 'asc');
 		return $this->db->get()->row_array();
 	}
 	public function bai_tt($id,$MaGT)
 	{	$this->db->select('*');
 
-		$this->db->from('lop_hoc,giao_trinh,mon_hoc');
-		$this->db->where('lop_hoc.MaLH = mon_hoc.MaLH');
-	    $this->db->where('lop_hoc.MaLH=',$id);
-	    $this->db->where('mon_hoc.MaMH = giao_trinh.MaMH');
-	    $this->db->where('giao_trinh.Ma_Giaotrinh > ', $MaGT);
+		$this->db->from('giao_trinh,mon_hoc,lop_hoc');
+	 	$this->db->where('mon_hoc.MaLH = lop_hoc.MaLH');
+	 	$this->db->where('mon_hoc.MaMH = giao_trinh.MaMH');
+	    $this->db->where('mon_hoc.MaMH=',$id);
+	    $this->db->where('Ma_Giaotrinh > ', $MaGT);
 		$this->db->order_by('giao_trinh.Ma_Giaotrinh', 'asc');
 	 		
 		return $this->db->get()->result_array();
 	}
-	public function cap1()
+	public function cap($id)
 	{
-		$this->db->from('lop_hoc');
-		$this->db->where('cap = 1');
+		$this->db->from('lop_hoc, giaovien');
+		$this->db->where('lop_hoc.cap', $id);
+		$this->db->where('lop_hoc.magv = giaovien.magv');
 		//$this->db->order_by('MaLH', 'desc');
 		//$this->db->limit();
 		return $this->db->get()->result_array();

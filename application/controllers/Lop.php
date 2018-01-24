@@ -28,13 +28,14 @@ class Lop extends CI_Controller {
 		}
 		else
 		{
-			$data['lophoc_moi'] = $this->Mlophoc->lophoc(3);
-			$data['lophoc_hot'] = $this->Mlophoc->lophoc(16);
-			$data['cap1'] = $this->Mlophoc->cap1();
-			$data['cap2'] = $this->Mlophoc->cap2();
+//			$data['lophoc_moi'] = $this->Mlophoc->lophoc(3);
+//			$data['lophoc_hot'] = $this->Mlophoc->lophoc(16);
+//			$data['cap1'] = $this->Mlophoc->cap1();
+//			$data['cap2'] = $this->Mlophoc->cap2();
 			$data['chitiet'] = $chitiet = $this->Mlophoc->chitiet($id,$gt);
-			print_r($id);
-			$data['bai_tt'] = $this->Mlophoc->bai_tt($id,$chitiet['Ma_Giaotrinh']);
+			if(count($data['chitiet']) != 0) {
+				$data['bai_tt'] = $this->Mlophoc->bai_tt($id,$chitiet['Ma_Giaotrinh']);
+			}
 			$this->load->view('lophoc',$data);
 		}
        }

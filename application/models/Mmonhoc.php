@@ -34,6 +34,14 @@ class Mmonhoc extends CI_Model{
 		$this->db->where('mon_hoc.magv = giaovien.magv');
 		return $this->db->get()->result_array();
 	}
+	public function monhoc($MaLH)
+	{
+		$this->db->from('mon_hoc,lop_hoc,giaovien');
+		$this->db->where('mon_hoc.MaLH = lop_hoc.MaLH');
+		$this->db->where('mon_hoc.MaLH', $MaLH);
+		$this->db->where('mon_hoc.magv = giaovien.magv');
+		return $this->db->get()->result_array();
+	}
 	public function get($id)
 	{
 		$this->db->from('mon_hoc');
