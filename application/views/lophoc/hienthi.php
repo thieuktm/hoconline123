@@ -199,7 +199,7 @@
 					<a href="<?=base_url('lop/').$chitiet['MaMH'].'/'.$tt['Ma_Giaotrinh'] ?>"><img src="<?=base_url().$tt['poster']?>" alt="" /></a>
 				</div>
 				<div class="col-md-8 single-right-grid-right">
-					<a href="single.html" class="title"> <?=$tt['TenGiaotrinh'] ?></a>
+					<a href="<?=base_url('lop/').$chitiet['MaMH'].'/'.$tt['Ma_Giaotrinh'] ?>" class="title"> <?=$tt['TenGiaotrinh'] ?></a>
 					<p class="author"><a href="#" class="author">John Maniya</a></p>
 					<p class="views">2,114,200 views</p>
 				</div>

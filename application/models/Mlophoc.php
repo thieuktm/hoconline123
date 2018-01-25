@@ -9,7 +9,8 @@ class Mlophoc extends CI_Model{
 
 	public function lophoc($limit)
 	{
-		$this->db->from('lop_hoc');
+		$this->db->from('lop_hoc,giaovien');
+		$this->db->where('lop_hoc.magv = giaovien.magv');
 		$this->db->order_by('MaLH', 'desc');
 		$this->db->limit($limit);
 		return $this->db->get()->result_array();

@@ -18,7 +18,7 @@ class Timkiem extends CI_Controller {
 		}
 		else {
 			foreach($ketqua as $kq) {
-				echo '<a href="'.base_url('lop/'.$kq['MaLH']).'">'.$kq['TenMH'].' - '.$kq['TenLH'].'</a>';
+				echo '<a href="'.base_url('lop/'.$kq['MaMH']).'">'.$kq['TenMH'].' - '.$kq['TenLH'].'</a>';
 			}
 		}
 	}

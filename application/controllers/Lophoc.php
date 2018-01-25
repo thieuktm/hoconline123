@@ -17,10 +17,10 @@ class Lophoc extends CI_Controller {
 		$data['menu'] = 'lophoc/menu';
 		$data['lophoc_moi'] = $this->Mlophoc->lophoc(3);
 		$data['lophoc_hot'] = $this->Mlophoc->lophoc(12);
-		$data['cap1'] = $this->Mlophoc->cap1();
-		$data['cap2'] = $this->Mlophoc->cap2();
-		$data['cap3'] = $this->Mlophoc->cap3();
-		$data['cap4'] = $this->Mlophoc->cap4();
+		$data['cap1'] = $this->Mlophoc->cap(1);
+		$data['cap2'] = $this->Mlophoc->cap(2);
+		$data['cap3'] = $this->Mlophoc->cap(3);
+		$data['cap4'] = $this->Mlophoc->cap(4);
 		$data['giaovien1'] = $this->Mlophoc->giaovien1();
 		$data['giaovien2'] = $this->Mlophoc->giaovien2();
 		$data['giaovien3'] = $this->Mlophoc->giaovien3();

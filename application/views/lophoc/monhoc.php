@@ -23,7 +23,7 @@
 				<!---- load là cái tên trước video gọi từ file lop trong thư mục controller;-->
 					<h5><a href="<?=base_url('lop/'.$tam['MaMH']); ?>" class="title"><?=$tam['TenMH']; ?></a></h5>
 					<ul>
-						<li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
+						<li><p class="author author-info"><a href="#" class="author"><?=$tam['TenGV'] ?></a></p></li>
 					<!--	-- load là cái tên trước video gọi từ file lop trong thư mục controller;-->
 					</ul>
 				</div>
