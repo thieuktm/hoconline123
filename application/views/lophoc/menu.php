@@ -15,7 +15,7 @@
 			<li <?php if($active == 4) echo('class="active"'); ?>><a href="<?=base_url('lophoc/cap3'); ?>" class="user-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Cấp 3</a></li>
 				
 			<li <?php if($active == 5) echo('class="active"'); ?>><a href="<?=base_url('lophoc/cap4'); ?>" class="user-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Đào Tạo Nghề</a></li>
-			<li><a href="news.html" class="news-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Liên Kết Làm Việc</a></li>
+<!--			<li><a href="news.html" class="news-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Liên Kết Làm Việc</a></li>-->
 		  </ul>
 		  <!-- script-for-menu -->
 				<script>
