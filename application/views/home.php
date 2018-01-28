@@ -296,7 +296,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 				<div class="w3layouts_banner_bottom_grid">
 					<img src="images/t2.jpg" alt=" " class="img-responsive" />
 					<div class="w3layouts_banner_bottom_grid_pos">
-						<p>Victoria</p>
+						<p><a href="<?=base_url('giaovien') ?>">Victoria</a></p>
 						<div class="social-bnr-agileits">
 							<ul>
 								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -311,7 +311,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 				<div class="w3layouts_banner_bottom_grid">
 					<img src="images/t5.png" alt=" " class="img-responsive" />
 					<div class="w3layouts_banner_bottom_grid_pos">
-						<p>Ngô Bảo Châu</p>
+						<p><a href="<?=base_url('giaovien') ?>">Ngô Bảo Châu</a></p>
 						<div class="social-bnr-agileits">
 							<ul>
 								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -326,7 +326,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 				<div class="w3layouts_banner_bottom_grid">
 					<img src="images/t3.jpg" alt=" " class="img-responsive" />
 					<div class="w3layouts_banner_bottom_grid_pos">
-						<p>Thomson</p>
+						<p><a href="<?=base_url('giaovien') ?>">Thomson</a></p>
 						<div class="social-bnr-agileits">
 							<ul>
 								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -341,7 +341,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 				<div class="w3layouts_banner_bottom_grid">
 					<img src="images/t4.jpg" alt=" " class="img-responsive" />
 					<div class="w3layouts_banner_bottom_grid_pos">
-						<p>Heny Jon</p>
+						<p><a href="<?=base_url('giaovien') ?>">Heny Jon</a></p>
 						<div class="social-bnr-agileits">
 							<ul>
 								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
